@@ -1499,6 +1499,15 @@ reverseString("hello");
 ```
 
 ### How would you reverse words in a sentence?
+Similar to the above, but take note of the space to denote a new word.
+
+```javascript
+function reverseString(str) {
+	return str.split(' ').reverse().join(' ');
+}
+
+reverseString('Hello, World. My Name is Daniel Del Core');
+```
 
 ### Find the first non repeating char in a string?
 
