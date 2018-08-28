@@ -1422,6 +1422,50 @@ https://www.glassdoor.com.au/Interview/Given-an-input-array-and-another-array-th
 
 https://www.interviewcake.com/question/javascript/bst-checker
 
+This question is designed to trick you. You MUST keep track of the min and max nodes. Do not evaluate only the children nodes in relation to the value of the parent node.
+
+Consider this BST:
+```
+      3
+     / \
+    2   5
+  /  \
+ 1    4
+```
+Notice how the 4 is in the left sub tree (as a child of 2). It should actually be in the right subtree as a left hand child of 5. 
+
+The following solution will cover this scenario: 
+
+```javascript
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+
+function isValidBST(root, min = 0, max = 9999) {
+  if (!root) {
+    return true;      
+  }
+    
+  if (root.val >= max || root.val <= min) {
+      return false;
+  }
+  
+  if (!!root.left && !isValidBST(root.left, min, root.val)) {
+    return false;   
+  }    
+    
+  if (!!root.right && !isValidBST(root.right, root.val, max)) {
+    return false;
+  }
+    
+  return true;
+};
+```
+
 ### Delete a node from a singly-linked list, given only variable pointing to that node.
 
 https://www.interviewcake.com/question/javascript/delete-node
