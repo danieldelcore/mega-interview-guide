@@ -1424,6 +1424,8 @@ https://www.interviewcake.com/question/javascript/bst-checker
 
 This question is designed to trick you. You MUST keep track of the min and max nodes. Do not evaluate only the children nodes in relation to the value of the parent node.
 
+For more information please see: https://www.geeksforgeeks.org/a-program-to-check-if-a-binary-tree-is-bst-or-not/
+
 Consider this BST:
 ```
       3
@@ -1434,7 +1436,10 @@ Consider this BST:
 ```
 Notice how the 4 is in the left sub tree (as a child of 2). It should actually be in the right subtree as a left hand child of 5. 
 
-The following solution will cover this scenario: 
+The following solution **is correct, but not efficient**.
+It runs slowly since it traverses over some parts of the tree many times. A better solution looks at each node only once. 
+
+**DO NOT USE THIS SOLUTION**
 
 ```javascript
 /**
@@ -1463,6 +1468,28 @@ function isValidBST(root, min = 0, max = 9999) {
   }
     
   return true;
+};
+```
+The trick is to write a utility help function that traverses the tree keeping track of the narrowing min and max allowed values as it goes, looking at each node only once!
+
+This is a more efficient and correct solution:
+
+```javascript
+var isValidBST = function(root, min, max) {
+   return isBSTUtil(root, min, max)
+};
+
+var isBSTUtil = function(root, min, max) {
+  if (!root) {
+      return true;
+  }
+    
+  if (root.val < min || root.val > max) {
+      return false;
+  }
+    
+  return isBSTUtil(root.left, min, root.val-1) &&
+    isBSTUtil(root.right, root.val+1, max)
 };
 ```
 
