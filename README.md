@@ -1493,6 +1493,8 @@ var isBSTUtil = function(root, min, max) {
 };
 ```
 
+**Time complexity is O(n) since we only check each node once**
+
 ### Delete a node from a singly-linked list, given only variable pointing to that node.
 
 https://www.interviewcake.com/question/javascript/delete-node
