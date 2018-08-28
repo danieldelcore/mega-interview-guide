@@ -14,27 +14,37 @@ Also review **recursion and iterative approaches**.
 
 **Prepare 1-2 questions to ask your interviewer:** There is 5 minutes at the end of the interview for this.
 
-### Suggested reading resources
+# Resources
+
+### Suggested reading
 
 - [Cracking the Coding Interview](https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.amazon.com%2Fdp%2F0984782850%2F&h=ATMZRtbfTrzQcLHngryrTjFT_XCq2o3nid4NoEE88Unt61VMu5gFILsu62CeZiwgbMGZEsXHIio3myVajcoWduG6CmE2SNFwxgOsHYHdaHWJIaSz20A7UL-X0oS1_Y4HnsCjr2FMWV3QabQf&s=1)
-
 - [Introduction to Algorithms](https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.amazon.com%2Fdp%2F0262033844&h=ATOR-C75elaqF-869Wl2vEifzniqLLc-mNpQXeueUSB7OVXcUN7-lehuzUCmjAgZ_VvnNPPra-ogSE4exCDEjTb2hxaQHSzun9WU0eN94HDmr58g7ibkPOCFv2Cns6eQcvcH72WAD9yfxcyI&s=1)
-
 - [Algorithms in C](http://www.amazon.com/Algorithms-Parts-1-5-Bundle-Fundamentals/dp/0201756080)
-
 - [Data Structures and Algorithms](http://lib.mdp.ac.id/ebook/Karya%20Umum/Dsa.pdf) and [Big-O Cheat Sheet](http://bigocheatsheet.com/)
 - [Coursera - Algorithms, Part 1](https://www.coursera.org/learn/algorithms-part1)
 - [Coursera - Algorithms, Part 2](https://www.coursera.org/learn/algorithms-part2)
 - [Udacity - Intro to Algorithms](https://www.udacity.com/course/intro-to-algorithms--cs215)
 - [MIT Open courseware - Introduction to Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2008/)
+- “You Don’t Know JS” by Kyle Simpson - https://github.com/getify/You-Dont-Know-JS
+- [Cracking the javascript interview](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d)
+- [Cracking the Coding Interview (JS) Solutions](https://github.com/careercup/CtCI-6th-Edition-JavaScript)
 
-Several sites that provide similar problems to those typically asked in the interview are:
+### Practice questions
 
 - [500 Data Structures and Algorithms ](https://techiedelight.quora.com/500-Data-Structures-and-Algorithms-practice-problems-and-their-solutions?share=1&utm_medium=email&utm_source=hackernewsletter&utm_term=code)
 - [Top 10 Algos in Interview Questions](http://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/)
 - [HackerRank](https://www.hackerrank.com/), [Topcoder](https://community.topcoder.com/tc?module=MatchDetails&rd=15712), [Codeforces](http://codeforces.com/contests), [Leetcode](https://leetcode.com/), [InterviewBit](https://www.interviewbit.com/) or [Kattis.](https://open.kattis.com/)
 - Problems from[ Cracking the Coding Interview Book](https://books.google.co.uk/books/about/Cracking_the_Coding_Interview.html?id=anhAXwAACAAJ&hl=en)
 - List of [ACM-ICPC](https://icpc.baylor.edu/worldfinals/problems) and [Code Jam](https://code.google.com/codejam/past-contests) past questions
+
+### Videos
+
+- "Clean Code" https://www.youtube.com/watch?v=RlfLCWKxHJ0
+
+### Misc.
+
+http://flexboxfroggy.com/
 
 # Computer Science
 
@@ -62,6 +72,17 @@ Considered as a [linear data structure](https://en.wikipedia.org/wiki/Linear_dat
 
 A stack may be implemented to have a bounded capacity. If the stack is full and does not contain enough space to accept an entity to be pushed, the stack is then considered to be in an [overflow](https://en.wikipedia.org/wiki/Stack_overflow) state. The pop operation removes an item from the top of the stack.
 
+```javascript
+var stack = [];
+
+stack.push(2);       // stack is now [2]
+stack.push(5);       // stack is now [2, 5]
+
+var i = stack.pop(); // stack is now [2]
+
+alert(i);            // displays 5
+```
+
 ### Queues
 
 A **queue** is a particular kind of [abstract data type](https://en.wikipedia.org/wiki/Abstract_data_type) or [collection](https://en.wikipedia.org/wiki/Collection_(abstract_data_type)) in which the entities in the collection are kept in order and the principal (or only) operations on the collection are the addition of entities to the rear terminal position, known as *enqueue,* and removal of entities from the front terminal position, known as *dequeue*. This makes the queue a [First-In-First-Out (FIFO) data structure](https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics)). In a FIFO data structure, the first element added to the queue will be the first one to be removed. This is equivalent to the requirement that once a new element is added, all elements that were added before have to be removed before the new element can be removed. Often a *peek* or *front* operation is also entered, returning the value of the front element without dequeuing it. A queue is an example of a [linear data structure](https://en.wikipedia.org/wiki/Linear_data_structure), or more abstractly a sequential collection.
@@ -69,6 +90,17 @@ A **queue** is a particular kind of [abstract data type](https://en.wikipedia.or
 Queues provide services in [computer science](https://en.wikipedia.org/wiki/Computer_science), [transport](https://en.wikipedia.org/wiki/Transport), and [operations research](https://en.wikipedia.org/wiki/Operations_research) where various entities such as data, objects, persons, or events are stored and held to be processed later. In these contexts, the queue performs the function of a [buffer](https://en.wikipedia.org/wiki/Buffer_(computer_science)).
 
 Queues are common in computer programs, where they are implemented as data structures coupled with access routines, as an [abstract data structure](https://en.wikipedia.org/wiki/Abstract_data_structure) or in object-oriented languages as classes. Common implementations are [circular buffers](https://en.wikipedia.org/wiki/Circular_buffer) and [linked lists](https://en.wikipedia.org/wiki/Linked_list).
+
+```javascript
+var queue = [];
+
+queue.push(2);         // queue is now [2]
+queue.push(5);         // queue is now [2, 5]
+
+var i = queue.shift(); // queue is now [5]
+
+alert(i);              // displays 2
+```
 
 ### Priority Queue
 
@@ -90,15 +122,103 @@ We can use **heaps to implement the priority queue**. It will take O(log N) time
 
 Based on heap structure, priority queue also has two types max-priority queue and min-priority queue.
 
+Example Implementation: 
+
+```javascript
+class MaxHeap {
+    constructor() {
+        this._heap = [];
+    }
+
+    _getParent(index) {
+        return this._heap[(index -1 ) / 2];
+    }
+
+    _getLeftChild(parentIndex) {
+        return this._heap[2 * parentIndex + 1];
+    }
+
+    _getRightChild(parentIndex) {
+        return this._heap[2 * parentIndex + 2];
+    }
+
+    _bubbleUp(index) {
+        const parentIndex = (index -1 ) / 2;
+
+        if (parentIndex === 0) return;
+
+        if (this._getParent(index) < this._heap[index]) {
+            this._swap(parentIndex, index);
+            this._bubbleUp(parentIndex);
+        }
+    }
+
+    _sinkDown(index) {
+        const rightChildIndex = 2 * parentIndex + 2;
+
+        if (this._getRightChild(index) > this._heap.length) {
+            return;
+        }
+
+        if (this._getRightChild(index) > this._heap[index]) {
+            this._swap(index, rightChildIndex);
+            this._sinkDown(rightChildIndex);
+        }
+    }
+
+    _swap(indexOne, indexTwo) {
+        const temp = this._heap[indexOne];
+        this._heap[indexOne] = this._heap[indexTwo];
+        this._heap[indexTwo] = temp;
+    }
+
+    push(value) {
+        this._heap.push(value);
+
+        // Insert an element to the end of the heap
+        // If it's parent is smaller (max heap) or larger (min heap) It means we have 
+        // a heap violation. We should swap the child (newly added value) 
+        // with the parent until we restore the heap property
+        this._bubbleUp(this.heap.length);
+    }
+
+    pop() {
+        // Remove the first element in the heap. Swap the last element in the heap to the front.
+        // Sink down swapping with the right child until a position is found
+        const max = this._heap.shift();
+        this._swap(0, this._heap.length);
+        this._heap.pop();
+        this._sinkDown();
+
+        return max;
+    }
+
+    peek() {
+        this._heap[0];
+    }
+}
+
+class PriorityQueue {
+    // NOTE: Passing your heap implementation will
+    // allow you to switch from min to max heap with ease
+    constructor(heap) { this._heap = heap; }
+    enqueue(value) { this._heap.push(value); }
+    dequeue() { this._heap.pop(value); }
+    peek() { this._heap.peek(); }
+}
+
+const priorityQueue = new PriorityQueue(new MaxHeap());
+```
+
 ### Hash Tables
 
-A **hash table** (**hash map**) is a [data structure](https://en.wikipedia.org/wiki/Data_structure) which implements an [associative array](https://en.wikipedia.org/wiki/Associative_array) [abstract data type](https://en.wikipedia.org/wiki/Abstract_data_type), a structure that can map [keys](https://en.wikipedia.org/wiki/Unique_key) to [values](https://en.wikipedia.org/wiki/Value_(computer_science)). A hash table uses a [hash function](https://en.wikipedia.org/wiki/Hash_function) to compute an *index* into an array of *buckets* or *slots*, from which the desired value can be found.
+A **hash table** (**hash map**) is a data structure which implements an associative array abstract data type, a structure that can map keys to values. A hash table uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found.
 
 Ideally, the hash function will assign each key to a unique bucket, but most hash table designs employ an imperfect hash function, which might cause hash *collisions* where the hash function generates the same index for more than one key. Such collisions must be accommodated in some way.
 
-In a well-dimensioned hash table, the average cost (number of [instructions](https://en.wikipedia.org/wiki/Instruction_(computer_science))) for each lookup is independent of the number of elements stored in the table. Many hash table designs also allow arbitrary insertions and deletions of key-value pairs, at ([amortized](https://en.wikipedia.org/wiki/Amortized_analysis)) constant average cost per operation.
+In a well-dimensioned hash table, the average cost (number of instructions) for each lookup is independent of the number of elements stored in the table. Many hash table designs also allow arbitrary insertions and deletions of key-value pairs, at constant average cost per operation.
 
-In many situations, hash tables turn out to be more efficient than [search trees](https://en.wikipedia.org/wiki/Search_tree) or any other [table](https://en.wikipedia.org/wiki/Table_(computing)) lookup structure. For this reason, they are widely used in many kinds of computer [software](https://en.wikipedia.org/wiki/Software), particularly for associative arrays, [database indexing](https://en.wikipedia.org/wiki/Database_index), [caches](https://en.wikipedia.org/wiki/Cache_(computing)), and [sets](https://en.wikipedia.org/wiki/Set_(abstract_data_type)).
+In many situations, **hash tables turn out to be more efficient than search trees or any other table lookup structure.** For this reason, **they are widely used in many kinds of computer software, particularly for associative arrays, database indexing, caches, and sets**.
 
 #### Hash functions
 
@@ -135,14 +255,6 @@ Alternatively, a tree can be defined abstractly as a whole (globally) as an [ord
 - **Descendant:** A node reachable by repeated proceeding from parent to child.
 - **Ancestor:** A node reachable by repeated proceeding from child to parent.
 - **Leaf:** A node with no children.
-- **Degree:** The number of sub trees of a node.
-- **Edge:** The connection between one node and another.
-- **Path:** A sequence of nodes and edges connecting a node with a descendant.
-- **Level:** The level of a node is defined by 1 + (the number of connections between the node and the root).
-- **Height of node:** The height of a node is the number of edges on the longest path between that node and a leaf.
-- **Height of tree:** The height of a tree is the height of its root node.
-- **Depth:** The depth of a node is the number of edges from the tree's root node to the node.
-- **Forest:** A forest is a set of n ≥ 0 disjoint trees.
 
 ### Binary Trees
 
@@ -156,7 +268,7 @@ In computing, binary trees are seldom used solely for their structure. Much more
 
 ### Binary Search Trees
 
-**binary search trees (BST)**, are a particular type of data structure. They allow fast lookup, addition and removal of items, and can be used to implement either dynamic sets of items, or lookup tables that allow finding an item by its key (e.g., finding the phone number of a person by name).
+**Binary Search Trees (BST)**, are a particular type of data structure. They allow fast lookup, addition and removal of items, and can be used to implement either dynamic sets of items, or lookup tables that allow finding an item by its key (e.g., finding the phone number of a person by name).
 
 **Binary search trees keep their keys in sorted order**, so that lookup and other operations can use the principle of **binary search**: when looking for a key in a tree (or a place to insert a new key), they traverse the tree from root to leaf, making comparisons to keys stored in the nodes of the tree and deciding, based on the comparison, to continue searching in the left or right subtrees. On average, this means that each comparison allows the operations to skip about half of the tree, so that each lookup, insertion or deletion takes time proportional to the logarithm of the number of items stored in the tree. This is much better than the linear time required to find items by key in an (unsorted) array, but slower than the corresponding operations on hash tables.
 
@@ -810,7 +922,42 @@ function do_something() {
 }
 ```
 
-### Arrow Functions vs Functions
+### Arrow Functions
+
+An **arrow function expression** has a shorter syntax than a [function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function) and does not have its own `this`, [arguments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments), [super](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super), or [new.target](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new.target). These function expressions are best suited for non-method functions, and they cannot be used as constructors.
+
+There is one subtle difference in behavior between ordinary `function `functions and arrow functions. **Arrow functions do not have their own this value.** The value of `this` inside an arrow function is always inherited from the enclosing scope. In contrast `function` functions receive a `this` value automatically, whether they want one or not.
+
+### Generator Functions
+
+Generators are functions which can be exited and later re-entered. Their context (variable bindings) will be saved across re-entrances.
+
+> Generator functions are a feature introduced in ES6 that allows a function to *generate many values over time* by returning an object which can be iterated over… an iterable with a *`.next()`* method that returns objects 
+>
+> [The hidden power of generators](https://medium.com/javascript-scene/the-hidden-power-of-es6-generators-observable-async-flow-control-cfa4c7f31435)
+
+Generators in JavaScript -- especially when combined with Promises -- are a very powerful tool for asynchronous programming as they mitigate -- if not entirely eliminate -- the problems with callbacks, such as [Callback Hell](http://callbackhell.com/) and [Inversion of Control](https://frontendmasters.com/courses/rethinking-async-js/callback-problems-inversion-of-control/). 
+
+**This pattern is what `async` functions are built on top of...**
+
+Calling a generator function does not execute its body immediately; an [iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterator) object for the function is returned instead. When the iterator's `next()` method is called, the generator function's body is executed until the first [`yield`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield) expression, which specifies the value to be returned from the iterator or, with [`yield*`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield*), delegates to another generator function. The `next()` method returns an object with a `value` property containing the yielded value and a `done` property which indicates whether the generator has yielded its last value as a boolean. Calling the `next()` method with an argument will resume the generator function execution, replacing the `yield` expression where execution was paused with the argument from `next()`. 
+
+A `return` statement in a generator, when executed, will make the generator finished (i.e the `done` property of the object returned by it will be set to `true`). If a value is returned, it will be set as the `value` property of the object returned by the generator. Much like a `return` statement, an error thrown inside the generator will make the generator finished -- unless caught within the generator's body. When a generator is finished, subsequent `next` calls will not execute any  of that generator's code, they will just return an object of this form: `{value: undefined, done: true}`.
+
+**Example:** Return statement in a generator
+
+```javascript
+function* yieldAndReturn() {
+  yield "Y";
+  return "R";
+  yield "unreachable";
+}
+
+var gen = yieldAndReturn()
+console.log(gen.next()); // { value: "Y", done: false }
+console.log(gen.next()); // { value: "R", done: true }
+console.log(gen.next()); // { value: undefined, done: true }
+```
 
 
 
@@ -836,6 +983,35 @@ When we change something in our Virtual DOM Tree, we get a new Virtual Tree. An 
 
 Virtual DOM allows you to update a view whenever state changes by creating a full virtual tree of the view and then patching the DOM efficiently to look exactly as you described it. This results in keeping manual DOM manipulation and previous state tracking out of your application code, promoting clean and maintainable rendering logic for web applications.
 
+**Why Virtual DOM?**
+
+DOM manipulation is the heart of the modern, interactive web. Unfortunately, it is also a lot slower than most JavaScript operations. This slowness is made worse by the fact that **most JavaScript frameworks update the DOM much more than they have to.**
+
+For example: let's say that you have a list that contains ten items. You check off the first item. Most JavaScript frameworks would rebuild *the entire list*. That's ten times more work than necessary! Only one item changed, but the remaining nine get rebuilt exactly how they were before.
+
+Rebuilding a list is no big deal to a web browser, but modern websites can use huge amounts of DOM manipulation. Inefficient updating has become a serious problem.
+
+Manipulating the DOM is slow. Manipulating the virtual DOM is much faster, because nothing gets drawn onscreen. Think of manipulating the virtual DOM as editing a blueprint, as opposed to moving rooms in an actual house.
+
+**How it helps**
+
+In React, when you render a JSX element, every single virtual DOM object gets updated. This sounds incredibly inefficient, but the cost is insignificant because the **virtual DOM can update so quickly**.
+
+Once the virtual DOM has updated, then React compares the virtual DOM with a virtual DOM *snapshot* that was taken right before the update.
+
+By comparing the new virtual DOM with a pre-update version, React figures out *exactly which virtual DOM objects have changed.* This process is called "diffing."
+
+Once React knows which virtual DOM objects have changed, then React updates those objects, *and only those objects,* on the real DOM. In our example from earlier, React would be smart enough to rebuild your one checked-off list-item, and leave the rest of your list alone.
+
+This makes a big difference! React can update only the necessary parts of the DOM. React's reputation for performance comes largely from this innovation.
+
+In summary, here's what happens when you try to update the DOM in React:
+
+1. The entire virtual DOM gets updated.
+2. The virtual DOM gets compared to what it looked like before you updated it. React figures out which objects have changed.
+3. The changed objects, and the changed objects only, get updated on the *real* DOM.
+4. Changes on the real DOM cause the screen to change.
+
 ### Shadow DOM
 
 Shadow DOM is used to encapsulate a DOM subtree from the rest of the page. Useful if you are making plug and play widgets. This **encapsulation means your document stylesheet can’t accidentally apply to encapsulated subtree**. Your **JavaScript can’t accidentally modify parts inside shadow Dom**; your **IDs wont overlap** and so on.
@@ -856,17 +1032,174 @@ Following code will change the buttons text to Chinese. But interestingly `host.
 
 When you hit an web url in browser, first the HTML content is downloaded and browser starts parsing the HTML. During HTML parsing if it encounters a script block, HTML parsing halts. It makes a call to fetch the script (if external ) and then executes the script, before resuming HTML parsing.
 
-If we use async , HTML parsing doesn’t stop whilst file is fetched, but once it’s fetched , HTML parsing stops to execute the script.
+If we use **async**, HTML parsing doesn’t stop whilst file is fetched, but once it’s fetched, HTML parsing stops to execute the script.
 
-If we use defer browser downloads the JS during HTML parsing , and executes the JS only when HTML parsing is [*done*](http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html).
+If we use **defer** browser downloads the JS during HTML parsing, and executes the JS only when HTML parsing is [*done*](http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html).
 
 ### Async Await
 
+_The await operator is used to wait for a Promise. It can only be used inside an async function._ 
 
+The `await` expression causes `async` function execution to pause until a `Promise` is resolved, that is fulfilled or rejected, and to resume execution of the `async` function after fulfillment. When resumed, the value of the `await` expression is that of the fulfilled `Promise`.
 
-### Handling large batches of promises
+If the `Promise` is rejected, the `await` expression throws the rejected value.
 
+If the value of the *expression* following the `await` operator is not a `Promise`, it's converted to a [resolved Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve).
 
+**Example:**
+
+If a `Promise` is passed to an `await` expression, it waits for the `Promise` to be fulfilled and returns the fulfilled value.
+
+```javascript
+function resolveAfter2Seconds(x) { 
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(x);
+    }, 2000);
+  });
+}
+
+async function f1() {
+  var x = await resolveAfter2Seconds(10);
+  console.log(x); // 10
+}
+f1();
+```
+
+If the value is not a `Promise`, it converts the value to a resolved `Promise`, and waits for it.
+
+```javascript
+async function f2() {
+  var y = await 20;
+  console.log(y); // 20
+}
+f2();
+```
+
+If the `Promise` is rejected, the rejected value is thrown.
+
+```javascript
+async function f3() {
+  try {
+    var z = await Promise.reject(30);
+  } catch(e) {
+    console.log(e); // 30
+  }
+}
+f3();
+```
+
+### Web Workers
+
+Web Workers is a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface. Once created, a worker can send messages to the JavaScript code that created it by posting messages to an event handler specified by that code (and vice versa). 
+
+A worker is an object created using a constructor (e.g. [`Worker()`](https://developer.mozilla.org/en-US/docs/Web/API/Worker/Worker)) that runs a named JavaScript file — this file contains the code that will run in the worker thread; workers run in another global context that is different from the current [`window`](https://developer.mozilla.org/en-US/docs/Web/API/Window). 
+
+**Data is sent between workers and the main thread via a system of messages** — both sides send their messages using the `postMessage()` method, and respond to messages via the `onmessage` event handler (the message is contained within the `Message` event's data attribute.) The data is copied rather than shared.
+
+Workers may, in turn, spawn new workers, as long as those workers are hosted within the same origin as the parent page.
+
+**Dedicated workers**
+
+Dedicated workers can be created like this: 
+
+```javascript
+var myWorker = new Worker('worker.js');
+```
+
+Once created, you can send messages to and from the worker via `postMessage()` and listen on the `on message` event handler.
+
+When you want to send a message to the worker, you post messages to it like this (in the context of main.js):
+
+```javascript
+first.onchange = function() {
+  myWorker.postMessage([first.value,second.value]);
+  console.log('Message posted to worker');
+}
+
+second.onchange = function() {
+  myWorker.postMessage([first.value,second.value]);
+  console.log('Message posted to worker');
+}
+```
+
+So here we have two `<input/>` elements represented by the variables `first` and `second`; when the value of either is changed, `myWorker.postMessage([first.value,second.value])` is used to send the value inside to the worker, as an array. You can send pretty much anything you like in the message.
+
+In the worker, we can respond when the message is received by writing an event handler block like this (in the context of worker.js):
+
+```javascript
+onmessage = function(e) {
+  console.log('Message received from main script');
+  
+  var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+    
+  console.log('Posting message back to main script');
+  postMessage(workerResult);
+}
+```
+
+The `onmessage` handler allows us to run some code whenever a message is received, with the message itself being available in the `message` event's `data` attribute. Here we simply multiply together the two numbers then use `postMessage()` again, to post the result back to the main thread.
+
+Back in the main thread, we use `onmessage` again, to respond to the message sent back from the worker:
+
+```javascript
+myWorker.onmessage = function(e) {
+  result.textContent = e.data;
+  console.log('Message received from worker');
+}
+```
+
+Here we grab the message event data and set it as the `textContent` of the result paragraph, so the user can see the result of the calculation.
+
+Notice that `onmessage` and `postMessage()` need to be hung off the `Worker`object when used in the main script thread, but not when used in the worker. This is because, inside the worker, the worker is effectively the global scope.
+
+> Note: When a message is passed between the main thread and worker, it is copied, not shared.
+
+If you need to immediately terminate a running worker from the main thread, you can do so by calling the worker's [`terminate`](https://developer.mozilla.org/en-US/docs/Web/API/Worker) method:
+
+```javascript
+myWorker.terminate();
+```
+
+The worker thread is killed immediately without an opportunity to complete its operations or clean up after itself.
+
+In the worker thread, workers may close themselves by calling their own [`close`](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope) method:
+
+```javascript
+close();
+```
+
+**Example: **
+
+**example.html**: (the main page):
+
+```javascript
+var myWorker = new Worker('my_task.js');
+
+myWorker.onmessage = function(oEvent) {
+  console.log('Worker said : ' + oEvent.data);
+};
+
+myWorker.postMessage('ali');
+```
+
+**my_task.js** (the worker):
+
+```javascript
+postMessage("I\'m working before postMessage(\'ali\').");
+
+onmessage = function(oEvent) {
+  postMessage('Hi ' + oEvent.data);
+};
+```
+
+For more information, see: [MDN - Using Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+
+### Service Workers
+
+[ServiceWorkers](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API) essentially act as proxy servers that sit between web applications, and the browser and network (when available). **They are intended to (amongst other things) enable the creation of effective offline experiences**, intercepting network requests and taking appropriate action based on whether the network is available and updated assets reside on the server. They will also allow access to push notifications and background sync APIs.
+
+A service worker is run in a worker context: it therefore has no DOM access, and runs on a different thread to the main JavaScript that powers your app, so it is not blocking. It is designed to be fully async. **Service workers only run over HTTPS, for security reasons**. Having modified network requests, wide open to man in the middle attacks would be really bad.
 
 ### Throttle vs. Debounce
 
@@ -909,7 +1242,7 @@ function debounce(fn, interval) {
 }
 ```
 
-### Pass By Value And Pass By Reference In JavaScript
+### Pass By Value & Pass By Reference In JavaScript
 Javascript uses a **pass by value** strategy for **primitives** but uses **pass by reference** for **objects including arrays** (AKA [call by sharing](https://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_sharing)).
 
 **Pass by reference** is when variables passed in to functions are given the direct memory address. This allows the function to manipulate the object or primitive as it exists outside the scope of the function.
@@ -937,6 +1270,14 @@ Javascript uses a **pass by value** strategy for **primitives** but uses **pass 
 [`Array.prototype.splice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) Adds and/or removes elements from an array.
 
 [`Array.prototype.slice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) Extracts a section of an array and returns a new array.
+
+### Memoization
+
+Memoization is an optimisation technique used primarily to speed up computer programs by storing the results of expensive function calls and returning the cached result when the same inputs occur again.
+
+A memoized function "remembers" the results corresponding to some set of specific inputs. Subsequent calls with remembered inputs return the remembered result rather than recalculating it, thus eliminating the primary cost of a call with given parameters from all but the first call made to the function with those parameters. The set of remembered associations may be a fixed-size set controlled by a replacement algorithm or a fixed set, depending on the nature of the function and its use. A function can only be memoized if it is referentially transparent; that is, only if calling the function has exactly the same effect as replacing that function call with its return value. 
+
+Memoization is a way to lower a function's time cost in exchange for space cost; that is, memoized functions become optimised for speed in exchange for a higher use of computer memory space. The time/space "cost" of algorithms has a specific name in computing: computational complexity. All functions have a computational complexity in time (i.e. they take time to execute) and in space.
 
 # Design Patterns
 
@@ -1000,7 +1341,7 @@ The Factory pattern is another creational pattern concerned with the notion of c
 
 Imagine that we have a UI factory where we are asked to create a type of UI component. Rather than creating this component directly using the `new` operator or via another creational constructor, we ask a Factory object for a new component instead. We inform the Factory what type of object is required (e.g "Button", "Panel") and it instantiates this, returning it to us for use.
 
-### When To Use The Factory Pattern
+**When To Use The Factory Pattern**
 
 The Factory pattern can be especially useful when applied to the following situations:
 
@@ -1037,6 +1378,27 @@ In JavaScript, Singletons serve as a shared resource namespace which isolate imp
 2. They violate the [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle): by virtue of the fact that they control their own creation and lifecycle.
 3. They inherently cause code to be tightly [coupled](https://en.wikipedia.org/wiki/Coupling_%28computer_programming%29). This makes faking them out under test rather difficult in many cases.
 4. They carry state around for the lifetime of the application. Another hit to testing since you can end up with a situation where tests need to be ordered which is a big no no for unit tests. Why? Because each unit test should be independent from the other.
+
+**Example:**
+
+```javascript
+export default class Singleton {
+  static instance;
+
+  constructor(){
+    if(instance) return instance;
+
+    this.state = "duke";
+    this.instance = this;
+  }
+}
+
+Now:
+let first = new Singleton();
+let second = new Singleton();
+
+console.log(first===second); //output: true
+```
 
 ### Module
 
@@ -1080,42 +1442,172 @@ It's often useful to refer back to published definitions of design patterns that
 
 > One or more observers are interested in the state of a subject and register their interest with the subject by attaching themselves. When something changes in our subject that the observer may be interested in, a notify message is sent which calls the update method in each observer. When the observer is no longer interested in the subject's state, they can simply detach themselves.
 
-### Dependency Injection
+### Strategy Pattern
 
-Dependency injection separates the creation of a client's dependencies from the client's behavior, which allows program designs to be **loosely coupled** and to follow the [dependency inversion](https://en.wikipedia.org/wiki/Dependency_inversion_principle) and [single responsibility principles](https://en.wikipedia.org/wiki/Single_responsibility_principle). It directly contrasts with the service locator pattern, which allows clients to know about the system they use to find dependencies.
+> Strategy - defines a family of algorithms, encapsulates each, and makes them interchangeable. Strategy lets the algorithm vary independently form clients that use it.
 
-An injection, the basic unit of dependency injection, is not a new or a custom mechanism. It works in the same way that "parameter passing" works. Referring to "parameter passing" as an injection carries the added implication that it's being done to isolate the client from details.
+This pattern seems to be very similar to Factory, Command and others. The main difference is that it is *one to many* pattern (one object can have many strategies). Also this pattern is used to define algorithms. It may be used for:
 
-An injection is also about what is in control of the passing (never the client) and is independent of how the passing is accomplished, whether by passing a reference or a value.
+- Using optimal sorting algorithm for different types of data
+- Using different algorithms to count product discount based on user type
+- Using different algorithms to convert an image/file to different format
 
-Dependency injection involves four roles:
+**When to use it**
+When you have a part of your Class that's subject to change frequently or perhaps you have many related subclasses which only differ in behavior it's often a good time to consider using a Strategy pattern.
 
-- the **service** object(s) to be used
-- the **client** object that is depending on the service(s) it uses
-- the [**interfaces**](https://en.wikipedia.org/wiki/Interface_(object-oriented_programming)) that define how the client may use the services
-- the **injector**, which is responsible for constructing the services and injecting them into the client
+Another benefit of the Strategy pattern is that it can hide complex logic or data that the client doesn't need to know about.
 
-Any object that may be used can be considered a **service**. Any object that uses other objects can be considered a **client**. The names have nothing to do with what the objects are for and everything to do with the role the objects play in any one injection.
+**Example:**
 
-The **interfaces** are the types the client expects its dependencies to be. An issue is what they make accessible. They may truly be interface types implemented by the services but also may be abstract classes or even the [concrete](https://en.wikipedia.org/wiki/Class_(computer_programming)#Abstract_and_Concrete) services themselves, though this last would violate DIP and sacrifice the dynamic decoupling that enables testing. It's only required that the client does not know which they are and therefore never treats them as concrete, say by constructing or extending them.
+```javascript
+class Greeter {
+    constructor(strategy) {
+    	this.strategy = strategy;
+    }
+    
+    greet() {
+  		return this.strategy();
+	};
+};
+ 
+// Since a function encapsulates an algorithm, it makes a perfect
+// candidate for a Strategy.
+var politeGreetingStrategy = function() {
+ console.log("Hello."); 
+};
+ 
+var friendlyGreetingStrategy = function() {
+  console.log("Hey!");
+};
+ 
+var boredGreetingStrategy = function() {
+  console.log("sup.");
+};
+ 
+// Let's use these strategies!
+var politeGreeter = new Greeter(politeGreetingStrategy);
+var friendlyGreeter = new Greeter(friendlyGreetingStrategy);
+var boredGreeter = new Greeter(boredGreetingStrategy);
 
-The client should have no concrete knowledge of the specific implementation of its dependencies. It should only know the interface's name and API. As a result, the client won't need to change even if what is behind the interface changes. However, if the interface is refactored from being a class to an interface type (or vice versa) the client will need to be recompiled. This is significant if the client and services are published separately. This unfortunate coupling is one that dependency injection cannot resolve.
+politeGreeter.greet();   //=> Hello.
+friendlyGreeter.greet(); //=> Hey!
+boredGreeter.greet();    //=> sup.
+```
 
-The **injector** introduces the services into the client. Often, it also constructs the client. An injector may connect together a very complex object graph by treating an object like a client and later as a service for another client. The injector may actually be many objects working together but may not be the client. The injector may be referred to by other names such as: assembler, provider, **container**, factory, builder, spring, construction code, or main.
+### Inversion of Control
 
-Dependency injection can be applied as a discipline, one that asks that all objects separate construction and behavior. Relying on a DI framework to perform construction can lead to forbidding the use of the **new** keyword, or, less strictly, only allowing direct construction of [value objects](https://en.wikipedia.org/wiki/Value_object).
+IoC and DIP are high level design principles which should be used while designing application classes. These are principles, so they only recommend certain best practices but do not provide any specific implementation details. Dependency Injection (DI) is a pattern and IoC container is a framework.
+
+#### ![ioc-principles-and-patterns](assets/ioc-principles-and-patterns.png)
+
+**IoC** is a design principle which recommends inversion of different kinds of controls in object oriented design to achieve loose coupling between the application classes. Here, the control means any additional responsibilities a class has other than its main responsibility, such as control over the flow of an application, control over the dependent object creation and binding (Remember SRP-Single Responsibility Principle). If you want to do TDD (Test Driven Development) then you must use IoC principle without which TDD is not possible.
+
+#### **Dependency Inversion Principle**
+
+DIP principle also helps in achieving loose coupling between the classes. It is highly recommended to use DIP and IoC together in order to achieve loose coupling. 
+
+DIP suggests that high-level modules should not depend on low level modules. Both should depend on abstraction.
+
+#### **Dependency Injection**
+
+Dependency Injection (DI) is a design pattern used to implement IoC where it allows creation of dependent objects outside of a class and provides those objects to a class through different ways. Using DI, we move the creation and binding of the dependent objects outside of the class that depends on it.
+
+Dependency Injection pattern involves 3 types of classes.
+
+1. **Client Class:** The client class (dependent class) is a class which depends on the service class
+2. **Service Class:** The service class (dependency) is a class that provides service to the client class.
+3. **Injector Class:** The injector class injects service class object into the client class.
+
+**Types of Dependency Injection: **
+
+- **Constructor Injection:** In the constructor injection, injector supplies service (dependency) through the client class constructor.
+- **Property Injection:** In property injection (aka Setter Injection), injector supplies dependency through a public property of the client class.
+- **Method Injection:** In this type of injection, client class implements an interface which declares method(s) to supply dependency and the injector uses this interface to supply dependency to the client class.
+
+Dependency injection is effective in these situations:
+
+1. You need to inject configuration data into one or more components.
+2. You need to inject the same dependency into multiple components.
+3. You need to inject different implementations of the same dependency.
+4. You need to inject the same implementation in different configurations.
+5. You need some of the services provided by the container.
+
+Dependency injection is **not** effective if:
+
+- You will never need a different implementation.
+- You will never need a different configuration.
+
+If you know you will never change the implementation or configuration of some dependency, there is no benefit in using dependency injection.
+
+#### IoC Container
+
+IoC Container (a.k.a. DI Container) is a framework for implementing automatic dependency injection. It manages object creating and its life time and also injects dependencies to the class.
+
+IoC container creates an object of the specified class and also injects all the dependency objects through constructor, property or method at run time and disposes it at the appropriate time. This is done so that we don't have to create and manage objects manually.
+
+All the containers must provide easy support for the following DI lifecycle.
+
+- **Register:** The container must know which dependency to instantiate when it encounters a particular type. This process is called registration. Basically, it must include some way to register type-mapping.
+- **Resolve:** When using IoC container, we don't need to create objects manually. Container does it for us. This is called resolution. Container must include some methods to resolve the specified type; container creates an object of specified type, injects required dependencies if any and returns it.
+- **Dispose:** Container must manage the lifetime of dependent objects. Most IoC containers include different lifetime managers to manage an object's lifecycle and dispose of it.
 
 ### Composition vs Inheritance 
 
-`// TODO:`
+*Prefer composition over inheritance as it is easy to modify later, but do not use a compose-always approach.* 
+
+Composition is simply when a class is *composed* of other classes; or to say it another way, an instance of an object has references to instances of other objects.
+
+Inheritance is when a class inherits methods and properties from another class.
+
+To favor composition over inheritance is a design principle that gives the design higher flexibility. It is more natural to build business-domain classes out of various components than trying to find commonality between them and creating a family tree. For example, a gas pedal and a wheel share very few common traits, yet are both vital components in a car. What they can do and how they can be used to benefit the car is easily defined. Composition also provides a more stable business domain in the long term as it is less prone to the quirks of the family members. In other words, it is better to compose what an object can do (HAS-A) than extend what it is (IS-A).
+
+Initial design is simplified by identifying system object behaviors in separate interfaces instead of creating a hierarchical relationship to distribute behaviors among business-domain classes via inheritance. This approach more easily accommodates future requirements changes that would otherwise require a complete restructuring of business-domain classes in the inheritance model. Additionally, it avoids problems often associated with relatively minor changes to an inheritance-based model that includes several generations of classes.
+
+# HTML / CSS 
+
+### Flexbox
+
+The Flexible Box Module, usually referred to as flexbox, was designed as a one-dimensional layout model, and as a method that could offer space distribution between items in an interface and powerful alignment capabilities.
+
+When we describe flexbox as being one dimensional we are describing the fact that flexbox deals with layout in one dimension at a time — either as a row or as a column. This can be contrasted with the two-dimensional model of [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout), which controls columns and rows together.
+
+When working with flexbox you need to **think in terms of two axes** — **the main axis** and **the cross axis**. The main axis is defined by the [`flex-direction`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction) property, and the cross axis runs perpendicular to it. Everything we do with flexbox refers back to these axes, so it is worth understanding how they work from the outset.
+
+The main axis is defined by `flex-direction`, which has four possible values:
+
+- `row`
+- `row-reverse`
+- `column`
+- `column-reverse`
+
+Should you choose `row` or `row-reverse`, your main axis will run along the row in the **inline direction**.
+
+Choose `column` or `column-reverse` and your main axis will run from the top of the page to the bottom — in the **block direction**.
+
+The cross axis runs perpendicular to the main axis, therefore if your `flex-direction`(main axis) is set to `row` or `row-reverse` the cross axis runs down the columns.
+
+If your main axis is `column` or `column-reverse` then the cross axis runs along the rows.
+
+Understanding which axis is which is important when we start to look at aligning and justifying flex items; flexbox features properties that align and justify content along one axis or the other.
+
+### Transforms
+
+The **transform** [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) property lets you rotate, scale, skew, or translate a given element. This is achieved by modifying the coordinate space of the CSS [visual formatting model](https://developer.mozilla.org/en-US/docs/Web/CSS/Visual_formatting_model).
+
+```css
+transform: matrix(1, 2, 3, 4, 5, 6);
+transform: translate(120px, 50%);
+transform: scale(2, 0.5);
+transform: rotate(0.5turn);
+transform: skew(30deg, 20deg);
+transform: scale(0.5) translate(-100%, -100%);
+```
 
 # Questions
 
 ### **How would you make these functions work.**
 
-`add(2, 5); // 7`
-
-`add(2)(5); // 7`
+`add(2, 5); // 7` `add(2)(5); // 7`
 
 **Answer:**
 
@@ -1472,6 +1964,8 @@ function isValidBST(root, min = 0, max = 9999) {
 ```
 The trick is to write a utility help function that traverses the tree keeping track of the narrowing min and max allowed values as it goes, looking at each node only once!
 
+**DO NOT USE THIS SOLUTION**
+
 This is a more efficient and correct solution:
 
 ```javascript
@@ -1493,7 +1987,41 @@ var isBSTUtil = function(root, min, max) {
 };
 ```
 
-**Time complexity is O(n) since we only check each node once**
+BUT the best solution is to do an in-order traversal of the given tree and store the result in a temp array. Then check if the array is sorted, if it is then the tree is a valid BST. This is the general idea, but we can improve upon it further but removing the temp array and just checking the previously visited node value. If the value is less than the previous value then tree is not bst.
+
+**Time Complexity: O(n)**
+
+Inorder traversal 
+1. Traverse the left subtree, i.e., call Inorder(left-subtree)
+2. Visit the root.
+3. Traverse the right subtree, i.e., call Inorder(right-subtree)
+
+```javascript
+var isValidBST = function(root) {
+   if (!root) return true;
+   
+   const stack = [];
+   let prev;
+    
+   while (!!root || stack.length !== 0) {
+      while (root != null) {
+         stack.push(root);
+         root = root.left;
+      }
+      
+      root = stack.pop();
+      
+      if(!!prev && root.val <= prev.val) {
+        return false;   
+      }
+      
+      prev = root;
+      root = root.right;
+   }
+    
+   return true;
+};
+```
 
 ### Delete a node from a singly-linked list, given only variable pointing to that node.
 
@@ -1522,12 +2050,6 @@ https://www.interviewcake.com/question/javascript/kth-to-last-node-in-singly-lin
 
 Write a function kthToLastNode() that takes an integer `k` and the headNode of a singly-linked list, and returns the `kth` to last node in the list.
 
-### Write a function to reverse a string in-place.
-
-> Since strings in JavaScript are **immutable**, first convert the string into *an array of characters*, do the in-place reversal on that array, and re-join that array into a string before returning it. This isn't technically "in-place" and the array of characters will cost _O(n)_ additional space, but it's a reasonable way to stay within the spirit of the challenge.
-
-https://www.interviewcake.com/question/javascript/reverse-string-in-place
-
 ### Verify a prime number?
 
 ```javascript
@@ -1552,6 +2074,10 @@ a = a - b;
 
 ### Reverse a string in JavaScript?
 
+> Since strings in JavaScript are **immutable**, first convert the string into *an array of characters*, do the in-place reversal on that array, and re-join that array into a string before returning it. This isn't technically "in-place" and the array of characters will cost _O(n)_ additional space, but it's a reasonable way to stay within the spirit of the challenge.
+
+https://www.interviewcake.com/question/javascript/reverse-string-in-place
+
 ```javascript
 
 function reverseString(str) {
@@ -1571,7 +2097,7 @@ function reverseString(str) {
 reverseString("hello");
 ```
 
-### How would you reverse words in a sentence?
+### Reverse words in a sentence?
 Similar to the above, but take note of the space to denote a new word.
 
 ```javascript
@@ -1582,11 +2108,23 @@ function reverseString(str) {
 reverseString('Hello, World. My Name is Daniel Del Core');
 ```
 
-### Find the first non repeating char in a string?
+### Find the first non-repeating char in a string?
 
 ### Remove duplicate characters from a sting?
 
 ### How will you verify a word as palindrome?
+
+```javascript
+function palindrome(str) {
+    // String clean up to support sentences etc
+    const cleanStr = str.toLowerCase();
+    const reverseStr = cleanStr.split('').reverse().join('');
+    
+    return cleanStr === reverseStr;
+}
+
+palindrome("race car"); // True
+```
 
 ### Generate random between 5 to 7 by using defined function.
 
@@ -1599,3 +2137,14 @@ reverseString('Hello, World. My Name is Daniel Del Core');
 ### Check whether a given string is a substring of bigger string
 
 ### Get permutations of a string
+
+### How would you handle 5000 promises?
+
+Group the promises into batches of 50 (for example) and recursively execute each batch until completion or error. If an error occurs you could either retry, with that batch, or throw an error to the client as timeouts and other server errors are likely to occur. 
+
+**Don't forget!** If duplicate requests occur, you can simply memoize the function and safely return the same result to side-step the network request and improve performance.
+
+```javascript
+// TODO:
+```
+
