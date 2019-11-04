@@ -1,4 +1,4 @@
-# The MEGA Interview Doc
+# The MEGA Interview Guide
 
 ### How to Prepare
 
