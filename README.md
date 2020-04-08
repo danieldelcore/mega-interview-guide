@@ -1,3 +1,7 @@
+<p align="center">
+  <img width="500" src="./logos/logo.png" alt="Mega interviewer guide avatars">
+</p>
+
 # The MEGA Interview Guide
 
 ### How to Prepare
