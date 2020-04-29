@@ -4,7 +4,111 @@
 
 # The MEGA Interview Guide
 
-### How to Prepare
+<!-- toc -->
+
+- [How to Prepare](#how-to-prepare)
+- [Resources](#resources)
+    + [Suggested reading](#suggested-reading)
+    + [Practice questions](#practice-questions)
+    + [Videos](#videos)
+    + [Misc.](#misc)
+- [Computer Science](#computer-science)
+  * [Data Structures](#data-structures)
+    + [Lists](#lists)
+    + [Stacks](#stacks)
+    + [Queues](#queues)
+    + [Priority Queue](#priority-queue)
+    + [Hash Tables](#hash-tables)
+    + [Graphs](#graphs)
+    + [Trees](#trees)
+    + [Binary Trees](#binary-trees)
+    + [Binary Search Trees](#binary-search-trees)
+    + [Heaps](#heaps)
+  * [Algorithms](#algorithms)
+    + [Bubble sort](#bubble-sort)
+    + [Insertion sort](#insertion-sort)
+    + [Merge sort](#merge-sort)
+    + [Quick sort](#quick-sort)
+    + [Selection sort](#selection-sort)
+    + [Searches](#searches)
+    + [Traversals](#traversals)
+    + [Breadth First Search (BFS)](#breadth-first-search-bfs)
+    + [Depth First Search (DFS)](#depth-first-search-dfs)
+  * [Complexity](#complexity)
+    + [Examples](#examples)
+    + [Drop the constants](#drop-the-constants)
+    + [Logarithms](#logarithms)
+- [JavaScript + Web APIs](#javascript--web-apis)
+    + [Prototypal Inheritance](#prototypal-inheritance)
+    + [Scoping](#scoping)
+    + [Closures](#closures)
+    + [Event bubbling](#event-bubbling)
+    + [`preventDefault` vs. `stopPropagation`](#preventdefault-vs-stoppropagation)
+    + [Apply, call, and bind](#apply-call-and-bind)
+    + [Variable and function hoisting](#variable-and-function-hoisting)
+    + [Currying](#currying)
+    + [Var, Let and Const](#var-let-and-const)
+    + [Arrow Functions](#arrow-functions)
+    + [Generator Functions](#generator-functions)
+    + [Map vs Object](#map-vs-object)
+    + [Virtual DOM](#virtual-dom)
+    + [Shadow DOM](#shadow-dom)
+    + [Async Await](#async-await)
+    + [Web Workers](#web-workers)
+    + [Service Workers](#service-workers)
+    + [Throttle vs. Debounce](#throttle-vs-debounce)
+    + [Pass By Value & Pass By Reference In JavaScript](#pass-by-value--pass-by-reference-in-javascript)
+    + [Array Methods](#array-methods)
+    + [Memoization](#memoization)
+- [Design Patterns](#design-patterns)
+    + [Decorator](#decorator)
+    + [Factory](#factory)
+    + [Singleton](#singleton)
+    + [Module](#module)
+    + [Facade](#facade)
+    + [Observer](#observer)
+    + [Strategy Pattern](#strategy-pattern)
+    + [Inversion of Control](#inversion-of-control)
+    + [Composition vs Inheritance](#composition-vs-inheritance)
+- [HTML / CSS](#html--css)
+    + [Flexbox](#flexbox)
+    + [Transforms](#transforms)
+  * [Design Systems](#design-systems)
+  * [Accessibility](#accessibility)
+- [Questions](#questions)
+    + [**How would you make these functions work.**](#how-would-you-make-these-functions-work)
+    + [If we execute this Javascript, what will the browser's console show?](#if-we-execute-this-javascript-what-will-the-browsers-console-show)
+    + [Get nth Fibonacci number?](#get-nth-fibonacci-number)
+    + [Write a function that deeply flattens an array recursively](#write-a-function-that-deeply-flattens-an-array-recursively)
+    + [Write a function that deeply flattens an array iteratively](#write-a-function-that-deeply-flattens-an-array-iteratively)
+    + [Write a function to find the 2nd largest element in a binary search tree.](#write-a-function-to-find-the-2nd-largest-element-in-a-binary-search-tree)
+    + [Given 2 identical DOM trees (but not equal) and one element of the first DOM tree, how would you find this element in the second DOM tree?](#given-2-identical-dom-trees-but-not-equal-and-one-element-of-the-first-dom-tree-how-would-you-find-this-element-in-the-second-dom-tree)
+    + [Write an event emitter that supports subscribing, unsubscribing and emitting events.](#write-an-event-emitter-that-supports-subscribing-unsubscribing-and-emitting-events)
+    + [Given an input array and another array that describes a new index for each element, mutate the input array so that each element ends up in their new index. Discuss the runtime of the algorithm and how you can be sure there won't be any infinite loops.](#given-an-input-array-and-another-array-that-describes-a-new-index-for-each-element-mutate-the-input-array-so-that-each-element-ends-up-in-their-new-index-discuss-the-runtime-of-the-algorithm-and-how-you-can-be-sure-there-wont-be-any-infinite-loops)
+    + [Implement a square root function.](#implement-a-square-root-function)
+    + [Write a function to check that a binary tree is a valid binary search tree.](#write-a-function-to-check-that-a-binary-tree-is-a-valid-binary-search-tree)
+    + [Delete a node from a singly-linked list, given only variable pointing to that node.](#delete-a-node-from-a-singly-linked-list-given-only-variable-pointing-to-that-node)
+    + [Write a function for reversing a linked list. Do it in-place.](#write-a-function-for-reversing-a-linked-list-do-it-in-place)
+    + [You have a linked list and want to find the kkth to last node.](#you-have-a-linked-list-and-want-to-find-the-kkth-to-last-node)
+    + [Verify a prime number?](#verify-a-prime-number)
+    + [Remove duplicate members from an array?](#remove-duplicate-members-from-an-array)
+    + [Swap two numbers without using a temp variable?](#swap-two-numbers-without-using-a-temp-variable)
+    + [Reverse a string in JavaScript?](#reverse-a-string-in-javascript)
+    + [Reverse words in a sentence?](#reverse-words-in-a-sentence)
+    + [Find the first non-repeating char in a string?](#find-the-first-non-repeating-char-in-a-string)
+    + [Remove duplicate characters from a sting?](#remove-duplicate-characters-from-a-sting)
+    + [How will you verify a word as palindrome?](#how-will-you-verify-a-word-as-palindrome)
+    + [Generate random between 5 to 7 by using defined function.](#generate-random-between-5-to-7-by-using-defined-function)
+    + [Find missing number from unsorted array of integers.](#find-missing-number-from-unsorted-array-of-integers)
+    + [Get two numbers that equal to a given number?](#get-two-numbers-that-equal-to-a-given-number)
+    + [Find the largest sum of any two elements?](#find-the-largest-sum-of-any-two-elements)
+    + [Check whether a given string is a substring of bigger string](#check-whether-a-given-string-is-a-substring-of-bigger-string)
+    + [Get permutations of a string](#get-permutations-of-a-string)
+    + [How would you handle 5000 promises?](#how-would-you-handle-5000-promises)
+
+<!-- tocstop -->
+
+# How to Prepare
 
 Invest time in preparing: It's important for any engineer, even senior ones, to brush up on their interview skills, coding skills and algorithms. An interview is typically different from your day-to-day job. This is the first technical interview in the process, so any preparation for this interview will be beneficial for the next ones.
 
@@ -44,11 +148,11 @@ Also review **recursion and iterative approaches**.
 
 ### Videos
 
-- "Clean Code" https://www.youtube.com/watch?v=RlfLCWKxHJ0
+- [Clean Code](https://www.youtube.com/watch?v=RlfLCWKxHJ0)
 
 ### Misc.
 
-http://flexboxfroggy.com/
+- [Flexbox Froggy](http://flexboxfroggy.com/)
 
 # Computer Science
 
@@ -62,48 +166,48 @@ Data structures provide a means to manage large amounts of data efficiently for 
 
 ### Lists
 
-A **linked list** is a linear collection of data elements, in which linear order is not given by their physical placement in memory. Each pointing to the next node by means of a [pointer](https://en.wikipedia.org/wiki/Pointer_(computer_programming)). It is a [data structure](https://en.wikipedia.org/wiki/Data_structure) consisting of a group of [nodes](https://en.wikipedia.org/wiki/Node_(computer_science)) which together represent a [sequence](https://en.wikipedia.org/wiki/Sequence). Under the simplest form, each node is composed of data and a [reference](https://en.wikipedia.org/wiki/Reference_(computer_science)) (in other words, a *link*) to the next node in the sequence. This structure allows for efficient insertion or removal of elements from any position in the sequence during iteration. More complex variants add additional links, allowing efficient insertion or removal from arbitrary element references.
+A **linked list** is a linear collection of data elements, in which linear order is not given by their physical placement in memory. Each pointing to the next node by means of a [pointer](<https://en.wikipedia.org/wiki/Pointer_(computer_programming)>). It is a [data structure](https://en.wikipedia.org/wiki/Data_structure) consisting of a group of [nodes](<https://en.wikipedia.org/wiki/Node_(computer_science)>) which together represent a [sequence](https://en.wikipedia.org/wiki/Sequence). Under the simplest form, each node is composed of data and a [reference](<https://en.wikipedia.org/wiki/Reference_(computer_science)>) (in other words, a _link_) to the next node in the sequence. This structure allows for efficient insertion or removal of elements from any position in the sequence during iteration. More complex variants add additional links, allowing efficient insertion or removal from arbitrary element references.
 
-Linked lists are among the simplest and most common data structures. They can be used to implement several other common [abstract data types](https://en.wikipedia.org/wiki/Abstract_data_type), including [lists](https://en.wikipedia.org/wiki/List_(abstract_data_type)) (the abstract data type), [stacks](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)), [queues](https://en.wikipedia.org/wiki/Queue_(abstract_data_type)), [associative arrays](https://en.wikipedia.org/wiki/Associative_array), and [S-expressions](https://en.wikipedia.org/wiki/S-expression), though it is not uncommon to implement the other data structures directly without using a list as the basis of implementation.
+Linked lists are among the simplest and most common data structures. They can be used to implement several other common [abstract data types](https://en.wikipedia.org/wiki/Abstract_data_type), including [lists](<https://en.wikipedia.org/wiki/List_(abstract_data_type)>) (the abstract data type), [stacks](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>), [queues](<https://en.wikipedia.org/wiki/Queue_(abstract_data_type)>), [associative arrays](https://en.wikipedia.org/wiki/Associative_array), and [S-expressions](https://en.wikipedia.org/wiki/S-expression), though it is not uncommon to implement the other data structures directly without using a list as the basis of implementation.
 
 ### Stacks
 
-A **stack** is an [abstract data type](https://en.wikipedia.org/wiki/Abstract_data_type) that serves as a [collection](https://en.wikipedia.org/wiki/Collection_(computing)) of elements, with two principal operations: *push*, which adds an element to the collection, and *pop*, which removes the most recently added element that was not yet removed. The order in which elements come off a stack gives rise to its alternative name, **LIFO**(for **last in, first out**). Additionally, a [*peek*](https://en.wikipedia.org/wiki/Peek_(data_type_operation)) operation may give access to the top without modifying the stack.
+A **stack** is an [abstract data type](https://en.wikipedia.org/wiki/Abstract_data_type) that serves as a [collection](<https://en.wikipedia.org/wiki/Collection_(computing)>) of elements, with two principal operations: _push_, which adds an element to the collection, and _pop_, which removes the most recently added element that was not yet removed. The order in which elements come off a stack gives rise to its alternative name, **LIFO**(for **last in, first out**). Additionally, a [_peek_](<https://en.wikipedia.org/wiki/Peek_(data_type_operation)>) operation may give access to the top without modifying the stack.
 
-The name "stack" for this type of structure comes from the analogy to a set of physical items stacked on top of each other, which makes it easy to take an item off the top of the stack, while getting to an item deeper in the stack may require taking off multiple other items first.[[1\]](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)#cite_note-clrs-1)
+The name "stack" for this type of structure comes from the analogy to a set of physical items stacked on top of each other, which makes it easy to take an item off the top of the stack, while getting to an item deeper in the stack may require taking off multiple other items first.[[1\]](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)#cite_note-clrs-1>)
 
-Considered as a [linear data structure](https://en.wikipedia.org/wiki/Linear_data_structure), or more abstractly a sequential collection, the push and pop operations occur only at one end of the structure, referred to as the *top* of the stack. This makes it possible to implement a stack as a [singly linked list](https://en.wikipedia.org/wiki/Singly_linked_list) and a pointer to the top element.
+Considered as a [linear data structure](https://en.wikipedia.org/wiki/Linear_data_structure), or more abstractly a sequential collection, the push and pop operations occur only at one end of the structure, referred to as the _top_ of the stack. This makes it possible to implement a stack as a [singly linked list](https://en.wikipedia.org/wiki/Singly_linked_list) and a pointer to the top element.
 
 A stack may be implemented to have a bounded capacity. If the stack is full and does not contain enough space to accept an entity to be pushed, the stack is then considered to be in an [overflow](https://en.wikipedia.org/wiki/Stack_overflow) state. The pop operation removes an item from the top of the stack.
 
 ```javascript
 var stack = [];
 
-stack.push(2);       // stack is now [2]
-stack.push(5);       // stack is now [2, 5]
+stack.push(2); // stack is now [2]
+stack.push(5); // stack is now [2, 5]
 
 var i = stack.pop(); // stack is now [2]
 
-alert(i);            // displays 5
+alert(i); // displays 5
 ```
 
 ### Queues
 
-A **queue** is a particular kind of [abstract data type](https://en.wikipedia.org/wiki/Abstract_data_type) or [collection](https://en.wikipedia.org/wiki/Collection_(abstract_data_type)) in which the entities in the collection are kept in order and the principal (or only) operations on the collection are the addition of entities to the rear terminal position, known as *enqueue,* and removal of entities from the front terminal position, known as *dequeue*. This makes the queue a [First-In-First-Out (FIFO) data structure](https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics)). In a FIFO data structure, the first element added to the queue will be the first one to be removed. This is equivalent to the requirement that once a new element is added, all elements that were added before have to be removed before the new element can be removed. Often a *peek* or *front* operation is also entered, returning the value of the front element without dequeuing it. A queue is an example of a [linear data structure](https://en.wikipedia.org/wiki/Linear_data_structure), or more abstractly a sequential collection.
+A **queue** is a particular kind of [abstract data type](https://en.wikipedia.org/wiki/Abstract_data_type) or [collection](<https://en.wikipedia.org/wiki/Collection_(abstract_data_type)>) in which the entities in the collection are kept in order and the principal (or only) operations on the collection are the addition of entities to the rear terminal position, known as _enqueue,_ and removal of entities from the front terminal position, known as _dequeue_. This makes the queue a [First-In-First-Out (FIFO) data structure](<https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics)>). In a FIFO data structure, the first element added to the queue will be the first one to be removed. This is equivalent to the requirement that once a new element is added, all elements that were added before have to be removed before the new element can be removed. Often a _peek_ or _front_ operation is also entered, returning the value of the front element without dequeuing it. A queue is an example of a [linear data structure](https://en.wikipedia.org/wiki/Linear_data_structure), or more abstractly a sequential collection.
 
-Queues provide services in [computer science](https://en.wikipedia.org/wiki/Computer_science), [transport](https://en.wikipedia.org/wiki/Transport), and [operations research](https://en.wikipedia.org/wiki/Operations_research) where various entities such as data, objects, persons, or events are stored and held to be processed later. In these contexts, the queue performs the function of a [buffer](https://en.wikipedia.org/wiki/Buffer_(computer_science)).
+Queues provide services in [computer science](https://en.wikipedia.org/wiki/Computer_science), [transport](https://en.wikipedia.org/wiki/Transport), and [operations research](https://en.wikipedia.org/wiki/Operations_research) where various entities such as data, objects, persons, or events are stored and held to be processed later. In these contexts, the queue performs the function of a [buffer](<https://en.wikipedia.org/wiki/Buffer_(computer_science)>).
 
 Queues are common in computer programs, where they are implemented as data structures coupled with access routines, as an [abstract data structure](https://en.wikipedia.org/wiki/Abstract_data_structure) or in object-oriented languages as classes. Common implementations are [circular buffers](https://en.wikipedia.org/wiki/Circular_buffer) and [linked lists](https://en.wikipedia.org/wiki/Linked_list).
 
 ```javascript
 var queue = [];
 
-queue.push(2);         // queue is now [2]
-queue.push(5);         // queue is now [2, 5]
+queue.push(2); // queue is now [2]
+queue.push(5); // queue is now [2, 5]
 
 var i = queue.shift(); // queue is now [5]
 
-alert(i);              // displays 2
+alert(i); // displays 2
 ```
 
 ### Priority Queue
@@ -126,89 +230,97 @@ We can use **heaps to implement the priority queue**. It will take O(log N) time
 
 Based on heap structure, priority queue also has two types max-priority queue and min-priority queue.
 
-Example Implementation: 
+Example Implementation:
 
 ```javascript
 class MaxHeap {
-    constructor() {
-        this._heap = [];
+  constructor() {
+    this._heap = [];
+  }
+
+  _getParent(index) {
+    return this._heap[(index - 1) / 2];
+  }
+
+  _getLeftChild(parentIndex) {
+    return this._heap[2 * parentIndex + 1];
+  }
+
+  _getRightChild(parentIndex) {
+    return this._heap[2 * parentIndex + 2];
+  }
+
+  _bubbleUp(index) {
+    const parentIndex = (index - 1) / 2;
+
+    if (parentIndex === 0) return;
+
+    if (this._getParent(index) < this._heap[index]) {
+      this._swap(parentIndex, index);
+      this._bubbleUp(parentIndex);
+    }
+  }
+
+  _sinkDown(index) {
+    const rightChildIndex = 2 * parentIndex + 2;
+
+    if (this._getRightChild(index) > this._heap.length) {
+      return;
     }
 
-    _getParent(index) {
-        return this._heap[(index -1 ) / 2];
+    if (this._getRightChild(index) > this._heap[index]) {
+      this._swap(index, rightChildIndex);
+      this._sinkDown(rightChildIndex);
     }
+  }
 
-    _getLeftChild(parentIndex) {
-        return this._heap[2 * parentIndex + 1];
-    }
+  _swap(indexOne, indexTwo) {
+    const temp = this._heap[indexOne];
+    this._heap[indexOne] = this._heap[indexTwo];
+    this._heap[indexTwo] = temp;
+  }
 
-    _getRightChild(parentIndex) {
-        return this._heap[2 * parentIndex + 2];
-    }
+  push(value) {
+    this._heap.push(value);
 
-    _bubbleUp(index) {
-        const parentIndex = (index -1 ) / 2;
+    // Insert an element to the end of the heap
+    // If it's parent is smaller (max heap) or larger (min heap) It means we have
+    // a heap violation. We should swap the child (newly added value)
+    // with the parent until we restore the heap property
+    this._bubbleUp(this.heap.length);
+  }
 
-        if (parentIndex === 0) return;
+  pop() {
+    // Remove the first element in the heap. Swap the last element in the heap to the front.
+    // Sink down swapping with the right child until a position is found
+    const max = this._heap.shift();
+    this._swap(0, this._heap.length);
+    this._heap.pop();
+    this._sinkDown();
 
-        if (this._getParent(index) < this._heap[index]) {
-            this._swap(parentIndex, index);
-            this._bubbleUp(parentIndex);
-        }
-    }
+    return max;
+  }
 
-    _sinkDown(index) {
-        const rightChildIndex = 2 * parentIndex + 2;
-
-        if (this._getRightChild(index) > this._heap.length) {
-            return;
-        }
-
-        if (this._getRightChild(index) > this._heap[index]) {
-            this._swap(index, rightChildIndex);
-            this._sinkDown(rightChildIndex);
-        }
-    }
-
-    _swap(indexOne, indexTwo) {
-        const temp = this._heap[indexOne];
-        this._heap[indexOne] = this._heap[indexTwo];
-        this._heap[indexTwo] = temp;
-    }
-
-    push(value) {
-        this._heap.push(value);
-
-        // Insert an element to the end of the heap
-        // If it's parent is smaller (max heap) or larger (min heap) It means we have 
-        // a heap violation. We should swap the child (newly added value) 
-        // with the parent until we restore the heap property
-        this._bubbleUp(this.heap.length);
-    }
-
-    pop() {
-        // Remove the first element in the heap. Swap the last element in the heap to the front.
-        // Sink down swapping with the right child until a position is found
-        const max = this._heap.shift();
-        this._swap(0, this._heap.length);
-        this._heap.pop();
-        this._sinkDown();
-
-        return max;
-    }
-
-    peek() {
-        this._heap[0];
-    }
+  peek() {
+    this._heap[0];
+  }
 }
 
 class PriorityQueue {
-    // NOTE: Passing your heap implementation will
-    // allow you to switch from min to max heap with ease
-    constructor(heap) { this._heap = heap; }
-    enqueue(value) { this._heap.push(value); }
-    dequeue() { this._heap.pop(value); }
-    peek() { this._heap.peek(); }
+  // NOTE: Passing your heap implementation will
+  // allow you to switch from min to max heap with ease
+  constructor(heap) {
+    this._heap = heap;
+  }
+  enqueue(value) {
+    this._heap.push(value);
+  }
+  dequeue() {
+    this._heap.pop(value);
+  }
+  peek() {
+    this._heap.peek();
+  }
 }
 
 const priorityQueue = new PriorityQueue(new MaxHeap());
@@ -218,7 +330,7 @@ const priorityQueue = new PriorityQueue(new MaxHeap());
 
 A **hash table** (**hash map**) is a data structure which implements an associative array abstract data type, a structure that can map keys to values. A hash table uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found.
 
-Ideally, the hash function will assign each key to a unique bucket, but most hash table designs employ an imperfect hash function, which might cause hash *collisions* where the hash function generates the same index for more than one key. Such collisions must be accommodated in some way.
+Ideally, the hash function will assign each key to a unique bucket, but most hash table designs employ an imperfect hash function, which might cause hash _collisions_ where the hash function generates the same index for more than one key. Such collisions must be accommodated in some way.
 
 In a well-dimensioned hash table, the average cost (number of instructions) for each lookup is independent of the number of elements stored in the table. Many hash table designs also allow arbitrary insertions and deletions of key-value pairs, at constant average cost per operation.
 
@@ -228,27 +340,27 @@ In many situations, **hash tables turn out to be more efficient than search tree
 
 All a hash function does is turn a value into an array index. The hash function in turn is composed of two parts.
 
-The first part, the *hash code*, takes a value and returns an integer. A function that always returned zero would be a hash coding function, but it would be a terrible one. More terrible ones include adding the ASCII values of a string together, multiplying the digits of a number, etc. A good hashing function minimizes the chance of a hash collision; a hash collision is when two distinct values have the same hash code. Good hashing functions, like SHA-256, have extremely small probabilities of hash collisions. I've heard that it's much more likely that a giant asteroid will impact the earth than a collision of SHA-256 ever happening in the wild.  The second part of hash functions is the *compression mapping*. All this does is maps the integer to an array index using the modulus operator and the length of the underlying array.
+The first part, the _hash code_, takes a value and returns an integer. A function that always returned zero would be a hash coding function, but it would be a terrible one. More terrible ones include adding the ASCII values of a string together, multiplying the digits of a number, etc. A good hashing function minimizes the chance of a hash collision; a hash collision is when two distinct values have the same hash code. Good hashing functions, like SHA-256, have extremely small probabilities of hash collisions. I've heard that it's much more likely that a giant asteroid will impact the earth than a collision of SHA-256 ever happening in the wild.  The second part of hash functions is the _compression mapping_. All this does is maps the integer to an array index using the modulus operator and the length of the underlying array.
 
 A good hash function should be extremely fast to compute. Cryptographic-strength has functions often are relatively slow to compute, so faster ones are used that have higher collision rates. So how do we manage collisions?
 
 ### Graphs
 
-A **graph** is an [abstract data type](https://en.wikipedia.org/wiki/Abstract_data_type) that is meant to implement the [undirected graph](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)) and [directed graph](https://en.wikipedia.org/wiki/Directed_graph) concepts from [mathematics](https://en.wikipedia.org/wiki/Mathematics), specifically the field of [graph theory](https://en.wikipedia.org/wiki/Graph_theory).
+A **graph** is an [abstract data type](https://en.wikipedia.org/wiki/Abstract_data_type) that is meant to implement the [undirected graph](<https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)>) and [directed graph](https://en.wikipedia.org/wiki/Directed_graph) concepts from [mathematics](https://en.wikipedia.org/wiki/Mathematics), specifically the field of [graph theory](https://en.wikipedia.org/wiki/Graph_theory).
 
-A graph data structure consists of a finite (and possibly mutable) [set](https://en.wikipedia.org/wiki/Set_(computer_science)) of *vertices* or *nodes*, together with a set of unordered pairs of these vertices for an undirected graph or a set of ordered pairs for a directed graph. These pairs are known as *edges*, *arcs*, or *lines* for an undirected graph and as *arrows*, *directed edges*, *directed arcs*, or *directed lines* for a directed graph. The vertices may be part of the graph structure, or may be external entities represented by integer indices or [references](https://en.wikipedia.org/wiki/Reference_(computer_science)).
+A graph data structure consists of a finite (and possibly mutable) [set](<https://en.wikipedia.org/wiki/Set_(computer_science)>) of _vertices_ or _nodes_, together with a set of unordered pairs of these vertices for an undirected graph or a set of ordered pairs for a directed graph. These pairs are known as _edges_, _arcs_, or _lines_ for an undirected graph and as _arrows_, _directed edges_, _directed arcs_, or _directed lines_ for a directed graph. The vertices may be part of the graph structure, or may be external entities represented by integer indices or [references](<https://en.wikipedia.org/wiki/Reference_(computer_science)>).
 
-A graph data structure may also associate to each edge some *edge value*, such as a symbolic label or a numeric attribute (cost, capacity, length, etc.).
+A graph data structure may also associate to each edge some _edge value_, such as a symbolic label or a numeric attribute (cost, capacity, length, etc.).
 
 ![https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Directed.svg/250px-Directed.svg.png](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Directed.svg/250px-Directed.svg.png)
 
 ### Trees
 
-A **tree** is a widely used [abstract data type](https://en.wikipedia.org/wiki/Abstract_data_type) (ADT)—or [data structure](https://en.wikipedia.org/wiki/Data_structure) implementing this ADT—that simulates a hierarchical [tree structure](https://en.wikipedia.org/wiki/Tree_structure), with a root value and [subtrees](https://en.wikipedia.org/wiki/Subtrees) of children with a parent node, represented as a set of linked [nodes](https://en.wikipedia.org/wiki/Vertex_(graph_theory)).
+A **tree** is a widely used [abstract data type](https://en.wikipedia.org/wiki/Abstract_data_type) (ADT)—or [data structure](https://en.wikipedia.org/wiki/Data_structure) implementing this ADT—that simulates a hierarchical [tree structure](https://en.wikipedia.org/wiki/Tree_structure), with a root value and [subtrees](https://en.wikipedia.org/wiki/Subtrees) of children with a parent node, represented as a set of linked [nodes](<https://en.wikipedia.org/wiki/Vertex_(graph_theory)>).
 
-A tree data structure can be defined [recursively](https://en.wikipedia.org/wiki/Recursion) (locally) as a collection of [nodes](https://en.wikipedia.org/wiki/Node_(computer_science)) (starting at a root node), where each node is a data structure consisting of a value, together with a list of references to nodes (the "children"), with the constraints that no reference is duplicated, and none points to the root.
+A tree data structure can be defined [recursively](https://en.wikipedia.org/wiki/Recursion) (locally) as a collection of [nodes](<https://en.wikipedia.org/wiki/Node_(computer_science)>) (starting at a root node), where each node is a data structure consisting of a value, together with a list of references to nodes (the "children"), with the constraints that no reference is duplicated, and none points to the root.
 
-Alternatively, a tree can be defined abstractly as a whole (globally) as an [ordered tree](https://en.wikipedia.org/wiki/Ordered_tree), with a value assigned to each node. Both these perspectives are useful: while a tree can be analyzed mathematically as a whole, when actually represented as a data structure it is usually represented and worked with separately by node (rather than as a list of nodes and an [adjacency list](https://en.wikipedia.org/wiki/Adjacency_list) of edges between nodes, as one may represent a [digraph](https://en.wikipedia.org/wiki/Tree_(data_structure)#Digraphs), for instance). For example, looking at a tree as a whole, one can talk about "the parent node" of a given node, but in general as a data structure a given node only contains the list of its children, but does not contain a reference to its parent (if any)
+Alternatively, a tree can be defined abstractly as a whole (globally) as an [ordered tree](https://en.wikipedia.org/wiki/Ordered_tree), with a value assigned to each node. Both these perspectives are useful: while a tree can be analyzed mathematically as a whole, when actually represented as a data structure it is usually represented and worked with separately by node (rather than as a list of nodes and an [adjacency list](https://en.wikipedia.org/wiki/Adjacency_list) of edges between nodes, as one may represent a [digraph](<https://en.wikipedia.org/wiki/Tree_(data_structure)#Digraphs>), for instance). For example, looking at a tree as a whole, one can talk about "the parent node" of a given node, but in general as a data structure a given node only contains the list of its children, but does not contain a reference to its parent (if any)
 
 **Terminoligy**
 
@@ -262,11 +374,11 @@ Alternatively, a tree can be defined abstractly as a whole (globally) as an [ord
 
 ### Binary Trees
 
-A **binary tree** is a [tree](https://en.wikipedia.org/wiki/Tree_structure) [data structure](https://en.wikipedia.org/wiki/Data_structure) in which **each node has at most two [children](https://en.wikipedia.org/wiki/Child_node)**, which are referred to as the *left child* and the *right child*. A [recursive definition](https://en.wikipedia.org/wiki/Recursive_definition) using just [set theory](https://en.wikipedia.org/wiki/Set_theory) notions is that a (non-empty) binary tree is a [triple](https://en.wikipedia.org/wiki/Tuple) (*L*, *S*, *R*), where *L* and *R* are binary trees or the [empty set](https://en.wikipedia.org/wiki/Empty_set) and *S* is a [singleton set](https://en.wikipedia.org/wiki/Singleton_set). Some authors allow the binary tree to be the empty set as well.
+A **binary tree** is a [tree](https://en.wikipedia.org/wiki/Tree_structure) [data structure](https://en.wikipedia.org/wiki/Data_structure) in which **each node has at most two [children](https://en.wikipedia.org/wiki/Child_node)**, which are referred to as the _left child_ and the _right child_. A [recursive definition](https://en.wikipedia.org/wiki/Recursive_definition) using just [set theory](https://en.wikipedia.org/wiki/Set_theory) notions is that a (non-empty) binary tree is a [triple](https://en.wikipedia.org/wiki/Tuple) (_L_, _S_, _R_), where _L_ and _R_ are binary trees or the [empty set](https://en.wikipedia.org/wiki/Empty_set) and _S_ is a [singleton set](https://en.wikipedia.org/wiki/Singleton_set). Some authors allow the binary tree to be the empty set as well.
 
-From a [graph theory](https://en.wikipedia.org/wiki/Graph_theory) perspective, binary (and K-ary) trees as defined here are actually [arborescences](https://en.wikipedia.org/wiki/Arborescence_(graph_theory)). A binary tree may thus be also called a **bifurcating arborescence**—a term which appears in some very old programming books, before the modern computer science terminology prevailed. It is also possible to interpret a binary tree as an [undirected](https://en.wikipedia.org/wiki/Undirected_graph), rather than a [directed graph](https://en.wikipedia.org/wiki/Directed_graph), in which case a binary tree is an [ordered](https://en.wikipedia.org/wiki/Ordered_tree), [rooted tree](https://en.wikipedia.org/wiki/Rooted_tree). Some authors use **rooted binary tree** instead of *binary tree* to emphasize the fact that the tree is rooted, but as defined above, a binary tree is always rooted. A binary tree is a special case of an ordered [K-ary tree](https://en.wikipedia.org/wiki/K-ary_tree), where *k* is 2.
+From a [graph theory](https://en.wikipedia.org/wiki/Graph_theory) perspective, binary (and K-ary) trees as defined here are actually [arborescences](<https://en.wikipedia.org/wiki/Arborescence_(graph_theory)>). A binary tree may thus be also called a **bifurcating arborescence**—a term which appears in some very old programming books, before the modern computer science terminology prevailed. It is also possible to interpret a binary tree as an [undirected](https://en.wikipedia.org/wiki/Undirected_graph), rather than a [directed graph](https://en.wikipedia.org/wiki/Directed_graph), in which case a binary tree is an [ordered](https://en.wikipedia.org/wiki/Ordered_tree), [rooted tree](https://en.wikipedia.org/wiki/Rooted_tree). Some authors use **rooted binary tree** instead of _binary tree_ to emphasize the fact that the tree is rooted, but as defined above, a binary tree is always rooted. A binary tree is a special case of an ordered [K-ary tree](https://en.wikipedia.org/wiki/K-ary_tree), where _k_ is 2.
 
-In computing, binary trees are seldom used solely for their structure. Much more typical is to define a labeling function on the nodes, which associates some value to each node. Binary trees labelled this way are used to implement [binary search trees](https://en.wikipedia.org/wiki/Binary_search_tree) and [binary heaps](https://en.wikipedia.org/wiki/Binary_heap), and are used for efficient [searching](https://en.wikipedia.org/wiki/Search_algorithm) and [sorting](https://en.wikipedia.org/wiki/Sorting_algorithm). The designation of non-root nodes as left or right child even when there is only one child present matters in some of these applications, in particular it is significant in binary search trees. In mathematics, what is termed *binary tree* can vary significantly from author to author. Some use the definition commonly used in computer science, but others define it as every non-leaf having exactly two children and don't necessarily order (as left/right) the children either.
+In computing, binary trees are seldom used solely for their structure. Much more typical is to define a labeling function on the nodes, which associates some value to each node. Binary trees labelled this way are used to implement [binary search trees](https://en.wikipedia.org/wiki/Binary_search_tree) and [binary heaps](https://en.wikipedia.org/wiki/Binary_heap), and are used for efficient [searching](https://en.wikipedia.org/wiki/Search_algorithm) and [sorting](https://en.wikipedia.org/wiki/Sorting_algorithm). The designation of non-root nodes as left or right child even when there is only one child present matters in some of these applications, in particular it is significant in binary search trees. In mathematics, what is termed _binary tree_ can vary significantly from author to author. Some use the definition commonly used in computer science, but others define it as every non-leaf having exactly two children and don't necessarily order (as left/right) the children either.
 
 ![https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Binary_tree.svg/384px-Binary_tree.svg.png](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Binary_tree.svg/384px-Binary_tree.svg.png)
 
@@ -344,7 +456,7 @@ A **simple** sorting algorithm that repeatedly steps through the list to be sort
 - Simple implementation
 - Efficient for (quite) small data sets, much like other quadratic sorting algorithms
 - More efficient in practice than most other simple quadratic (i.e., [O](https://en.wikipedia.org/wiki/Big_O_notation)(*n*2)) algorithms such as [selection sort](https://en.wikipedia.org/wiki/Selection_sort) or [bubble sort](https://en.wikipedia.org/wiki/Bubble_sort)
-- [Adaptive](https://en.wikipedia.org/wiki/Adaptive_sort), i.e., efficient for data sets that are already substantially sorted: the [time complexity](https://en.wikipedia.org/wiki/Time_complexity) is *O*(*nk*) when each element in the input is no more than k places away from its sorted position
+- [Adaptive](https://en.wikipedia.org/wiki/Adaptive_sort), i.e., efficient for data sets that are already substantially sorted: the [time complexity](https://en.wikipedia.org/wiki/Time_complexity) is _O_(_nk_) when each element in the input is no more than k places away from its sorted position
 - [Stable](https://en.wikipedia.org/wiki/Stable_sort); i.e., does not change the relative order of elements with equal keys
 - [In-place](https://en.wikipedia.org/wiki/In-place_algorithm); i.e., only requires a constant amount O(1) of additional memory space
 - [Online](https://en.wikipedia.org/wiki/Online_algorithm); i.e., can sort a list as it receives it
@@ -353,7 +465,7 @@ When people manually sort cards in a bridge hand, most use a method that is simi
 
 ### Merge sort
 
-**merge sort** (also commonly spelled **mergesort**) is an efficient, general-purpose, [comparison-based](https://en.wikipedia.org/wiki/Comparison_sort) [sorting algorithm](https://en.wikipedia.org/wiki/Sorting_algorithm). Most implementations produce a [stable sort](https://en.wikipedia.org/wiki/Sorting_algorithm#Stability), which means that the implementation preserves the input order of [equal](https://en.wikipedia.org/wiki/Equality_(mathematics)) elements in the sorted output. Mergesort is a divide and conquer algorithm.
+**merge sort** (also commonly spelled **mergesort**) is an efficient, general-purpose, [comparison-based](https://en.wikipedia.org/wiki/Comparison_sort) [sorting algorithm](https://en.wikipedia.org/wiki/Sorting_algorithm). Most implementations produce a [stable sort](https://en.wikipedia.org/wiki/Sorting_algorithm#Stability), which means that the implementation preserves the input order of [equal](<https://en.wikipedia.org/wiki/Equality_(mathematics)>) elements in the sorted output. Mergesort is a divide and conquer algorithm.
 
 An example of merge sort. First divide the list into the smallest unit (1 element), then compare each element with the adjacent list to sort and merge the two adjacent lists. Finally all the elements are sorted and merged.
 
@@ -426,7 +538,7 @@ BFS (G, s)                   //Where G is the graph and s is the source node
         //Removing that vertex from queue,whose neighbour will be visited now
         v  =  Q.dequeue( )
 
-        //processing all the neighbours of v  
+        //processing all the neighbours of v
         for all neighbours w of v in Graph G
            if w is not visited
                Q.enqueue( w )             //Stores w in Q to further visit its neighbour
@@ -457,10 +569,10 @@ DFS-iterative (G, s):  //Where G is graph and s is source vertex
           //Pop a vertex from stack to visit next
           v  =  S.top( )
          S.pop( )
-         //Push all the neighbours of v in stack that are not visited   
+         //Push all the neighbours of v in stack that are not visited
         for all neighbours w of v in Graph G:
             if w is not visited :
-                     S.push( w )         
+                     S.push( w )
                     mark w as visited
 
 // recursive
@@ -481,7 +593,7 @@ https://en.wikipedia.org/wiki/Big_O_notation
 
 With big O notation we express the runtime in terms of how quickly it grows relative to the input, as the input gets arbitrarily large.
 
-1. **how quickly the runtime grows**—Some external factors affect the time it takes for a function to run: the speed of the processor, what else the computer is running, etc. So it's hard to make strong statements about the *exact runtime* of an algorithm. Instead we use big O notation to express *how quickly its runtime grows*.
+1. **how quickly the runtime grows**—Some external factors affect the time it takes for a function to run: the speed of the processor, what else the computer is running, etc. So it's hard to make strong statements about the _exact runtime_ of an algorithm. Instead we use big O notation to express _how quickly its runtime grows_.
 2. **relative to the input**—Since we're not looking at an exact number, we need to phrase our runtime growth in terms of something. We use the size of the input. So we can say things like the runtime grows "on the order of the size of the input" (O(n)O(n)) or "on the order of the square of the size of the input" (O(n^2)O(n2)).
 3. **as the input gets arbitrarily large**—Our algorithm may have steps that seem expensive when nn is small but are eclipsed eventually by other steps as nn gets huge. For big O analysis, we care most about the stuff that grows fastest as the input grows, because everything else is quickly eclipsed as nn gets very large. If you know what an asymptote is, you might see why "big O analysis" is sometimes called "asymptotic analysis."
 
@@ -495,7 +607,7 @@ With big O notation we express the runtime in terms of how quickly it grows rela
 
 ```javascript
 function printFirstItem(arrayOfItems) {
-    console.log(arrayOfItems[0]);
+  console.log(arrayOfItems[0]);
 }
 ```
 
@@ -503,21 +615,21 @@ function printFirstItem(arrayOfItems) {
 
 ```javascript
 function printAllItems(arrayOfItems) {
-    arrayOfItems.forEach(function(item) {
-        console.log(item);
-    });
+  arrayOfItems.forEach(function (item) {
+    console.log(item);
+  });
 }
 ```
 
-Here we're nesting two loops. If our array has n items, our outer loop runs n times and our inner loop runs *n times for each iteration of the outer loop*, giving us n^2 total prints. Thus **this function runs in O(n^2) time (or "quadratic time")**. If the array has 10 items, we have to print 100 times. If it has 1,000 items, we have to print 1,000,000 times.
+Here we're nesting two loops. If our array has n items, our outer loop runs n times and our inner loop runs _n times for each iteration of the outer loop_, giving us n^2 total prints. Thus **this function runs in O(n^2) time (or "quadratic time")**. If the array has 10 items, we have to print 100 times. If it has 1,000 items, we have to print 1,000,000 times.
 
 ```javascript
 function printAllPossibleOrderedPairs(arrayOfItems) {
-    arrayOfItems.forEach(function(firstItem) {
-        arrayOfItems.forEach(function(secondItem) {
-            console.log(firstItem, secondItem);
-        });
+  arrayOfItems.forEach(function (firstItem) {
+    arrayOfItems.forEach(function (secondItem) {
+      console.log(firstItem, secondItem);
     });
+  });
 }
 ```
 
@@ -527,17 +639,19 @@ When you're calculating the big O complexity of something, you just throw out th
 
 ```javascript
 function printAllItemsTwice(theArray) {
-    theArray.forEach(function(item) { // O(n)
-        console.log(item);
-    });
+  theArray.forEach(function (item) {
+    // O(n)
+    console.log(item);
+  });
 
-    // once more, with feeling
-    theArray.forEach(function(item) { // O(n)
-        console.log(item);
-    });
+  // once more, with feeling
+  theArray.forEach(function (item) {
+    // O(n)
+    console.log(item);
+  });
 
-  	// O(n) + O(n) = O(n^2)
-  	//             = O(n)
+  // O(n) + O(n) = O(n^2)
+  //             = O(n)
 }
 ```
 
@@ -567,7 +681,7 @@ While this is often considered to be one of JavaScript's weaknesses, the prototy
 
 **Class Inheritance:** **A class is like a blueprint — a description of the object to be created.** Classes inherit from classes and **create subclass relationships**: hierarchical class taxonomies.
 
-Instances are typically instantiated via constructor functions with the *`new`*keyword. Class inheritance may or may not use the *`class`* keyword from ES6. Classes as you may know them from languages like Java don’t technically exist in JavaScript. Constructor functions are used, instead. The ES6 *`class`* keyword desugars to a constructor function:
+Instances are typically instantiated via constructor functions with the *`new`*keyword. Class inheritance may or may not use the _`class`_ keyword from ES6. Classes as you may know them from languages like Java don’t technically exist in JavaScript. Constructor functions are used, instead. The ES6 _`class`_ keyword desugars to a constructor function:
 
 ```
 class Foo {}
@@ -576,42 +690,42 @@ typeof Foo // 'function'
 
 In JavaScript, class inheritance is implemented on top of prototypal inheritance, but that does not mean that it does the same thing:
 
-JavaScript’s class inheritance uses **the prototype chain** to wire the child *`Constructor.prototype`* to the parent *`Constructor.prototype`* for delegation. Usually, the *`super()`* constructor is also called. Those steps form **single-ancestor parent/child hierarchies** and **create the tightest coupling available in OO design.**
+JavaScript’s class inheritance uses **the prototype chain** to wire the child _`Constructor.prototype`_ to the parent _`Constructor.prototype`_ for delegation. Usually, the _`super()`_ constructor is also called. Those steps form **single-ancestor parent/child hierarchies** and **create the tightest coupling available in OO design.**
 
 **Prototypal Inheritance:** **A prototype is a working object instance.** Objects inherit directly from other objects.
 
-Instances may be composed from many different source objects, allowing for easy selective inheritance and a flat [[Prototype]] delegation hierarchy. In other words, **class taxonomies are not an automatic side-effect of prototypal OO**: *a critical distinction.*
+Instances may be composed from many different source objects, allowing for easy selective inheritance and a flat [[Prototype]] delegation hierarchy. In other words, **class taxonomies are not an automatic side-effect of prototypal OO**: _a critical distinction._
 
-Instances are typically instantiated via factory functions, object literals, or *`Object.create()`*.
+Instances are typically instantiated via factory functions, object literals, or _`Object.create()`_.
 
 ### Scoping
 
 [Scoping](https://spin.atomicobject.com/2014/10/20/javascript-scope-closures/)
 
-JavaScript has *lexical scoping* with *function scope*. In other words, even though JavaScript looks like it should have block scope because it uses curly braces { }, **a new scope is created only when you create a new function.**
+JavaScript has _lexical scoping_ with _function scope_. In other words, even though JavaScript looks like it should have block scope because it uses curly braces { }, **a new scope is created only when you create a new function.**
 
 > **Lexical scoping** (sometimes known as static **scoping** ) is a convention used with many programming languages that sets the **scope** (range of functionality) of a variable so that it may only be called (referenced) from within the block of code in which it is defined.
 
 ```javascript
-var outerFunction = function(){
-   if(true){
-      var x = 5;
-      //console.log(y); //line 1, ReferenceError: y not defined
-   }
+var outerFunction = function () {
+  if (true) {
+    var x = 5;
+    //console.log(y); //line 1, ReferenceError: y not defined
+  }
 
-   var nestedFunction = function() {
-      if(true){
-         var y = 7;
-         console.log(x); //line 2, x will still be known prints 5
-      }
+  var nestedFunction = function () {
+    if (true) {
+      var y = 7;
+      console.log(x); //line 2, x will still be known prints 5
+    }
 
-      if(true){
-         console.log(y); //line 3, prints 7
-      }
-   }
+    if (true) {
+      console.log(y); //line 3, prints 7
+    }
+  };
 
-   return nestedFunction;
-}
+  return nestedFunction;
+};
 
 var myFunction = outerFunction();
 myFunction();
@@ -629,18 +743,19 @@ A closure is an inner function that has access to the outer (enclosing) function
 
 **The closure has three scope chains:** it has access to its **own scope** (variables defined between its curly brackets), it has access to the **outer function’s variables**, and it has access to the **global variables**.
 
-The inner function has access not only to the outer function’s variables, but also to the outer function’s parameters. Note that the inner function cannot call the outer function’s *arguments* object, however, even though it can call the outer function’s parameters directly.
+The inner function has access not only to the outer function’s variables, but also to the outer function’s parameters. Note that the inner function cannot call the outer function’s _arguments_ object, however, even though it can call the outer function’s parameters directly.
 
 **A closure is created by adding a function inside another function.**
 
-> A *closure* is the combination of a function and the lexical environment within which that function was declared.
+> A _closure_ is the combination of a function and the lexical environment within which that function was declared.
 
 ```javascript
 function init() {
-  var name = 'Mozilla'; // name is a local variable created by init
+  var name = "Mozilla"; // name is a local variable created by init
 
-  function displayName() { // displayName() is the inner function, a closure
-    alert(name); // use variable declared in the parent function    
+  function displayName() {
+    // displayName() is the inner function, a closure
+    alert(name); // use variable declared in the parent function
   }
 
   displayName();
@@ -667,7 +782,7 @@ This branch is important because it is the path along which the events propagate
 
 Remember that several listeners can be registered on a node for the same event type. When the propagation reaches one such node, listeners are invoked in the order of their registration.
 
- **The propagation is bidirectional, from the window to the event target and back. This propagation can be divided into three phases:**
+**The propagation is bidirectional, from the window to the event target and back. This propagation can be divided into three phases:**
 
 1. From the window to the event target parent: this is the **capture phase**
 2. The event target itself: this is the **target phase**
@@ -675,7 +790,7 @@ Remember that several listeners can be registered on a node for the same event t
 
 **The Event Capture Phase**
 
-In this phase only the *capturer* listeners are called, namely, those listeners that were registered using a value of `true` for the third parameter of [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener):
+In this phase only the _capturer_ listeners are called, namely, those listeners that were registered using a value of `true` for the third parameter of [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener):
 
 ```
 el.addEventListener('click', listener, true)
@@ -698,7 +813,7 @@ el.addEventListener('click', listener, false) // listener doesn't capture
 el.addEventListener('click', listener) // listener doesn't capture
 ```
 
-Note that while all events flow down to the event target with the capture phase, `focus`, `blur`, `load` and some others, don’t bubble up. That is, their travel stops after the *target* phase.
+Note that while all events flow down to the event target with the capture phase, `focus`, `blur`, `load` and some others, don’t bubble up. That is, their travel stops after the _target_ phase.
 
 ![eventprop](assets/eventprop.png)
 
@@ -725,25 +840,25 @@ Use `.call()` or `.apply()` when you want to **invoke the function immediately, 
 
 ```javascript
 function MyObject(element) {
-    this.elm = element;
-    element.addEventListener('click', this.onClick.bind(this), false);
-};
+  this.elm = element;
+  element.addEventListener("click", this.onClick.bind(this), false);
+}
 
-MyObject.prototype.onClick = function(e) {
-     var t=this;  //do something with [t]...
-    //without bind the context of this function wouldn't be a MyObject
-    //instance as you would normally expect.
+MyObject.prototype.onClick = function (e) {
+  var t = this; //do something with [t]...
+  //without bind the context of this function wouldn't be a MyObject
+  //instance as you would normally expect.
 };
 ```
 
 A simple, naive implementation of bind would be like:
 
 ```javascript
-Function.prototype.bind = function(ctx) {
-    var fn = this;
-    return function() {
-        fn.apply(ctx, arguments);
-    };
+Function.prototype.bind = function (ctx) {
+  var fn = this;
+  return function () {
+    fn.apply(ctx, arguments);
+  };
 };
 ```
 
@@ -761,7 +876,7 @@ The `call()` method calls a function with a given `this` value and arguments pro
 
 **Call vs. Apply**
 
-The difference is that `apply` lets you invoke the function with `arguments` as an array; `call`requires the parameters be listed explicitly. A useful mnemonic is *"\**A** for **a**rray and **C** for **c**omma."*
+The difference is that `apply` lets you invoke the function with `arguments` as an array; `call`requires the parameters be listed explicitly. A useful mnemonic is \*"\*_A** for **a**rray and **C** for **c\*\*omma."_
 
 **Pseudo syntax:**
 
@@ -773,7 +888,7 @@ The difference is that `apply` lets you invoke the function with `arguments` as 
 
 ```javascript
 function theFunction(name, profession) {
-    console.log("My name is " + name + " and I am a " + profession + ".");
+  console.log("My name is " + name + " and I am a " + profession + ".");
 }
 theFunction("John", "fireman");
 theFunction.apply(undefined, ["Susan", "school teacher"]);
@@ -798,8 +913,8 @@ Function declarations and variable declarations are always moved (“hoisted”)
 
 ```javascript
 function foo() {
-	bar();
-	var x = 1;
+  bar();
+  var x = 1;
 }
 ```
 
@@ -807,9 +922,9 @@ is actually interpreted like this:
 
 ```javascript
 function foo() {
-	var x;
-	bar();
-	x = 1;
+  var x;
+  bar();
+  x = 1;
 }
 ```
 
@@ -820,8 +935,8 @@ function foo() {
 Currying is a way of constructing functions that allows partial application of a function’s arguments. What this means is that you can pass all of the arguments a function is expecting and get the result, or pass a subset of those arguments and get a function back that’s waiting for the rest of the arguments.
 
 ```javascript
-var greetCurried = function(greeting) {
-  return function(name) {
+var greetCurried = function (greeting) {
+  return function (name) {
     console.log(greeting + ", " + name);
   };
 };
@@ -832,12 +947,13 @@ The only problem is the syntax. As you build these curried functions up, you nee
 To address that problem, one approach is to create a quick and dirty currying function that will take the name of an existing function that was written without all the nested returns. A currying function would need to pull out the list of arguments for that function, and use those to return a curried version of the original function:
 
 ```javascript
-var curryIt = function(uncurried) {
+var curryIt = function (uncurried) {
   var parameters = Array.prototype.slice.call(arguments, 1);
-  return function() {
-    return uncurried.apply(this, parameters.concat(
-      Array.prototype.slice.call(arguments, 0)
-    ));
+  return function () {
+    return uncurried.apply(
+      this,
+      parameters.concat(Array.prototype.slice.call(arguments, 0))
+    );
   };
 };
 ```
@@ -845,7 +961,7 @@ var curryIt = function(uncurried) {
 To use this, we pass it the name of a function that takes any number of arguments, along with as many of the arguments as we want to pre-populate. What we get back is a function that’s waiting for the remaining arguments:
 
 ```javascript
-var greeter = function(greeting, separator, emphasis, name) {
+var greeter = function (greeting, separator, emphasis, name) {
   console.log(greeting + separator + name + emphasis);
 };
 var greetHello = curryIt(greeter, "Hello", ", ", ".");
@@ -857,41 +973,41 @@ greetHello("Eddie"); //"Hello, Eddie."
 
 ```javascript
 function converter(toUnit, factor, offset, input) {
-    offset = offset || 0;
-    return [((offset + input) * factor).toFixed(2), toUnit].join(" ");
+  offset = offset || 0;
+  return [((offset + input) * factor).toFixed(2), toUnit].join(" ");
 }
 
-var milesToKm = converter.curry('km', 1.60936, undefined);
-var poundsToKg = converter.curry('kg', 0.45460, undefined);
-var farenheitToCelsius = converter.curry('degrees C', 0.5556, -32);
+var milesToKm = converter.curry("km", 1.60936, undefined);
+var poundsToKg = converter.curry("kg", 0.4546, undefined);
+var farenheitToCelsius = converter.curry("degrees C", 0.5556, -32);
 
-milesToKm(10);            // returns "16.09 km"
-poundsToKg(2.5);          // returns "1.14 kg"
-farenheitToCelsius(98);   // returns "36.67 degrees C"
+milesToKm(10); // returns "16.09 km"
+poundsToKg(2.5); // returns "1.14 kg"
+farenheitToCelsius(98); // returns "36.67 degrees C"
 ```
 
 This relies on a curry extension of Function, although as you can see it only uses apply (nothing too fancy):
 
 ```javascript
-Function.prototype.curry = function() {
-    if (arguments.length < 1) {
-        return this; //nothing to curry with - return function
-    }
+Function.prototype.curry = function () {
+  if (arguments.length < 1) {
+    return this; //nothing to curry with - return function
+  }
 
-    var __method = this;
-    var args = toArray(arguments);
+  var __method = this;
+  var args = toArray(arguments);
 
-    return function() {
-        return __method.apply(this, args.concat([].slice.apply(null, arguments)));
-    }
-}
+  return function () {
+    return __method.apply(this, args.concat([].slice.apply(null, arguments)));
+  };
+};
 ```
 
 ### Var, Let and Const
 
 **Var**
 
-The most important thing to know about the `var` keyword is that it is **function scoped**. Scope refers to how a computer keeps track of all the variables in a program, specifically the environment in which each variable is accessible. Typically we talk about scope as either being *global* and therefore available everywhere or *local* and reserved for a specific block of code.
+The most important thing to know about the `var` keyword is that it is **function scoped**. Scope refers to how a computer keeps track of all the variables in a program, specifically the environment in which each variable is accessible. Typically we talk about scope as either being _global_ and therefore available everywhere or _local_ and reserved for a specific block of code.
 
 When using `var` our local scope is within a function. This means that a variable with the same name can be used in two separate functions as each has their own local scope. In fact, we can use the same variable three times if we also include it in the global scope.
 
@@ -930,21 +1046,21 @@ function do_something() {
 
 An **arrow function expression** has a shorter syntax than a [function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function) and does not have its own `this`, [arguments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments), [super](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super), or [new.target](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new.target). These function expressions are best suited for non-method functions, and they cannot be used as constructors.
 
-There is one subtle difference in behavior between ordinary `function `functions and arrow functions. **Arrow functions do not have their own this value.** The value of `this` inside an arrow function is always inherited from the enclosing scope. In contrast `function` functions receive a `this` value automatically, whether they want one or not.
+There is one subtle difference in behavior between ordinary `function`functions and arrow functions. **Arrow functions do not have their own this value.** The value of `this` inside an arrow function is always inherited from the enclosing scope. In contrast `function` functions receive a `this` value automatically, whether they want one or not.
 
 ### Generator Functions
 
 Generators are functions which can be exited and later re-entered. Their context (variable bindings) will be saved across re-entrances.
 
-> Generator functions are a feature introduced in ES6 that allows a function to *generate many values over time* by returning an object which can be iterated over… an iterable with a *`.next()`* method that returns objects 
+> Generator functions are a feature introduced in ES6 that allows a function to _generate many values over time_ by returning an object which can be iterated over… an iterable with a _`.next()`_ method that returns objects
 >
 > [The hidden power of generators](https://medium.com/javascript-scene/the-hidden-power-of-es6-generators-observable-async-flow-control-cfa4c7f31435)
 
-Generators in JavaScript -- especially when combined with Promises -- are a very powerful tool for asynchronous programming as they mitigate -- if not entirely eliminate -- the problems with callbacks, such as [Callback Hell](http://callbackhell.com/) and [Inversion of Control](https://frontendmasters.com/courses/rethinking-async-js/callback-problems-inversion-of-control/). 
+Generators in JavaScript -- especially when combined with Promises -- are a very powerful tool for asynchronous programming as they mitigate -- if not entirely eliminate -- the problems with callbacks, such as [Callback Hell](http://callbackhell.com/) and [Inversion of Control](https://frontendmasters.com/courses/rethinking-async-js/callback-problems-inversion-of-control/).
 
 **This pattern is what `async` functions are built on top of...**
 
-Calling a generator function does not execute its body immediately; an [iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterator) object for the function is returned instead. When the iterator's `next()` method is called, the generator function's body is executed until the first [`yield`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield) expression, which specifies the value to be returned from the iterator or, with [`yield*`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield*), delegates to another generator function. The `next()` method returns an object with a `value` property containing the yielded value and a `done` property which indicates whether the generator has yielded its last value as a boolean. Calling the `next()` method with an argument will resume the generator function execution, replacing the `yield` expression where execution was paused with the argument from `next()`. 
+Calling a generator function does not execute its body immediately; an [iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterator) object for the function is returned instead. When the iterator's `next()` method is called, the generator function's body is executed until the first [`yield`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield) expression, which specifies the value to be returned from the iterator or, with [`yield*`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield*), delegates to another generator function. The `next()` method returns an object with a `value` property containing the yielded value and a `done` property which indicates whether the generator has yielded its last value as a boolean. Calling the `next()` method with an argument will resume the generator function execution, replacing the `yield` expression where execution was paused with the argument from `next()`.
 
 A `return` statement in a generator, when executed, will make the generator finished (i.e the `done` property of the object returned by it will be set to `true`). If a value is returned, it will be set as the `value` property of the object returned by the generator. Much like a `return` statement, an error thrown inside the generator will make the generator finished -- unless caught within the generator's body. When a generator is finished, subsequent `next` calls will not execute any  of that generator's code, they will just return an object of this form: `{value: undefined, done: true}`.
 
@@ -957,13 +1073,11 @@ function* yieldAndReturn() {
   yield "unreachable";
 }
 
-var gen = yieldAndReturn()
+var gen = yieldAndReturn();
 console.log(gen.next()); // { value: "Y", done: false }
 console.log(gen.next()); // { value: "R", done: true }
 console.log(gen.next()); // { value: undefined, done: true }
 ```
-
-
 
 ### Map vs Object
 
@@ -991,7 +1105,7 @@ Virtual DOM allows you to update a view whenever state changes by creating a fu
 
 DOM manipulation is the heart of the modern, interactive web. Unfortunately, it is also a lot slower than most JavaScript operations. This slowness is made worse by the fact that **most JavaScript frameworks update the DOM much more than they have to.**
 
-For example: let's say that you have a list that contains ten items. You check off the first item. Most JavaScript frameworks would rebuild *the entire list*. That's ten times more work than necessary! Only one item changed, but the remaining nine get rebuilt exactly how they were before.
+For example: let's say that you have a list that contains ten items. You check off the first item. Most JavaScript frameworks would rebuild _the entire list_. That's ten times more work than necessary! Only one item changed, but the remaining nine get rebuilt exactly how they were before.
 
 Rebuilding a list is no big deal to a web browser, but modern websites can use huge amounts of DOM manipulation. Inefficient updating has become a serious problem.
 
@@ -1001,11 +1115,11 @@ Manipulating the DOM is slow. Manipulating the virtual DOM is much faster, becau
 
 In React, when you render a JSX element, every single virtual DOM object gets updated. This sounds incredibly inefficient, but the cost is insignificant because the **virtual DOM can update so quickly**.
 
-Once the virtual DOM has updated, then React compares the virtual DOM with a virtual DOM *snapshot* that was taken right before the update.
+Once the virtual DOM has updated, then React compares the virtual DOM with a virtual DOM _snapshot_ that was taken right before the update.
 
-By comparing the new virtual DOM with a pre-update version, React figures out *exactly which virtual DOM objects have changed.* This process is called "diffing."
+By comparing the new virtual DOM with a pre-update version, React figures out _exactly which virtual DOM objects have changed._ This process is called "diffing."
 
-Once React knows which virtual DOM objects have changed, then React updates those objects, *and only those objects,* on the real DOM. In our example from earlier, React would be smart enough to rebuild your one checked-off list-item, and leave the rest of your list alone.
+Once React knows which virtual DOM objects have changed, then React updates those objects, _and only those objects,_ on the real DOM. In our example from earlier, React would be smart enough to rebuild your one checked-off list-item, and leave the rest of your list alone.
 
 This makes a big difference! React can update only the necessary parts of the DOM. React's reputation for performance comes largely from this innovation.
 
@@ -1013,7 +1127,7 @@ In summary, here's what happens when you try to update the DOM in React:
 
 1. The entire virtual DOM gets updated.
 2. The virtual DOM gets compared to what it looked like before you updated it. React figures out which objects have changed.
-3. The changed objects, and the changed objects only, get updated on the *real* DOM.
+3. The changed objects, and the changed objects only, get updated on the _real_ DOM.
 4. Changes on the real DOM cause the screen to change.
 
 ### Shadow DOM
@@ -1025,10 +1139,10 @@ Following code will change the buttons text to Chinese. But interestingly `host.
 ```html
 <button>Hello, world!</button>
 <script>
-    var host = document.querySelector('button');
-    var root = host.createShadowRoot();
+  var host = document.querySelector("button");
+  var root = host.createShadowRoot();
 
-    root.textContent = 'こんにちは、影の世界!';
+  root.textContent = "こんにちは、影の世界!";
 </script>
 ```
 
@@ -1038,25 +1152,25 @@ When you hit an web url in browser, first the HTML content is downloaded and bro
 
 If we use **async**, HTML parsing doesn’t stop whilst file is fetched, but once it’s fetched, HTML parsing stops to execute the script.
 
-If we use **defer** browser downloads the JS during HTML parsing, and executes the JS only when HTML parsing is [*done*](http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html).
+If we use **defer** browser downloads the JS during HTML parsing, and executes the JS only when HTML parsing is [_done_](http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html).
 
 ### Async Await
 
-_The await operator is used to wait for a Promise. It can only be used inside an async function._ 
+_The await operator is used to wait for a Promise. It can only be used inside an async function._
 
 The `await` expression causes `async` function execution to pause until a `Promise` is resolved, that is fulfilled or rejected, and to resume execution of the `async` function after fulfillment. When resumed, the value of the `await` expression is that of the fulfilled `Promise`.
 
 If the `Promise` is rejected, the `await` expression throws the rejected value.
 
-If the value of the *expression* following the `await` operator is not a `Promise`, it's converted to a [resolved Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve).
+If the value of the _expression_ following the `await` operator is not a `Promise`, it's converted to a [resolved Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve).
 
 **Example:**
 
 If a `Promise` is passed to an `await` expression, it waits for the `Promise` to be fulfilled and returns the fulfilled value.
 
 ```javascript
-function resolveAfter2Seconds(x) { 
-  return new Promise(resolve => {
+function resolveAfter2Seconds(x) {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
@@ -1086,7 +1200,7 @@ If the `Promise` is rejected, the rejected value is thrown.
 async function f3() {
   try {
     var z = await Promise.reject(30);
-  } catch(e) {
+  } catch (e) {
     console.log(e); // 30
   }
 }
@@ -1095,9 +1209,9 @@ f3();
 
 ### Web Workers
 
-Web Workers is a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface. Once created, a worker can send messages to the JavaScript code that created it by posting messages to an event handler specified by that code (and vice versa). 
+Web Workers is a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface. Once created, a worker can send messages to the JavaScript code that created it by posting messages to an event handler specified by that code (and vice versa).
 
-A worker is an object created using a constructor (e.g. [`Worker()`](https://developer.mozilla.org/en-US/docs/Web/API/Worker/Worker)) that runs a named JavaScript file — this file contains the code that will run in the worker thread; workers run in another global context that is different from the current [`window`](https://developer.mozilla.org/en-US/docs/Web/API/Window). 
+A worker is an object created using a constructor (e.g. [`Worker()`](https://developer.mozilla.org/en-US/docs/Web/API/Worker/Worker)) that runs a named JavaScript file — this file contains the code that will run in the worker thread; workers run in another global context that is different from the current [`window`](https://developer.mozilla.org/en-US/docs/Web/API/Window).
 
 **Data is sent between workers and the main thread via a system of messages** — both sides send their messages using the `postMessage()` method, and respond to messages via the `onmessage` event handler (the message is contained within the `Message` event's data attribute.) The data is copied rather than shared.
 
@@ -1105,10 +1219,10 @@ Workers may, in turn, spawn new workers, as long as those workers are hosted wit
 
 **Dedicated workers**
 
-Dedicated workers can be created like this: 
+Dedicated workers can be created like this:
 
 ```javascript
-var myWorker = new Worker('worker.js');
+var myWorker = new Worker("worker.js");
 ```
 
 Once created, you can send messages to and from the worker via `postMessage()` and listen on the `on message` event handler.
@@ -1116,15 +1230,15 @@ Once created, you can send messages to and from the worker via `postMessage()` a
 When you want to send a message to the worker, you post messages to it like this (in the context of main.js):
 
 ```javascript
-first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
-}
+first.onchange = function () {
+  myWorker.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 
-second.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
-}
+second.onchange = function () {
+  myWorker.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 ```
 
 So here we have two `<input/>` elements represented by the variables `first` and `second`; when the value of either is changed, `myWorker.postMessage([first.value,second.value])` is used to send the value inside to the worker, as an array. You can send pretty much anything you like in the message.
@@ -1132,14 +1246,14 @@ So here we have two `<input/>` elements represented by the variables `first`�
 In the worker, we can respond when the message is received by writing an event handler block like this (in the context of worker.js):
 
 ```javascript
-onmessage = function(e) {
-  console.log('Message received from main script');
-  
-  var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
-    
-  console.log('Posting message back to main script');
+onmessage = function (e) {
+  console.log("Message received from main script");
+
+  var workerResult = "Result: " + e.data[0] * e.data[1];
+
+  console.log("Posting message back to main script");
   postMessage(workerResult);
-}
+};
 ```
 
 The `onmessage` handler allows us to run some code whenever a message is received, with the message itself being available in the `message` event's `data` attribute. Here we simply multiply together the two numbers then use `postMessage()` again, to post the result back to the main thread.
@@ -1147,10 +1261,10 @@ The `onmessage` handler allows us to run some code whenever a message is recei
 Back in the main thread, we use `onmessage` again, to respond to the message sent back from the worker:
 
 ```javascript
-myWorker.onmessage = function(e) {
+myWorker.onmessage = function (e) {
   result.textContent = e.data;
-  console.log('Message received from worker');
-}
+  console.log("Message received from worker");
+};
 ```
 
 Here we grab the message event data and set it as the `textContent` of the result paragraph, so the user can see the result of the calculation.
@@ -1178,22 +1292,22 @@ close();
 **example.html**: (the main page):
 
 ```javascript
-var myWorker = new Worker('my_task.js');
+var myWorker = new Worker("my_task.js");
 
-myWorker.onmessage = function(oEvent) {
-  console.log('Worker said : ' + oEvent.data);
+myWorker.onmessage = function (oEvent) {
+  console.log("Worker said : " + oEvent.data);
 };
 
-myWorker.postMessage('ali');
+myWorker.postMessage("ali");
 ```
 
 **my_task.js** (the worker):
 
 ```javascript
-postMessage("I\'m working before postMessage(\'ali\').");
+postMessage("I'm working before postMessage('ali').");
 
-onmessage = function(oEvent) {
-  postMessage('Hi ' + oEvent.data);
+onmessage = function (oEvent) {
+  postMessage("Hi " + oEvent.data);
 };
 ```
 
@@ -1207,8 +1321,8 @@ A service worker is run in a worker context: it therefore has no DOM access, and
 
 ### Throttle vs. Debounce
 
-- **Throttle**: the original function be called *at most once per specified period.*
-- **Debounce**: the original function be called after *the caller stops calling the decorated function after a specified period*.
+- **Throttle**: the original function be called _at most once per specified period._
+- **Debounce**: the original function be called after _the caller stops calling the decorated function after a specified period_.
 
 Throttle implementation:
 
@@ -1217,14 +1331,14 @@ function throttled(delay, fn) {
   let lastCall = 0;
 
   return function (...args) {
-    const now = (new Date).getTime();
+    const now = new Date().getTime();
 
     if (now - lastCall < delay) return;
 
     lastCall = now;
 
     return fn(...args);
-  }
+  };
 }
 ```
 
@@ -1232,21 +1346,22 @@ Debounce implementation:
 
 ```javascript
 function debounce(fn, interval) {
-    let timeoutToken;
+  let timeoutToken;
 
-    return function(...args) {
-        clearTimeout(timeoutToken);
+  return function (...args) {
+    clearTimeout(timeoutToken);
 
-        timeoutToken = setTimeout(() => {
-            timeoutToken = null;
+    timeoutToken = setTimeout(() => {
+      timeoutToken = null;
 
-            fn.apply(this, args);
-        }, interval);
-    };
+      fn.apply(this, args);
+    }, interval);
+  };
 }
 ```
 
 ### Pass By Value & Pass By Reference In JavaScript
+
 Javascript uses a **pass by value** strategy for **primitives** but uses **pass by reference** for **objects including arrays** (AKA [call by sharing](https://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_sharing)).
 
 **Pass by reference** is when variables passed in to functions are given the direct memory address. This allows the function to manipulate the object or primitive as it exists outside the scope of the function.
@@ -1279,7 +1394,7 @@ Javascript uses a **pass by value** strategy for **primitives** but uses **pass 
 
 Memoization is an optimisation technique used primarily to speed up computer programs by storing the results of expensive function calls and returning the cached result when the same inputs occur again.
 
-A memoized function "remembers" the results corresponding to some set of specific inputs. Subsequent calls with remembered inputs return the remembered result rather than recalculating it, thus eliminating the primary cost of a call with given parameters from all but the first call made to the function with those parameters. The set of remembered associations may be a fixed-size set controlled by a replacement algorithm or a fixed set, depending on the nature of the function and its use. A function can only be memoized if it is referentially transparent; that is, only if calling the function has exactly the same effect as replacing that function call with its return value. 
+A memoized function "remembers" the results corresponding to some set of specific inputs. Subsequent calls with remembered inputs return the remembered result rather than recalculating it, thus eliminating the primary cost of a call with given parameters from all but the first call made to the function with those parameters. The set of remembered associations may be a fixed-size set controlled by a replacement algorithm or a fixed set, depending on the nature of the function and its use. A function can only be memoized if it is referentially transparent; that is, only if calling the function has exactly the same effect as replacing that function call with its return value.
 
 Memoization is a way to lower a function's time cost in exchange for space cost; that is, memoized functions become optimised for speed in exchange for a higher use of computer memory space. The time/space "cost" of algorithms has a specific name in computing: computational complexity. All functions have a computational complexity in time (i.e. they take time to execute) and in space.
 
@@ -1291,7 +1406,7 @@ Memoization is a way to lower a function's time cost in exchange for space cost;
 
 Decorators are a structural design pattern that aim to promote code re-use. Similar to Mixins, they can be considered another viable alternative to object sub-classing.
 
-Classically, Decorators offered the ability to add behaviour to existing classes in a system dynamically. The idea was that the *decoration* itself wasn't essential to the base functionality of the class, otherwise it would be baked into the *superclass* itself.
+Classically, Decorators offered the ability to add behaviour to existing classes in a system dynamically. The idea was that the _decoration_ itself wasn't essential to the base functionality of the class, otherwise it would be baked into the _superclass_ itself.
 
 They can be used to modify existing systems where we wish to add additional features to objects without the need to heavily modify the underlying code using them. A common reason why developers use them is their applications may contain features requiring a large quantity of distinct types of object. Imagine having to define hundreds of different object constructors for say, a JavaScript game.
 
@@ -1300,41 +1415,45 @@ The Decorator pattern isn't heavily tied to how objects are created but instead 
 ```javascript
 // The constructor to decorate
 function MacBook() {
-  this.cost = function () { return 997; };
-  this.screenSize = function () { return 11.6; };
+  this.cost = function () {
+    return 997;
+  };
+  this.screenSize = function () {
+    return 11.6;
+  };
 }
 
 // Decorator 1
-function memory( macbook ) {
+function memory(macbook) {
   var v = macbook.cost();
-  macbook.cost = function() {
+  macbook.cost = function () {
     return v + 75;
   };
 }
 
 // Decorator 2
-function engraving( macbook ){
+function engraving(macbook) {
   var v = macbook.cost();
-  macbook.cost = function(){
+  macbook.cost = function () {
     return v + 200;
   };
 }
 
 // Decorator 3
-function insurance( macbook ){
+function insurance(macbook) {
   var v = macbook.cost();
-  macbook.cost = function(){
-     return v + 250;
+  macbook.cost = function () {
+    return v + 250;
   };
 }
 
 var mb = new MacBook();
-memory( mb );
-engraving( mb );
-insurance( mb );
+memory(mb);
+engraving(mb);
+insurance(mb);
 
-console.log( mb.cost() ); // Outputs: 1522
-console.log( mb.screenSize() ); // Outputs: 11.6
+console.log(mb.cost()); // Outputs: 1522
+console.log(mb.screenSize()); // Outputs: 11.6
 ```
 
 ### Factory
@@ -1366,7 +1485,7 @@ Due to the fact that the process of object creation is effectively abstracted be
 
 The Singleton pattern is thus known because it restricts instantiation of a class to a single object. Classically, the Singleton pattern can be implemented by creating a class with a method that creates a new instance of the class if one doesn't exist. In the event of an instance already existing, it simply returns a reference to that object.
 
-Singletons differ from static *classes* (or objects) as we can delay their initialization, generally because they require some information that may not be available during initialization time. They don't provide a way for code that is unaware of a previous reference to them to easily retrieve them. This is because it is neither the object or "class" that's returned by a Singleton, it's a structure. Think of how closured variables aren't actually closures - the function scope that provides the closure is the closure.
+Singletons differ from static _classes_ (or objects) as we can delay their initialization, generally because they require some information that may not be available during initialization time. They don't provide a way for code that is unaware of a previous reference to them to easily retrieve them. This is because it is neither the object or "class" that's returned by a Singleton, it's a structure. Think of how closured variables aren't actually closures - the function scope that provides the closure is the closure.
 
 In JavaScript, Singletons serve as a shared resource namespace which isolate implementation code from the global namespace so as to provide a single point of access for functions.
 
@@ -1442,7 +1561,7 @@ When a subject needs to notify observers about something interesting happening, 
 
 When we no longer wish for a particular observer to be notified of changes by the subject they are registered with, the subject can remove them from the list of observers.
 
-It's often useful to refer back to published definitions of design patterns that are language agnostic to get a broader sense of their usage and advantages over time. The definition of the Observer pattern provided in the GoF book, *Design Patterns: Elements of Reusable Object-Oriented Software*, is:
+It's often useful to refer back to published definitions of design patterns that are language agnostic to get a broader sense of their usage and advantages over time. The definition of the Observer pattern provided in the GoF book, _Design Patterns: Elements of Reusable Object-Oriented Software_, is:
 
 > One or more observers are interested in the state of a subject and register their interest with the subject by attaching themselves. When something changes in our subject that the observer may be interested in, a notify message is sent which calls the update method in each observer. When the observer is no longer interested in the subject's state, they can simply detach themselves.
 
@@ -1450,7 +1569,7 @@ It's often useful to refer back to published definitions of design patterns that
 
 > Strategy - defines a family of algorithms, encapsulates each, and makes them interchangeable. Strategy lets the algorithm vary independently form clients that use it.
 
-This pattern seems to be very similar to Factory, Command and others. The main difference is that it is *one to many* pattern (one object can have many strategies). Also this pattern is used to define algorithms. It may be used for:
+This pattern seems to be very similar to Factory, Command and others. The main difference is that it is _one to many_ pattern (one object can have many strategies). Also this pattern is used to define algorithms. It may be used for:
 
 - Using optimal sorting algorithm for different types of data
 - Using different algorithms to count product discount based on user type
@@ -1465,37 +1584,37 @@ Another benefit of the Strategy pattern is that it can hide complex logic or dat
 
 ```javascript
 class Greeter {
-    constructor(strategy) {
-    	this.strategy = strategy;
-    }
-    
-    greet() {
-  		return this.strategy();
-	};
-};
- 
+  constructor(strategy) {
+    this.strategy = strategy;
+  }
+
+  greet() {
+    return this.strategy();
+  }
+}
+
 // Since a function encapsulates an algorithm, it makes a perfect
 // candidate for a Strategy.
-var politeGreetingStrategy = function() {
- console.log("Hello."); 
+var politeGreetingStrategy = function () {
+  console.log("Hello.");
 };
- 
-var friendlyGreetingStrategy = function() {
+
+var friendlyGreetingStrategy = function () {
   console.log("Hey!");
 };
- 
-var boredGreetingStrategy = function() {
+
+var boredGreetingStrategy = function () {
   console.log("sup.");
 };
- 
+
 // Let's use these strategies!
 var politeGreeter = new Greeter(politeGreetingStrategy);
 var friendlyGreeter = new Greeter(friendlyGreetingStrategy);
 var boredGreeter = new Greeter(boredGreetingStrategy);
 
-politeGreeter.greet();   //=> Hello.
+politeGreeter.greet(); //=> Hello.
 friendlyGreeter.greet(); //=> Hey!
-boredGreeter.greet();    //=> sup.
+boredGreeter.greet(); //=> sup.
 ```
 
 ### Inversion of Control
@@ -1508,7 +1627,7 @@ IoC and DIP are high level design principles which should be used while designin
 
 #### **Dependency Inversion Principle**
 
-DIP principle also helps in achieving loose coupling between the classes. It is highly recommended to use DIP and IoC together in order to achieve loose coupling. 
+DIP principle also helps in achieving loose coupling between the classes. It is highly recommended to use DIP and IoC together in order to achieve loose coupling.
 
 DIP suggests that high-level modules should not depend on low level modules. Both should depend on abstraction.
 
@@ -1555,11 +1674,11 @@ All the containers must provide easy support for the following DI lifecycle.
 - **Resolve:** When using IoC container, we don't need to create objects manually. Container does it for us. This is called resolution. Container must include some methods to resolve the specified type; container creates an object of specified type, injects required dependencies if any and returns it.
 - **Dispose:** Container must manage the lifetime of dependent objects. Most IoC containers include different lifetime managers to manage an object's lifecycle and dispose of it.
 
-### Composition vs Inheritance 
+### Composition vs Inheritance
 
-*Prefer composition over inheritance as it is easy to modify later, but do not use a compose-always approach.* 
+_Prefer composition over inheritance as it is easy to modify later, but do not use a compose-always approach._
 
-Composition is simply when a class is *composed* of other classes; or to say it another way, an instance of an object has references to instances of other objects.
+Composition is simply when a class is _composed_ of other classes; or to say it another way, an instance of an object has references to instances of other objects.
 
 Inheritance is when a class inherits methods and properties from another class.
 
@@ -1567,7 +1686,7 @@ To favor composition over inheritance is a design principle that gives the desig
 
 Initial design is simplified by identifying system object behaviors in separate interfaces instead of creating a hierarchical relationship to distribute behaviors among business-domain classes via inheritance. This approach more easily accommodates future requirements changes that would otherwise require a complete restructuring of business-domain classes in the inheritance model. Additionally, it avoids problems often associated with relatively minor changes to an inheritance-based model that includes several generations of classes.
 
-# HTML / CSS 
+# HTML / CSS
 
 ### Flexbox
 
@@ -1607,7 +1726,7 @@ transform: skew(30deg, 20deg);
 transform: scale(0.5) translate(-100%, -100%);
 ```
 
-## Design Systems 
+## Design Systems
 
 ## Accessibility
 
@@ -1623,9 +1742,9 @@ Basic function curry
 
 ```javascript
 function add(addend) {
-    return function(summand) {
-        return addend + summand;
-    };
+  return function (summand) {
+    return addend + summand;
+  };
 }
 ```
 
@@ -1634,38 +1753,39 @@ Generic function curry (supports both invocations)
 ```javascript
 // accepts partial list of arguments
 function add(x, y) {
-    if (typeof y === "undefined") { // partial
-        return function (y) {
-            return x + y;
-        };
-    }
+  if (typeof y === "undefined") {
+    // partial
+    return function (y) {
+      return x + y;
+    };
+  }
 
-    return x + y;
+  return x + y;
 }
 ```
 
 ### If we execute this Javascript, what will the browser's console show?
 
 ```javascript
-var text = 'outside';
+var text = "outside";
 
-function logIt(){
-    console.log(text);
-    var text = 'inside';
-};
+function logIt() {
+  console.log(text);
+  var text = "inside";
+}
 
 logIt();
 ```
 
 **Answer:**
 
-In JavaScript, variables are "hoisted" to the top of the function. That is, unlike some other languages (such as C), a variable declared within a function is within scope *throughout* the function. So the compiler sees your function like this:
+In JavaScript, variables are "hoisted" to the top of the function. That is, unlike some other languages (such as C), a variable declared within a function is within scope _throughout_ the function. So the compiler sees your function like this:
 
 ```javascript
-function logIt(){
-    var text;
-    console.log(text);
-    text = 'inside';
+function logIt() {
+  var text;
+  console.log(text);
+  text = "inside";
 } // <-- no semicolon after a function declaration
 ```
 
@@ -1674,10 +1794,10 @@ When you declare `text` as a local variable inside `logIt`, it shadows the varia
 If you want to keep `text` in the outer scope, just leave off the `var` declaration inside the function.
 
 ```javascript
-var text = 'outside';
-function logIt(){
-    console.log(text); // logs 'outside' now
-    text = 'inside';
+var text = "outside";
+function logIt() {
+  console.log(text); // logs 'outside' now
+  text = "inside";
 }
 logIt();
 ```
@@ -1686,18 +1806,18 @@ logIt();
 
 ```javascript
 function fib(n) {
-    if (n <= 2) return 1;
+  if (n <= 2) return 1;
 
-    let x = 0;
-    let y = 1;
+  let x = 0;
+  let y = 1;
 
-    for (var i = 0; i < n; i++) {
-        let tempY = y;
-        y = tempY + x;
-        x = tempY;
-    }
+  for (var i = 0; i < n; i++) {
+    let tempY = y;
+    y = tempY + x;
+    x = tempY;
+  }
 
-    return y;
+  return y;
 }
 ```
 
@@ -1705,13 +1825,11 @@ function fib(n) {
 
 ```javascript
 function flatten(array) {
-    return array.reduce((sum, el) => {
-        let flattenedArr = Array.isArray(el)
-            ? flatten(el)
-            : el;
+  return array.reduce((sum, el) => {
+    let flattenedArr = Array.isArray(el) ? flatten(el) : el;
 
-        return sum.concat(flattenedArr);
-    }, []);
+    return sum.concat(flattenedArr);
+  }, []);
 }
 
 flatten([1, 2, 3, 4, [5, [1, 2, 3, 4, 5, [4, 5]]]]);
@@ -1723,20 +1841,20 @@ flatten([1, 2, 3, 4, [5, [1, 2, 3, 4, 5, [4, 5]]]]);
 
 ```javascript
 function flatten(array) {
-    let clonedList = array.slice(0);
-    const flatList = [];
+  let clonedList = array.slice(0);
+  const flatList = [];
 
-    while (clonedList.length) {
-        const item = clonedList.shift();
+  while (clonedList.length) {
+    const item = clonedList.shift();
 
-        if (item instanceof Array === true) {
-            clonedList = item.concat(clonedList);
-        } else {
-            flatList.push(item);
-        }
+    if (item instanceof Array === true) {
+      clonedList = item.concat(clonedList);
+    } else {
+      flatList.push(item);
     }
+  }
 
-    return flatList;
+  return flatList;
 }
 
 flatten([1, 2, 3, 4, [5, [1, 2, 3, 4, 5, [4, 5]]]]);
@@ -1751,98 +1869,97 @@ const MIN = 0;
 const MAX = 1000;
 
 function rand(min, max) {
-    return Math.random() * (max - min) + min;
+  return Math.random() * (max - min) + min;
 }
 
 class Node {
-    constructor(value) {
-        this.value = value;
-        this.left = null;
-        this.right = null;
-    }
+  constructor(value) {
+    this.value = value;
+    this.left = null;
+    this.right = null;
+  }
 }
 
 function insert(root, key) {
-    const node = new Node(key);
+  const node = new Node(key);
 
-    if (!root) return node;
+  if (!root) return node;
 
-    if (root.value > key && !root.left) {
-        root.left = node;
-    } else if (root.value < key && !root.right) {
-        root.right = node;
-    } else if (root.value > key) {
-        insert(root.left, key);
-    } else if (root.value < key) {
-        insert(root.right, key);
-    }
+  if (root.value > key && !root.left) {
+    root.left = node;
+  } else if (root.value < key && !root.right) {
+    root.right = node;
+  } else if (root.value > key) {
+    insert(root.left, key);
+  } else if (root.value < key) {
+    insert(root.right, key);
+  }
 
-    return root;
+  return root;
 }
 
 function getMaxNode(node) {
-    if (!node) return null;
-    if (!node.right) return node;
+  if (!node) return null;
+  if (!node.right) return node;
 
-    return getMaxNode(node.right)
+  return getMaxNode(node.right);
 }
 
 function findSecondLargest(node) {
-    if (!node) return null;
+  if (!node) return null;
 
-    // if the current node is the max, the second largest is the max
-    // node on the left tree.
-    if (node.left && !node.right) {
-        return getMaxNode(node.left);
+  // if the current node is the max, the second largest is the max
+  // node on the left tree.
+  if (node.left && !node.right) {
+    return getMaxNode(node.left);
+  }
+  // if the right child node is the max, the current node is the
+  // second largest.
+  if (node.right) {
+    if (!node.right.left && !node.right.right) {
+      return node;
     }
-    // if the right child node is the max, the current node is the
-    // second largest.
-    if (node.right) {
-        if (!node.right.left && !node.right.right) {
-            return node
-        }
-    }
-    // otherwise, move on to the right child.
-    return findSecondLargest(node.right)
+  }
+  // otherwise, move on to the right child.
+  return findSecondLargest(node.right);
 }
-
 
 // Build BST
 let bst;
 
 for (var i = 0; i < 10; i++) {
-    const randNo = rand(MIN, MAX);
-    bst = insert(bst, randNo);
+  const randNo = rand(MIN, MAX);
+  bst = insert(bst, randNo);
 }
 
-console.log('largest', getMaxNode(bst).value);
-console.log('second largest', findSecondLargest(bst).value);
+console.log("largest", getMaxNode(bst).value);
+console.log("second largest", findSecondLargest(bst).value);
 ```
 
-### Given 2 identical DOM trees (but not equal) and one element  of the first DOM tree, how would you find this element in the second DOM tree?
+### Given 2 identical DOM trees (but not equal) and one element of the first DOM tree, how would you find this element in the second DOM tree?
 
 Example DOM:
 
 ```html
 <div id="root1">
-    <div>
-      <div></div>
-    </div>
-    <div>
-      <div id="node1"></div>
-      <div></div>
-    </div>
+  <div>
+    <div></div>
   </div>
+  <div>
+    <div id="node1"></div>
+    <div></div>
+  </div>
+</div>
 
-  <div id="root2">
-    <div>
-      <div></div>
-    </div>
-    <div>
-      <div id="node2"></div>
-      <div></div>
-    </div>
+<div id="root2">
+  <div>
+    <div></div>
   </div>
+  <div>
+    <div id="node2"></div>
+    <div></div>
+  </div>
+</div>
 ```
 
 **Answer:**
@@ -1906,7 +2023,7 @@ function find(rootA, rootB, nodeX) {
 
 ### Write an event emitter that supports subscribing, unsubscribing and emitting events.
 
-Your implementation should fire the `callback` supplied as part of your subscription to be invoked with `foo` and `bar` as parameters. For example:  `emitter.emit('event_name', foo, bar); `
+Your implementation should fire the `callback` supplied as part of your subscription to be invoked with `foo` and `bar` as parameters. For example: `emitter.emit('event_name', foo, bar);`
 
 https://www.glassdoor.com.au/Interview/Write-an-emitter-class-emitter-new-Emitter-1-Support-subscribing-to-events-sub-emitter-subscribe-eve-QTN_1793084.htm
 
@@ -1916,7 +2033,7 @@ https://www.glassdoor.com.au/Interview/Given-an-input-array-and-another-array-th
 
 ### Implement a square root function.
 
-> Question related to array  data manipulation.
+> Question related to array data manipulation.
 
 ### Write a function to check that a binary tree is a valid binary search tree.
 
@@ -1927,6 +2044,7 @@ This question is designed to trick you. You MUST keep track of the min and max n
 For more information please see: https://www.geeksforgeeks.org/a-program-to-check-if-a-binary-tree-is-bst-or-not/
 
 Consider this BST:
+
 ```
       3
      / \
@@ -1934,10 +2052,11 @@ Consider this BST:
   /  \
  1    4
 ```
-Notice how the 4 is in the left sub tree (as a child of 2). It should actually be in the right subtree as a left hand child of 5. 
+
+Notice how the 4 is in the left sub tree (as a child of 2). It should actually be in the right subtree as a left hand child of 5.
 
 The following solution **is correct, but not efficient**.
-It runs slowly since it traverses over some parts of the tree many times. A better solution looks at each node only once. 
+It runs slowly since it traverses over some parts of the tree many times. A better solution looks at each node only once.
 
 **DO NOT USE THIS SOLUTION**
 
@@ -1952,24 +2071,25 @@ It runs slowly since it traverses over some parts of the tree many times. A bett
 
 function isValidBST(root, min = 0, max = 9999) {
   if (!root) {
-    return true;      
+    return true;
   }
-    
+
   if (root.val >= max || root.val <= min) {
-      return false;
+    return false;
   }
-  
+
   if (!!root.left && !isValidBST(root.left, min, root.val)) {
-    return false;   
-  }    
-    
+    return false;
+  }
+
   if (!!root.right && !isValidBST(root.right, root.val, max)) {
     return false;
   }
-    
+
   return true;
-};
+}
 ```
+
 The trick is to write a utility help function that traverses the tree keeping track of the narrowing min and max allowed values as it goes, looking at each node only once!
 
 **DO NOT USE THIS SOLUTION**
@@ -1977,21 +2097,23 @@ The trick is to write a utility help function that traverses the tree keeping tr
 This is a more efficient and correct solution:
 
 ```javascript
-var isValidBST = function(root, min, max) {
-   return isBSTUtil(root, min, max)
+var isValidBST = function (root, min, max) {
+  return isBSTUtil(root, min, max);
 };
 
-var isBSTUtil = function(root, min, max) {
+var isBSTUtil = function (root, min, max) {
   if (!root) {
-      return true;
+    return true;
   }
-    
+
   if (root.val < min || root.val > max) {
-      return false;
+    return false;
   }
-    
-  return isBSTUtil(root.left, min, root.val-1) &&
-    isBSTUtil(root.right, root.val+1, max)
+
+  return (
+    isBSTUtil(root.left, min, root.val - 1) &&
+    isBSTUtil(root.right, root.val + 1, max)
+  );
 };
 ```
 
@@ -1999,35 +2121,36 @@ BUT the best solution is to do an in-order traversal of the given tree and store
 
 **Time Complexity: O(n)**
 
-Inorder traversal 
+Inorder traversal
+
 1. Traverse the left subtree, i.e., call Inorder(left-subtree)
 2. Visit the root.
 3. Traverse the right subtree, i.e., call Inorder(right-subtree)
 
 ```javascript
-var isValidBST = function(root) {
-   if (!root) return true;
-   
-   const stack = [];
-   let prev;
-    
-   while (!!root || stack.length !== 0) {
-      while (root != null) {
-         stack.push(root);
-         root = root.left;
-      }
-      
-      root = stack.pop();
-      
-      if(!!prev && root.val <= prev.val) {
-        return false;   
-      }
-      
-      prev = root;
-      root = root.right;
-   }
-    
-   return true;
+var isValidBST = function (root) {
+  if (!root) return true;
+
+  const stack = [];
+  let prev;
+
+  while (!!root || stack.length !== 0) {
+    while (root != null) {
+      stack.push(root);
+      root = root.left;
+    }
+
+    root = stack.pop();
+
+    if (!!prev && root.val <= prev.val) {
+      return false;
+    }
+
+    prev = root;
+    root = root.right;
+  }
+
+  return true;
 };
 ```
 
@@ -2047,8 +2170,8 @@ Here's a sample linked list node class:
 
 ```javascript
 function LinkedListNode(value) {
-    this.value = value;
-    this.next = null;
+  this.value = value;
+  this.next = null;
 }
 ```
 
@@ -2061,12 +2184,10 @@ Write a function kthToLastNode() that takes an integer `k` and the headNode of a
 ### Verify a prime number?
 
 ```javascript
-const isPrime = num => {
-    for (let i = 2; i < num; i++)
-        if (num % i === 0)
-            return false;
+const isPrime = (num) => {
+  for (let i = 2; i < num; i++) if (num % i === 0) return false;
 
-    return num !== 1;
+  return num !== 1;
 };
 ```
 
@@ -2082,38 +2203,38 @@ a = a - b;
 
 ### Reverse a string in JavaScript?
 
-> Since strings in JavaScript are **immutable**, first convert the string into *an array of characters*, do the in-place reversal on that array, and re-join that array into a string before returning it. This isn't technically "in-place" and the array of characters will cost _O(n)_ additional space, but it's a reasonable way to stay within the spirit of the challenge.
+> Since strings in JavaScript are **immutable**, first convert the string into _an array of characters_, do the in-place reversal on that array, and re-join that array into a string before returning it. This isn't technically "in-place" and the array of characters will cost _O(n)_ additional space, but it's a reasonable way to stay within the spirit of the challenge.
 
 https://www.interviewcake.com/question/javascript/reverse-string-in-place
 
 ```javascript
-
 function reverseString(str) {
-    // Step 1. Use the split() method to return a new array
-    var splitString = str.split(""); // ["h", "e", "l", "l", "o"]
- 
-    // Step 2. Use the reverse() method to reverse the new created array
-    var reverseArray = splitString.reverse(); // ["o", "l", "l", "e", "h"]
- 
-    // Step 3. Use the join() method to join all elements of the array into a string
-    var joinArray = reverseArray.join(""); // "olleh"
-    
-    //Step 4. Return the reversed string
-    return joinArray; // "olleh"
+  // Step 1. Use the split() method to return a new array
+  var splitString = str.split(""); // ["h", "e", "l", "l", "o"]
+
+  // Step 2. Use the reverse() method to reverse the new created array
+  var reverseArray = splitString.reverse(); // ["o", "l", "l", "e", "h"]
+
+  // Step 3. Use the join() method to join all elements of the array into a string
+  var joinArray = reverseArray.join(""); // "olleh"
+
+  //Step 4. Return the reversed string
+  return joinArray; // "olleh"
 }
 
 reverseString("hello");
 ```
 
 ### Reverse words in a sentence?
+
 Similar to the above, but take note of the space to denote a new word.
 
 ```javascript
 function reverseString(str) {
-	return str.split(' ').reverse().join(' ');
+  return str.split(" ").reverse().join(" ");
 }
 
-reverseString('Hello, World. My Name is Daniel Del Core');
+reverseString("Hello, World. My Name is Daniel Del Core");
 ```
 
 ### Find the first non-repeating char in a string?
@@ -2124,11 +2245,11 @@ reverseString('Hello, World. My Name is Daniel Del Core');
 
 ```javascript
 function palindrome(str) {
-    // String clean up to support sentences etc
-    const cleanStr = str.toLowerCase();
-    const reverseStr = cleanStr.split('').reverse().join('');
-    
-    return cleanStr === reverseStr;
+  // String clean up to support sentences etc
+  const cleanStr = str.toLowerCase();
+  const reverseStr = cleanStr.split("").reverse().join("");
+
+  return cleanStr === reverseStr;
 }
 
 palindrome("race car"); // True
@@ -2148,11 +2269,10 @@ palindrome("race car"); // True
 
 ### How would you handle 5000 promises?
 
-Group the promises into batches of 50 (for example) and recursively execute each batch until completion or error. If an error occurs you could either retry, with that batch, or throw an error to the client as timeouts and other server errors are likely to occur. 
+Group the promises into batches of 50 (for example) and recursively execute each batch until completion or error. If an error occurs you could either retry, with that batch, or throw an error to the client as timeouts and other server errors are likely to occur.
 
 **Don't forget!** If duplicate requests occur, you can simply memoize the function and safely return the same result to side-step the network request and improve performance.
 
 ```javascript
 // TODO:
 ```
-
