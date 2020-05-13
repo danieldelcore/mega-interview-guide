@@ -4,6 +4,8 @@
 
 # The MEGA Interview Guide
 
+**❤️ PRs Welcome ❤️**
+
 <!-- toc -->
 
 - [How to Prepare](#how-to-prepare)
