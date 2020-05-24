@@ -1732,6 +1732,21 @@ transform: scale(0.5) translate(-100%, -100%);
 
 ## Accessibility
 
+>Being accessible is about making your website, with all of its data and functions, available for anyone, no matter how they have to use your website. — Katie Cunningham, Accessibility Handbook (O’Reilly)
+
+For a beginner-friendly overview of accessibility, the [Google Web Fundamentals guide](https://developers.google.com/web/fundamentals/accessibility) is an excellent starting point. They explain the [Acessibility Tree](https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree) particularly well.
+
+If you want to dive into a more hands-on learning plan with recommended activities, see Julie Grundy's [Accessibility Learning Plan for Developers](https://github.com/stringyland/a11y-learning-plan). Julie recommends resources and activities for:
+
+- Writing semantic HTML
+- Creating accessible styles
+- Making images accessible
+- Learning the methods for hiding content
+- Building an accessible drop-down menu
+- Building an accessible form
+- Providing accessible error messages
+- Accessibility testing
+
 # Questions
 
 ### **How would you make these functions work.**
