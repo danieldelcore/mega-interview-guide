@@ -1289,7 +1289,7 @@ In the worker thread, workers may close themselves by calling their own [`close`
 close();
 ```
 
-**Example: **
+**Example:**
 
 **example.html**: (the main page):
 
@@ -1643,7 +1643,7 @@ Dependency Injection pattern involves 3 types of classes.
 2. **Service Class:** The service class (dependency) is a class that provides service to the client class.
 3. **Injector Class:** The injector class injects service class object into the client class.
 
-**Types of Dependency Injection: **
+**Types of Dependency Injection:**
 
 - **Constructor Injection:** In the constructor injection, injector supplies service (dependency) through the client class constructor.
 - **Property Injection:** In property injection (aka Setter Injection), injector supplies dependency through a public property of the client class.
