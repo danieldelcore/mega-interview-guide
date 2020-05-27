@@ -1760,8 +1760,10 @@ If you want to dive into a more hands-on learning plan with recommended activiti
 
 `add(2, 5); // 7` `add(2)(5); // 7`
 
-**Answer:**
-
+<details>
+<summary>Show Answer:</summary>
+<br>
+  
 Basic function curry
 
 ```javascript
@@ -1771,7 +1773,6 @@ function add(addend) {
   };
 }
 ```
-
 Generic function curry (supports both invocations)
 
 ```javascript
@@ -1788,6 +1789,9 @@ function add(x, y) {
 }
 ```
 
+
+</details>
+
 ### If we execute this Javascript, what will the browser's console show?
 
 ```javascript
@@ -1800,8 +1804,9 @@ function logIt() {
 
 logIt();
 ```
-
-**Answer:**
+<details>
+<summary>Show Answer:</summary>
+<br>
 
 In JavaScript, variables are "hoisted" to the top of the function. That is, unlike some other languages (such as C), a variable declared within a function is within scope _throughout_ the function. So the compiler sees your function like this:
 
@@ -1825,6 +1830,9 @@ function logIt() {
 }
 logIt();
 ```
+
+</details>
+
 
 ### Get nth Fibonacci number?
 
@@ -1985,9 +1993,10 @@ Example DOM:
   </div>
 </div>
 ```
-
-**Answer:**
-
+<details>
+<summary>Show Answer:</summary>
+<br>
+  
 ```javascript
 /*
   O          O
@@ -2044,6 +2053,7 @@ function find(rootA, rootB, nodeX) {
 }
 
 ```
+</details>
 
 ### Write an event emitter that supports subscribing, unsubscribing and emitting events.
 
