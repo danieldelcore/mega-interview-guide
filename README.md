@@ -2,9 +2,16 @@
   <img width="500" src="./logos/logo.png" alt="Mega interviewer guide avatars">
 </p>
 
-# The MEGA Interview Guide
+<h1 align="center">
+  The MEGA Interview Guide
+</h1>
+<p align="center">
+  A humble guide to give developers the tools they need to nail technical interviews! 
+</p>
+<p align="center">
+  <strong>❤️ PRs Welcome ❤️</strong>
+</p>
 
-**❤️ PRs Welcome ❤️**
 
 <!-- toc -->
 
