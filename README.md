@@ -6,12 +6,11 @@
   The MEGA Interview Guide
 </h1>
 <p align="center">
-  A humble guide to give developers the tools they need to nail technical interviews! 
+  A humble guide to give developers the tools they need to nail technical interviews!
 </p>
 <p align="center">
   <strong>❤️ PRs Welcome ❤️</strong>
 </p>
-
 
 <!-- toc -->
 
@@ -85,11 +84,11 @@
   * [Design Systems](#design-systems)
   * [Accessibility](#accessibility)
 - [Questions](#questions)
-    + [**How would you make these functions work.**](#how-would-you-make-these-functions-work)
+    + [How would you make these functions work?](#how-would-you-make-these-functions-work)
     + [If we execute this Javascript, what will the browser's console show?](#if-we-execute-this-javascript-what-will-the-browsers-console-show)
     + [Get nth Fibonacci number?](#get-nth-fibonacci-number)
-    + [Write a function that deeply flattens an array recursively](#write-a-function-that-deeply-flattens-an-array-recursively)
-    + [Write a function that deeply flattens an array iteratively](#write-a-function-that-deeply-flattens-an-array-iteratively)
+    + [Write a function that deeply flattens an array _recursively_](#write-a-function-that-deeply-flattens-an-array-_recursively_)
+    + [Write a function that deeply flattens an array _iteratively_](#write-a-function-that-deeply-flattens-an-array-_iteratively_)
     + [Write a function to find the 2nd largest element in a binary search tree.](#write-a-function-to-find-the-2nd-largest-element-in-a-binary-search-tree)
     + [Given 2 identical DOM trees (but not equal) and one element of the first DOM tree, how would you find this element in the second DOM tree?](#given-2-identical-dom-trees-but-not-equal-and-one-element-of-the-first-dom-tree-how-would-you-find-this-element-in-the-second-dom-tree)
     + [Write an event emitter that supports subscribing, unsubscribing and emitting events.](#write-an-event-emitter-that-supports-subscribing-unsubscribing-and-emitting-events)
@@ -98,7 +97,7 @@
     + [Write a function to check that a binary tree is a valid binary search tree.](#write-a-function-to-check-that-a-binary-tree-is-a-valid-binary-search-tree)
     + [Delete a node from a singly-linked list, given only variable pointing to that node.](#delete-a-node-from-a-singly-linked-list-given-only-variable-pointing-to-that-node)
     + [Write a function for reversing a linked list. Do it in-place.](#write-a-function-for-reversing-a-linked-list-do-it-in-place)
-    + [You have a linked list and want to find the kkth to last node.](#you-have-a-linked-list-and-want-to-find-the-kkth-to-last-node)
+    + [You have a linked list and want to find the kth to last node.](#you-have-a-linked-list-and-want-to-find-the-kth-to-last-node)
     + [Verify a prime number?](#verify-a-prime-number)
     + [Remove duplicate members from an array?](#remove-duplicate-members-from-an-array)
     + [Swap two numbers without using a temp variable?](#swap-two-numbers-without-using-a-temp-variable)
@@ -106,7 +105,7 @@
     + [Reverse words in a sentence?](#reverse-words-in-a-sentence)
     + [Find the first non-repeating char in a string?](#find-the-first-non-repeating-char-in-a-string)
     + [Remove duplicate characters from a sting?](#remove-duplicate-characters-from-a-sting)
-    + [How will you verify a word as palindrome?](#how-will-you-verify-a-word-as-palindrome)
+    + [How can you verify that a word is palindrome?](#how-can-you-verify-that-a-word-is-palindrome)
     + [Generate random between 5 to 7 by using defined function.](#generate-random-between-5-to-7-by-using-defined-function)
     + [Find missing number from unsorted array of integers.](#find-missing-number-from-unsorted-array-of-integers)
     + [Get two numbers that equal to a given number?](#get-two-numbers-that-equal-to-a-given-number)
@@ -1739,7 +1738,7 @@ transform: scale(0.5) translate(-100%, -100%);
 
 ## Accessibility
 
->Being accessible is about making your website, with all of its data and functions, available for anyone, no matter how they have to use your website. — Katie Cunningham, Accessibility Handbook (O’Reilly)
+> Being accessible is about making your website, with all of its data and functions, available for anyone, no matter how they have to use your website. — Katie Cunningham, Accessibility Handbook (O’Reilly)
 
 For a beginner-friendly overview of accessibility, the [Google Web Fundamentals guide](https://developers.google.com/web/fundamentals/accessibility) is an excellent starting point. They explain the [Acessibility Tree](https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree) particularly well.
 
@@ -1756,14 +1755,17 @@ If you want to dive into a more hands-on learning plan with recommended activiti
 
 # Questions
 
-### **How would you make these functions work.**
+### How would you make these functions work?
 
-`add(2, 5); // 7` `add(2)(5); // 7`
+```javascript
+add(2, 5); // 7
+add(2)(5); // 7
+```
 
 <details>
-<summary>Show Answer:</summary>
+<summary>Show Answer 💡</summary>
 <br>
-  
+
 Basic function curry
 
 ```javascript
@@ -1773,6 +1775,7 @@ function add(addend) {
   };
 }
 ```
+
 Generic function curry (supports both invocations)
 
 ```javascript
@@ -1789,7 +1792,6 @@ function add(x, y) {
 }
 ```
 
-
 </details>
 
 ### If we execute this Javascript, what will the browser's console show?
@@ -1804,8 +1806,9 @@ function logIt() {
 
 logIt();
 ```
+
 <details>
-<summary>Show Answer:</summary>
+<summary>Show Answer 💡</summary>
 <br>
 
 In JavaScript, variables are "hoisted" to the top of the function. That is, unlike some other languages (such as C), a variable declared within a function is within scope _throughout_ the function. So the compiler sees your function like this:
@@ -1833,8 +1836,11 @@ logIt();
 
 </details>
 
-
 ### Get nth Fibonacci number?
+
+<details>
+<summary>Show Answer 💡</summary>
+<br>
 
 ```javascript
 function fib(n) {
@@ -1853,7 +1859,13 @@ function fib(n) {
 }
 ```
 
-### Write a function that deeply flattens an array recursively
+</details>
+
+### Write a function that deeply flattens an array _recursively_
+
+<details>
+<summary>Show Answer 💡</summary>
+<br>
 
 ```javascript
 function flatten(array) {
@@ -1869,7 +1881,13 @@ flatten([1, 2, 3, 4, [5, [1, 2, 3, 4, 5, [4, 5]]]]);
 // [ 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 4, 5 ]
 ```
 
-### Write a function that deeply flattens an array iteratively
+</details>
+
+### Write a function that deeply flattens an array _iteratively_
+
+<details>
+<summary>Show Answer 💡</summary>
+<br>
 
 ```javascript
 function flatten(array) {
@@ -1894,7 +1912,13 @@ flatten([1, 2, 3, 4, [5, [1, 2, 3, 4, 5, [4, 5]]]]);
 // [ 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 4, 5 ]
 ```
 
+</details>
+
 ### Write a function to find the 2nd largest element in a binary search tree.
+
+<details>
+<summary>Show Answer 💡</summary>
+<br>
 
 ```javascript
 const MIN = 0;
@@ -1968,6 +1992,8 @@ console.log("largest", getMaxNode(bst).value);
 console.log("second largest", findSecondLargest(bst).value);
 ```
 
+</details>
+
 ### Given 2 identical DOM trees (but not equal) and one element of the first DOM tree, how would you find this element in the second DOM tree?
 
 Example DOM:
@@ -1993,10 +2019,11 @@ Example DOM:
   </div>
 </div>
 ```
+
 <details>
-<summary>Show Answer:</summary>
+<summary>Show Answer 💡</summary>
 <br>
-  
+
 ```javascript
 /*
   O          O
@@ -2053,23 +2080,50 @@ function find(rootA, rootB, nodeX) {
 }
 
 ```
+
 </details>
 
 ### Write an event emitter that supports subscribing, unsubscribing and emitting events.
 
 Your implementation should fire the `callback` supplied as part of your subscription to be invoked with `foo` and `bar` as parameters. For example: `emitter.emit('event_name', foo, bar);`
 
-https://www.glassdoor.com.au/Interview/Write-an-emitter-class-emitter-new-Emitter-1-Support-subscribing-to-events-sub-emitter-subscribe-eve-QTN_1793084.htm
+[Reference 📖](https://www.glassdoor.com.au/Interview/Write-an-emitter-class-emitter-new-Emitter-1-Support-subscribing-to-events-sub-emitter-subscribe-eve-QTN_1793084.htm)
+
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+There's no answer here - yet! Suggest one by [creating a pull request 🙏](https://github.com/danieldelcore/mega-interview-guide/pulls)
+
+</details>
 
 ### Given an input array and another array that describes a new index for each element, mutate the input array so that each element ends up in their new index. Discuss the runtime of the algorithm and how you can be sure there won't be any infinite loops.
 
-https://www.glassdoor.com.au/Interview/Given-an-input-array-and-another-array-that-describes-a-new-index-for-each-element-mutate-the-input-array-so-that-each-ele-QTN_446534.htm
+[Reference 📖](https://www.glassdoor.com.au/Interview/Given-an-input-array-and-another-array-that-describes-a-new-index-for-each-element-mutate-the-input-array-so-that-each-ele-QTN_446534.htm)
+
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+There's no answer here - yet! Suggest one by [creating a pull request 🙏](https://github.com/danieldelcore/mega-interview-guide/pulls)
+
+</details>
 
 ### Implement a square root function.
 
-> Question related to array data manipulation.
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+There's no answer here - yet! Suggest one by [creating a pull request 🙏](https://github.com/danieldelcore/mega-interview-guide/pulls)
+
+</details>
 
 ### Write a function to check that a binary tree is a valid binary search tree.
+
+<details>
+<summary>Show Answer 💡</summary>
+<br>
 
 https://www.interviewcake.com/question/javascript/bst-checker
 
@@ -2155,7 +2209,7 @@ BUT the best solution is to do an in-order traversal of the given tree and store
 
 **Time Complexity: O(n)**
 
-Inorder traversal
+In-order traversal
 
 1. Traverse the left subtree, i.e., call Inorder(left-subtree)
 2. Visit the root.
@@ -2188,17 +2242,26 @@ var isValidBST = function (root) {
 };
 ```
 
+</details>
+
 ### Delete a node from a singly-linked list, given only variable pointing to that node.
 
-https://www.interviewcake.com/question/javascript/delete-node
+[Reference 📖](https://www.interviewcake.com/question/javascript/delete-node)
+
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+There's no answer here - yet! Suggest one by [creating a pull request 🙏](https://github.com/danieldelcore/mega-interview-guide/pulls)
+
+</details>
 
 ### Write a function for reversing a linked list. Do it in-place.
 
-https://www.interviewcake.com/question/javascript/reverse-linked-list
+[Reference 📖](https://www.interviewcake.com/question/javascript/reverse-linked-list)
 
-Your function will have one input: the head of the list.
-
-Your function should return the new head of the list.
+- Your function will have one input: the head of the list.
+- Your function should return the new head of the list.
 
 Here's a sample linked list node class:
 
@@ -2209,13 +2272,33 @@ function LinkedListNode(value) {
 }
 ```
 
-### You have a linked list and want to find the kkth to last node.
+<details>
+<summary>Show Answer 💡</summary>
+<br>
 
-https://www.interviewcake.com/question/javascript/kth-to-last-node-in-singly-linked-list
+There's no answer here - yet! Suggest one by [creating a pull request 🙏](https://github.com/danieldelcore/mega-interview-guide/pulls)
+
+</details>
+
+### You have a linked list and want to find the kth to last node.
+
+[Reference 📖](https://www.interviewcake.com/question/javascript/kth-to-last-node-in-singly-linked-list)
 
 Write a function kthToLastNode() that takes an integer `k` and the headNode of a singly-linked list, and returns the `kth` to last node in the list.
 
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+There's no answer here - yet! Suggest one by [creating a pull request 🙏](https://github.com/danieldelcore/mega-interview-guide/pulls)
+
+</details>
+
 ### Verify a prime number?
+
+<details>
+<summary>Show Answer 💡</summary>
+<br>
 
 ```javascript
 const isPrime = (num) => {
@@ -2225,9 +2308,59 @@ const isPrime = (num) => {
 };
 ```
 
+</details>
+
 ### Remove duplicate members from an array?
 
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+[Reference 📖](https://wsvincent.com/javascript-remove-duplicates-array/)
+
+The simplest approach is to use the Set object which lets you store unique values of any type. In other words, Set will automatically remove duplicates for us.
+
+```javascript
+const names = ["John", "Paul", "George", "Ringo", "John"];
+
+let unique = [...new Set(names)];
+console.log(unique); // 'John', 'Paul', 'George', 'Ringo'
+```
+
+Another option is to use filter().
+
+```javascript
+const names = ["John", "Paul", "George", "Ringo", "John"];
+
+let x = (names) => names.filter((v, i) => names.indexOf(v) === i);
+x(names); // 'John', 'Paul', 'George', 'Ringo'
+```
+
+And finally we can use forEach().
+
+```javascript
+const names = ["John", "Paul", "George", "Ringo", "John"];
+
+function removeDups(names) {
+  let unique = {};
+  names.forEach(function (i) {
+    if (!unique[i]) {
+      unique[i] = true;
+    }
+  });
+  return Object.keys(unique);
+}
+
+removeDups(names); // // 'John', 'Paul', 'George', 'Ringo'
+```
+
+</details>
+
 ### Swap two numbers without using a temp variable?
+
+<details>
+<summary>Show Answer 💡</summary>
+<br>
 
 ```javascript
 a = a + b;
@@ -2235,7 +2368,13 @@ b = a - b;
 a = a - b;
 ```
 
+</details>
+
 ### Reverse a string in JavaScript?
+
+<details>
+<summary>Show Answer 💡</summary>
+<br>
 
 > Since strings in JavaScript are **immutable**, first convert the string into _an array of characters_, do the in-place reversal on that array, and re-join that array into a string before returning it. This isn't technically "in-place" and the array of characters will cost _O(n)_ additional space, but it's a reasonable way to stay within the spirit of the challenge.
 
@@ -2259,7 +2398,13 @@ function reverseString(str) {
 reverseString("hello");
 ```
 
+</details>
+
 ### Reverse words in a sentence?
+
+<details>
+<summary>Show Answer 💡</summary>
+<br>
 
 Similar to the above, but take note of the space to denote a new word.
 
@@ -2271,11 +2416,33 @@ function reverseString(str) {
 reverseString("Hello, World. My Name is Daniel Del Core");
 ```
 
+</details>
+
 ### Find the first non-repeating char in a string?
+
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+There's no answer here - yet! Suggest one by [creating a pull request 🙏](https://github.com/danieldelcore/mega-interview-guide/pulls)
+
+</details>
 
 ### Remove duplicate characters from a sting?
 
-### How will you verify a word as palindrome?
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+There's no answer here - yet! Suggest one by [creating a pull request 🙏](https://github.com/danieldelcore/mega-interview-guide/pulls)
+
+</details>
+
+### How can you verify that a word is palindrome?
+
+<details>
+<summary>Show Answer 💡</summary>
+<br>
 
 ```javascript
 function palindrome(str) {
@@ -2289,24 +2456,78 @@ function palindrome(str) {
 palindrome("race car"); // True
 ```
 
+</details>
+
 ### Generate random between 5 to 7 by using defined function.
+
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+There's no answer here - yet! Suggest one by [creating a pull request 🙏](https://github.com/danieldelcore/mega-interview-guide/pulls)
+
+</details>
 
 ### Find missing number from unsorted array of integers.
 
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+There's no answer here - yet! Suggest one by [creating a pull request 🙏](https://github.com/danieldelcore/mega-interview-guide/pulls)
+
+</details>
+
 ### Get two numbers that equal to a given number?
+
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+There's no answer here - yet! Suggest one by [creating a pull request 🙏](https://github.com/danieldelcore/mega-interview-guide/pulls)
+
+</details>
 
 ### Find the largest sum of any two elements?
 
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+There's no answer here - yet! Suggest one by [creating a pull request 🙏](https://github.com/danieldelcore/mega-interview-guide/pulls)
+
+</details>
+
 ### Check whether a given string is a substring of bigger string
+
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+There's no answer here - yet! Suggest one by [creating a pull request 🙏](https://github.com/danieldelcore/mega-interview-guide/pulls)
+
+</details>
 
 ### Get permutations of a string
 
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+There's no answer here - yet! Suggest one by [creating a pull request 🙏](https://github.com/danieldelcore/mega-interview-guide/pulls)
+
+</details>
+
 ### How would you handle 5000 promises?
+
+<details>
+<summary>Show Answer 💡</summary>
+<br>
 
 Group the promises into batches of 50 (for example) and recursively execute each batch until completion or error. If an error occurs you could either retry, with that batch, or throw an error to the client as timeouts and other server errors are likely to occur.
 
 **Don't forget!** If duplicate requests occur, you can simply memoize the function and safely return the same result to side-step the network request and improve performance.
 
-```javascript
-// TODO:
-```
+There's no answer here - yet! Suggest one by [creating a pull request 🙏](https://github.com/danieldelcore/mega-interview-guide/pulls)
+
+</details>
