@@ -2047,7 +2047,7 @@ function getPath(rootNode, startingNode) {
 
   while(currentNode !== rootNode) {
     const parentNode = currentNode.parentElement;
-    const childIndex = parentNode.children.indexOf(currentNode); // We only care about the index
+    const childIndex = Array.from(parentNode.children).indexOf(currentNode); // We only care about the index
 
     path.push(childIndex);
 
