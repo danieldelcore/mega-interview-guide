@@ -2105,7 +2105,38 @@ There's no answer here - yet! Suggest one by [creating a pull request 🙏](http
 <summary>Show Answer 💡</summary>
 <br>
 
-There's no answer here - yet! Suggest one by [creating a pull request 🙏](https://github.com/danieldelcore/mega-interview-guide/pulls)
+```javascript
+
+let arr = ["a", "b", "c", "d", "e", "f"];
+const indices = [2, 3, 4, 0, 5, 1];
+//should return  ["d", "f", "a", "b", "c", "e"]
+
+```
+
+1) O(n) space and O(n) time solution:
+```javascript
+
+const indicesMap = indices.reduce((map, item, index) => {
+    map.set(item, index);
+    return map;
+}, new Map());
+
+arr = indices.map((val, index) => {
+    return arr[indicesMap.get(index)];
+});
+
+console.log(arr);
+
+```
+
+2) O(n2) (n*n) time solution:
+```javascript
+
+arr = indices.map((val, index) => {
+    return arr[indices.indexOf(index)];
+});
+
+```
 
 </details>
 
