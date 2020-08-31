@@ -118,7 +118,7 @@
 
 # How to Prepare
 
-Invest time in preparing: It's important for any engineer, even senior ones, to brush up on their interview skills, coding skills and algorithms. An interview is typically different from your day-to-day job. This is the first technical interview in the process, so any preparation for this interview will be beneficial for the next ones.
+Invest time in preparing: It's important for any engineer, even senior ones, to brush up on their interview skills, coding skills and algorithms. An interview is typically different from your day-to-day job.
 
 **Practice answering many different coding questions:** Practice answering a coding question with the most efficient bug-free solution without using a compiler. A few resources that offer coding questions to use for practice: [Careercup](https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.careercup.com%2Fpage&h=ATNXGEU22051CK2jrQZuz0-_xpFzm-N44vARqRRGaN11C-Bj2vvn7WakmxepET56eZiatvTQ5pvqo_-swS4N6QtW0wLyqika349D8d17ymipgFcPjfwzH5Ij6wH7PmPc-MTcx2YwK5Yovm8v&s=1), [Topcoder](https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.topcoder.com%2F&h=ATM84NVzQHwje5rS4KBb5NHBfgwbX2g_4I-v4q3gW9I31bL155_2HLWALBAaz-u1XIGY8T7w1xFngHX7f9JT4IzFUw-OECGgW0kHns9mvkGq7tkFG9sQz_Oy3oKpwcwOwnJoXMEin1QmB7id&s=1), [Project Euler](https://l.facebook.com/l.php?u=http%3A%2F%2Fprojecteuler.net%2Findex.php&h=ATPG4D_F0Q_s08m-PKCq6owpQh-cUzeLVDZO2hpdW2Sz03dK80GOAQBL45uEyK73sTqcVHOpXPG-Sd-naTXSuOVwa7TKMiqHcJ72OMhzpwUay472i7xcEjrivGdjUlnSu39Rl-gh3G1T8a-s&s=1), or [Facebook Code Lab](https://l.facebook.com/l.php?u=https%3A%2F%2Fcodelab.interviewbit.com%2F&h=ATMMRfsaHRYEOnw7HsLuQSRHKv2q_tQz63MRO-4U9xFgmowjsV9YadpCd4pxMEPnpm2RnXJ8idkl23HwzzMTmFbwK0VAu8MYvxrPs2jqY0TMHs4VJe-df8N0qAG3D15gW4ZKAjGQKCE2SAni&s=1).
 
