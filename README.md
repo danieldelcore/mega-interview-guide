@@ -2525,7 +2525,25 @@ There's no answer here - yet! Suggest one by [creating a pull request 🙏](http
 <summary>Show Answer 💡</summary>
 <br>
 
-There's no answer here - yet! Suggest one by [creating a pull request 🙏](https://github.com/danieldelcore/mega-interview-guide/pulls)
+```javascript
+function findLargestSum(arr) {
+  const [largest, secondLargest] = arr.reduce(
+    ([largest, secondLargest], currentValue) => {
+      if (currentValue > largest) {
+        return [currentValue, largest];
+      }
+      if (currentValue > secondLargest) {
+        return [largest, currentValue];
+      }
+      return [largest, secondLargest];
+    },
+    [Number.MIN_VALUE, Number.MIN_VALUE]
+  );
+  return largest + secondLargest;
+}
+
+findLargestSum([7, 5, 3, -1, 4, 34, 8, 9, 6, 0]); // 43
+```
 
 </details>
 
