@@ -128,7 +128,7 @@ Also review **recursion and iterative approaches**.
 
 **Think about your 2-5 years career aspirations:** You will be asked to talk about your interest and your strengths as an engineer.
 
-**Prepare 1-2 questions to ask your interviewer:** There is 5 minutes at the end of the interview for this.
+**Prepare 1-2 questions to ask your interviewer:** There is generally 5 minutes at the end of a typical interview for this.
 
 # Resources
 
