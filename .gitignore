@@ -5,6 +5,7 @@ package-lock.json
 coverage
 lib
 dist
+build
 .site
 .DS_Store
 .vscode

@@ -758,7 +758,7 @@ In this phase all the listeners registered on the event target will be invoked, 
 
 During the event bubbling phase only the non-capturers will be called. That is, only the listeners registered with a value of `false` for the third parameter of `addEventListener()`:
 
-```
+```javascript
 el.addEventListener('click', listener, false) // listener doesn't capture
 el.addEventListener('click', listener) // listener doesn't capture
 ```

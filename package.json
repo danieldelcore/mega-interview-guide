@@ -4,7 +4,7 @@
   "description": "The mega frontend interview guide",
   "main": "index.js",
   "scripts": {
-    "dev": "npm update:toc && node index.js && npx http-server -p 8080 ./build",
+    "dev": "npm run update:toc && node index.js && npx http-server -p 8080 ./build",
     "build": "node index.js",
     "update:toc": "markdown-toc -i ./README.md --maxdepth 2",
     "test": "echo \"Error: no test specified\" && exit 1"
