@@ -8,6 +8,10 @@ body {
   --link: #2869c9;
 }
 
+img {
+  max-width: 100%;
+}
+
 main {
   padding: 0 32px;
 }
@@ -40,6 +44,7 @@ pre {
   background: #292a44;
   color: white;
   padding: 1rem;
+  overflow: scroll;
 }
 
 .footer {

@@ -648,8 +648,8 @@ init();
 <p>In this phase all the listeners registered on the event target will be invoked, regardless of the value of their capture flag.</p>
 <p><strong>The Event Bubbling Phase</strong></p>
 <p>During the event bubbling phase only the non-capturers will be called. That is, only the listeners registered with a value of <code>false</code> for the third parameter of <code>addEventListener()</code>:</p>
-<pre><code>el.addEventListener(&#x27;click&#x27;, listener, false) // listener doesn&#x27;t capture
-el.addEventListener(&#x27;click&#x27;, listener) // listener doesn&#x27;t capture
+<pre><code class="language-javascript">el.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, listener, <span class="hljs-literal">false</span>) <span class="hljs-comment">// listener doesn&#x27;t capture</span>
+el.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, listener) <span class="hljs-comment">// listener doesn&#x27;t capture</span>
 </code></pre>
 <p>Note that while all events flow down to the event target with the capture phase, <code>focus</code>, <code>blur</code>, <code>load</code> and some others, don’t bubble up. That is, their travel stops after the <em>target</em> phase.</p>
 <p><img src="assets/img/eventprop.png" alt="eventprop"></p>
