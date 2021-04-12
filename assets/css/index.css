@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  --brand: #e76f51;
+  --neutral: #e0e0e0;
+  --neutral-dark: #303846;
+  --link: #2869c9;
+}
+
+main {
+  padding: 0 32px;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+h1 {
+  padding-bottom: 1rem;
+  border-bottom: 3px solid var(--neutral);
+}
+
+strong {
+  font-weight: bolder;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+pre {
+  background: #ebebeb;
+  padding: 1rem;
+}
+
+.footer {
+  color: white;
+  background-color: var(--neutral-dark);
+}
