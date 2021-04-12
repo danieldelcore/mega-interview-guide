@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="500" src="./logos/logo.png" alt="Mega interviewer guide avatars">
+  <img width="500" src="assets/img/logos/logo.png" alt="Mega interview guide logo">
 </p>
 
 <h1 align="center">
@@ -16,103 +16,45 @@
 
 - [How to Prepare](#how-to-prepare)
 - [Resources](#resources)
-    + [Suggested reading](#suggested-reading)
-    + [Practice questions](#practice-questions)
-    + [Videos](#videos)
-    + [Misc.](#misc)
+  * [Suggested reading](#suggested-reading)
+  * [Videos](#videos)
+  * [Misc.](#misc)
 - [Computer Science](#computer-science)
   * [Data Structures](#data-structures)
-    + [Lists](#lists)
-    + [Stacks](#stacks)
-    + [Queues](#queues)
-    + [Priority Queue](#priority-queue)
-    + [Hash Tables](#hash-tables)
-    + [Graphs](#graphs)
-    + [Trees](#trees)
-    + [Binary Trees](#binary-trees)
-    + [Binary Search Trees](#binary-search-trees)
-    + [Heaps](#heaps)
   * [Algorithms](#algorithms)
-    + [Bubble sort](#bubble-sort)
-    + [Insertion sort](#insertion-sort)
-    + [Merge sort](#merge-sort)
-    + [Quick sort](#quick-sort)
-    + [Selection sort](#selection-sort)
-    + [Searches](#searches)
-    + [Traversals](#traversals)
-    + [Breadth First Search (BFS)](#breadth-first-search-bfs)
-    + [Depth First Search (DFS)](#depth-first-search-dfs)
   * [Complexity](#complexity)
-    + [Examples](#examples)
-    + [Drop the constants](#drop-the-constants)
-    + [Logarithms](#logarithms)
 - [JavaScript + Web APIs](#javascript--web-apis)
-    + [Prototypal Inheritance](#prototypal-inheritance)
-    + [Scoping](#scoping)
-    + [Closures](#closures)
-    + [Event bubbling](#event-bubbling)
-    + [`preventDefault` vs. `stopPropagation`](#preventdefault-vs-stoppropagation)
-    + [Apply, call, and bind](#apply-call-and-bind)
-    + [Variable and function hoisting](#variable-and-function-hoisting)
-    + [Currying](#currying)
-    + [Var, Let and Const](#var-let-and-const)
-    + [Arrow Functions](#arrow-functions)
-    + [Generator Functions](#generator-functions)
-    + [Map vs Object](#map-vs-object)
-    + [Virtual DOM](#virtual-dom)
-    + [Shadow DOM](#shadow-dom)
-    + [Async Await](#async-await)
-    + [Web Workers](#web-workers)
-    + [Service Workers](#service-workers)
-    + [Throttle vs. Debounce](#throttle-vs-debounce)
-    + [Pass By Value & Pass By Reference In JavaScript](#pass-by-value--pass-by-reference-in-javascript)
-    + [Array Methods](#array-methods)
-    + [Memoization](#memoization)
+  * [Prototypal Inheritance](#prototypal-inheritance)
+  * [Scope](#scope)
+  * [Closures](#closures)
+  * [Event bubbling](#event-bubbling)
+  * [Apply, call, and bind](#apply-call-and-bind)
+  * [Hoisting](#hoisting)
+  * [Var, Let & Const](#var-let--const)
+  * [Arrow Functions](#arrow-functions)
+  * [Generator Functions](#generator-functions)
+  * [Map vs Object](#map-vs-object)
+  * [Virtual DOM](#virtual-dom)
+  * [Shadow DOM](#shadow-dom)
+  * [Async / Await](#async--await)
+  * [Web Workers](#web-workers)
+  * [Service Workers](#service-workers)
+  * [Miscellaneous](#miscellaneous)
 - [Design Patterns](#design-patterns)
-    + [Decorator](#decorator)
-    + [Factory](#factory)
-    + [Singleton](#singleton)
-    + [Module](#module)
-    + [Facade](#facade)
-    + [Observer](#observer)
-    + [Strategy Pattern](#strategy-pattern)
-    + [Inversion of Control](#inversion-of-control)
-    + [Composition vs Inheritance](#composition-vs-inheritance)
+  * [Decorator](#decorator)
+  * [Factory](#factory)
+  * [Singleton](#singleton)
+  * [Module](#module)
+  * [Facade](#facade)
+  * [Observer](#observer)
+  * [Strategy Pattern](#strategy-pattern)
+  * [Inversion of Control](#inversion-of-control)
+  * [Composition vs Inheritance](#composition-vs-inheritance)
 - [HTML / CSS](#html--css)
-    + [Flexbox](#flexbox)
-    + [Transforms](#transforms)
-  * [Design Systems](#design-systems)
+  * [Flexbox](#flexbox)
+  * [Transforms](#transforms)
   * [Accessibility](#accessibility)
 - [Questions](#questions)
-    + [How would you make these functions work?](#how-would-you-make-these-functions-work)
-    + [If we execute this Javascript, what will the browser's console show?](#if-we-execute-this-javascript-what-will-the-browsers-console-show)
-    + [Get nth Fibonacci number?](#get-nth-fibonacci-number)
-    + [Write a function that deeply flattens an array _recursively_](#write-a-function-that-deeply-flattens-an-array-_recursively_)
-    + [Write a function that deeply flattens an array _iteratively_](#write-a-function-that-deeply-flattens-an-array-_iteratively_)
-    + [Write a function to find the 2nd largest element in a binary search tree.](#write-a-function-to-find-the-2nd-largest-element-in-a-binary-search-tree)
-    + [Given 2 identical DOM trees (but not equal) and one element of the first DOM tree, how would you find this element in the second DOM tree?](#given-2-identical-dom-trees-but-not-equal-and-one-element-of-the-first-dom-tree-how-would-you-find-this-element-in-the-second-dom-tree)
-    + [Write an event emitter that supports subscribing, unsubscribing and emitting events.](#write-an-event-emitter-that-supports-subscribing-unsubscribing-and-emitting-events)
-    + [Given an input array and another array that describes a new index for each element, mutate the input array so that each element ends up in their new index. Discuss the runtime of the algorithm and how you can be sure there won't be any infinite loops.](#given-an-input-array-and-another-array-that-describes-a-new-index-for-each-element-mutate-the-input-array-so-that-each-element-ends-up-in-their-new-index-discuss-the-runtime-of-the-algorithm-and-how-you-can-be-sure-there-wont-be-any-infinite-loops)
-    + [Implement a square root function.](#implement-a-square-root-function)
-    + [Write a function to check that a binary tree is a valid binary search tree.](#write-a-function-to-check-that-a-binary-tree-is-a-valid-binary-search-tree)
-    + [Delete a node from a singly-linked list, given only variable pointing to that node.](#delete-a-node-from-a-singly-linked-list-given-only-variable-pointing-to-that-node)
-    + [Write a function for reversing a linked list. Do it in-place.](#write-a-function-for-reversing-a-linked-list-do-it-in-place)
-    + [You have a linked list and want to find the kth to last node.](#you-have-a-linked-list-and-want-to-find-the-kth-to-last-node)
-    + [Verify a prime number?](#verify-a-prime-number)
-    + [Remove duplicate members from an array?](#remove-duplicate-members-from-an-array)
-    + [Swap two numbers without using a temp variable?](#swap-two-numbers-without-using-a-temp-variable)
-    + [Reverse a string in JavaScript?](#reverse-a-string-in-javascript)
-    + [Reverse words in a sentence?](#reverse-words-in-a-sentence)
-    + [Find the first non-repeating char in a string?](#find-the-first-non-repeating-char-in-a-string)
-    + [Remove duplicate characters from a sting?](#remove-duplicate-characters-from-a-sting)
-    + [How can you verify that a word is palindrome?](#how-can-you-verify-that-a-word-is-palindrome)
-    + [Generate random between 5 to 7 by using defined function.](#generate-random-between-5-to-7-by-using-defined-function)
-    + [Find missing number from unsorted array of integers.](#find-missing-number-from-unsorted-array-of-integers)
-    + [Get two numbers that equal to a given number?](#get-two-numbers-that-equal-to-a-given-number)
-    + [Find the largest sum of any two elements?](#find-the-largest-sum-of-any-two-elements)
-    + [Check whether a given string is a substring of bigger string](#check-whether-a-given-string-is-a-substring-of-bigger-string)
-    + [Get permutations of a string](#get-permutations-of-a-string)
-    + [How would you handle 5000 promises?](#how-would-you-handle-5000-promises)
 
 <!-- tocstop -->
 
@@ -132,7 +74,7 @@ Also review **recursion and iterative approaches**.
 
 # Resources
 
-### Suggested reading
+## Suggested reading
 
 - [Cracking the Coding Interview](https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.amazon.com%2Fdp%2F0984782850%2F&h=ATMZRtbfTrzQcLHngryrTjFT_XCq2o3nid4NoEE88Unt61VMu5gFILsu62CeZiwgbMGZEsXHIio3myVajcoWduG6CmE2SNFwxgOsHYHdaHWJIaSz20A7UL-X0oS1_Y4HnsCjr2FMWV3QabQf&s=1)
 - [Introduction to Algorithms](https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.amazon.com%2Fdp%2F0262033844&h=ATOR-C75elaqF-869Wl2vEifzniqLLc-mNpQXeueUSB7OVXcUN7-lehuzUCmjAgZ_VvnNPPra-ogSE4exCDEjTb2hxaQHSzun9WU0eN94HDmr58g7ibkPOCFv2Cns6eQcvcH72WAD9yfxcyI&s=1)
@@ -154,11 +96,11 @@ Also review **recursion and iterative approaches**.
 - Problems from[ Cracking the Coding Interview Book](https://books.google.co.uk/books/about/Cracking_the_Coding_Interview.html?id=anhAXwAACAAJ&hl=en)
 - List of [ACM-ICPC](https://icpc.baylor.edu/worldfinals/problems) and [Code Jam](https://code.google.com/codejam/past-contests) past questions
 
-### Videos
+## Videos
 
 - [Clean Code](https://www.youtube.com/watch?v=RlfLCWKxHJ0)
 
-### Misc.
+## Misc.
 
 - [Flexbox Froggy](http://flexboxfroggy.com/)
 
@@ -348,7 +290,7 @@ In many situations, **hash tables turn out to be more efficient than search tree
 
 All a hash function does is turn a value into an array index. The hash function in turn is composed of two parts.
 
-The first part, the _hash code_, takes a value and returns an integer. A function that always returned zero would be a hash coding function, but it would be a terrible one. More terrible ones include adding the ASCII values of a string together, multiplying the digits of a number, etc. A good hashing function minimizes the chance of a hash collision; a hash collision is when two distinct values have the same hash code. Good hashing functions, like SHA-256, have extremely small probabilities of hash collisions. I've heard that it's much more likely that a giant asteroid will impact the earth than a collision of SHA-256 ever happening in the wild.  The second part of hash functions is the _compression mapping_. All this does is maps the integer to an array index using the modulus operator and the length of the underlying array.
+The first part, the _hash code_, takes a value and returns an integer. A function that always returned zero would be a hash coding function, but it would be a terrible one. More terrible ones include adding the ASCII values of a string together, multiplying the digits of a number, etc. A good hashing function minimizes the chance of a hash collision; a hash collision is when two distinct values have the same hash code. Good hashing functions, like SHA-256, have extremely small probabilities of hash collisions. I've heard that it's much more likely that a giant asteroid will impact the earth than a collision of SHA-256 ever happening in the wild. The second part of hash functions is the _compression mapping_. All this does is maps the integer to an array index using the modulus operator and the length of the underlying array.
 
 A good hash function should be extremely fast to compute. Cryptographic-strength has functions often are relatively slow to compute, so faster ones are used that have higher collision rates. So how do we manage collisions?
 
@@ -439,11 +381,11 @@ As the value of parent is greater than that of child, this property generates **
 
 **Max-Heap** − Where the value of the root node is greater than or equal to either of its children.
 
-![maxheap](assets/maxheap.png)
+![maxheap](assets/img/maxheap.png)
 
 **Min-Heap** − Where the value of the root node is less than or equal to either of its children.
 
-![minheap](assets/minheap.png)
+![minheap](assets/img/minheap.png)
 
 The heap is one maximally efficient implementation of an [abstract data type](https://en.wikipedia.org/wiki/Abstract_data_type) called a [priority queue](https://en.wikipedia.org/wiki/Priority_queue), and in fact priority queues are often referred to as "heaps", regardless of how they may be implemented.
 
@@ -595,7 +537,7 @@ DFS-recursive(G, s):
 
 https://en.wikipedia.org/wiki/Big_O_notation
 
-![bigo](assets/bigo.png)
+![bigo](assets/img/bigo.png)
 
 **Big O notation is the language we use for articulating how long an algorithm takes to run**. It's how we compare the efficiency of different approaches to a problem.
 
@@ -607,7 +549,7 @@ With big O notation we express the runtime in terms of how quickly it grows rela
 
 **Note:** Often this "worst case" stipulation is implied.
 
-![sorting-complexity](assets/sorting-complexity.png)
+![sorting-complexity](assets/img/sorting-complexity.png)
 
 ### Examples
 
@@ -675,7 +617,7 @@ This type of algorithm is described as **O(log N)**. The iterative halving of da
 
 https://www.sitepoint.com/5-typical-javascript-interview-exercises/
 
-### Prototypal Inheritance
+## Prototypal Inheritance
 
 [Prototypal inheritance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
@@ -685,7 +627,7 @@ Nearly all objects in JavaScript are instances of [`Object`](https://developer.m
 
 While this is often considered to be one of JavaScript's weaknesses, the prototypal inheritance model is in fact more powerful than the classic model. It is, for example, fairly trivial to build a classic model on top of a prototypal model.
 
-#### What’s the Difference Between Class & Prototypal Inheritance?
+### What’s the Difference Between Class & Prototypal Inheritance?
 
 **Class Inheritance:** **A class is like a blueprint — a description of the object to be created.** Classes inherit from classes and **create subclass relationships**: hierarchical class taxonomies.
 
@@ -706,7 +648,7 @@ Instances may be composed from many different source objects, allowing for easy 
 
 Instances are typically instantiated via factory functions, object literals, or _`Object.create()`_.
 
-### Scoping
+## Scope
 
 [Scoping](https://spin.atomicobject.com/2014/10/20/javascript-scope-closures/)
 
@@ -741,7 +683,7 @@ myFunction();
 
 In this example, the variable `x` is available everywhere inside of `outerFunction()`. Also, the variable `y` is available everywhere within the `nestedFunction()`, but neither are available outside of the function where they were defined. The reason for this can be explained by lexical scoping. The scope of variables is defined by their position in source code. In order to resolve variables, JavaScript starts at the innermost scope and searches outwards until it finds the variable it was looking for. Lexical scoping is nice, because we can easily figure out what the value of a variable will be by looking at the code; whereas in dynamic scoping, the meaning of a variable can change at runtime, making it more difficult.
 
-### Closures
+## Closures
 
 [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 
@@ -772,7 +714,7 @@ function init() {
 init();
 ```
 
-### Event bubbling
+## Event bubbling
 
 [Event bubbling](http://javascript.info/tutorial/bubbling-and-capturing)
 
@@ -823,7 +765,7 @@ el.addEventListener('click', listener) // listener doesn't capture
 
 Note that while all events flow down to the event target with the capture phase, `focus`, `blur`, `load` and some others, don’t bubble up. That is, their travel stops after the _target_ phase.
 
-![eventprop](assets/eventprop.png)
+![eventprop](assets/img/eventprop.png)
 
 ### `preventDefault` vs. `stopPropagation`
 
@@ -834,7 +776,7 @@ With `stopPropagation` only the **buttons click handler** is called and the **di
 
 Where as if you just `preventDefault` only the browsers default action is stopped but the div's click handler still fires.
 
-### Apply, call, and bind
+## Apply, call, and bind
 
 [Apply, call, and bind](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/)
 
@@ -911,7 +853,7 @@ theFunction.call(undefined, ...["Matthew", "physicist"]); // used with the sprea
 // My name is Matthew and I am a physicist.
 ```
 
-### Variable and function hoisting
+## Hoisting
 
 [Variable and function hoisting](http://adripofjavascript.com/blog/drips/variable-and-function-hoisting)
 
@@ -1011,7 +953,7 @@ Function.prototype.curry = function () {
 };
 ```
 
-### Var, Let and Const
+## Var, Let & Const
 
 **Var**
 
@@ -1050,13 +992,13 @@ function do_something() {
 }
 ```
 
-### Arrow Functions
+## Arrow Functions
 
 An **arrow function expression** has a shorter syntax than a [function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function) and does not have its own `this`, [arguments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments), [super](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super), or [new.target](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new.target). These function expressions are best suited for non-method functions, and they cannot be used as constructors.
 
 There is one subtle difference in behavior between ordinary `function`functions and arrow functions. **Arrow functions do not have their own this value.** The value of `this` inside an arrow function is always inherited from the enclosing scope. In contrast `function` functions receive a `this` value automatically, whether they want one or not.
 
-### Generator Functions
+## Generator Functions
 
 Generators are functions which can be exited and later re-entered. Their context (variable bindings) will be saved across re-entrances.
 
@@ -1087,7 +1029,7 @@ console.log(gen.next()); // { value: "R", done: true }
 console.log(gen.next()); // { value: undefined, done: true }
 ```
 
-### Map vs Object
+## Map vs Object
 
 The **Map** object holds key-value pairs. Any value (both objects and [primitive values](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)) may be used as either a key or a value. **A Map** object can iterate its elements in insertion order - a for..of loop will return an array of [key, value] for each iteration.
 
@@ -1099,7 +1041,7 @@ An Object has a prototype, so there are default keys in the map. However, this c
 
 **Use objects when there is logic that operates on individual elements.**
 
-### Virtual DOM
+## Virtual DOM
 
 [source](https://medium.com/@deathmood/how-to-write-your-own-virtual-dom-ee74acc13060)
 
@@ -1138,7 +1080,7 @@ In summary, here's what happens when you try to update the DOM in React:
 3. The changed objects, and the changed objects only, get updated on the _real_ DOM.
 4. Changes on the real DOM cause the screen to change.
 
-### Shadow DOM
+## Shadow DOM
 
 Shadow DOM is used to encapsulate a DOM subtree from the rest of the page. Useful if you are making plug and play widgets. This **encapsulation means your document stylesheet can’t accidentally apply to encapsulated subtree**. Your **JavaScript can’t accidentally modify parts inside shadow Dom**; your **IDs wont overlap** and so on.
 
@@ -1154,15 +1096,7 @@ Following code will change the buttons text to Chinese. But interestingly `host.
 </script>
 ```
 
-#### Difference between defer and Async
-
-When you hit an web url in browser, first the HTML content is downloaded and browser starts parsing the HTML. During HTML parsing if it encounters a script block, HTML parsing halts. It makes a call to fetch the script (if external ) and then executes the script, before resuming HTML parsing.
-
-If we use **async**, HTML parsing doesn’t stop whilst file is fetched, but once it’s fetched, HTML parsing stops to execute the script.
-
-If we use **defer** browser downloads the JS during HTML parsing, and executes the JS only when HTML parsing is [_done_](http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html).
-
-### Async Await
+## Async / Await
 
 _The await operator is used to wait for a Promise. It can only be used inside an async function._
 
@@ -1215,7 +1149,7 @@ async function f3() {
 f3();
 ```
 
-### Web Workers
+## Web Workers
 
 Web Workers is a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface. Once created, a worker can send messages to the JavaScript code that created it by posting messages to an event handler specified by that code (and vice versa).
 
@@ -1321,7 +1255,7 @@ onmessage = function (oEvent) {
 
 For more information, see: [MDN - Using Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
 
-### Service Workers
+## Service Workers
 
 [ServiceWorkers](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API) essentially act as proxy servers that sit between web applications, and the browser and network (when available). **They are intended to (amongst other things) enable the creation of effective offline experiences**, intercepting network requests and taking appropriate action based on whether the network is available and updated assets reside on the server. They will also allow access to push notifications and background sync APIs.
 
@@ -1368,6 +1302,16 @@ function debounce(fn, interval) {
 }
 ```
 
+## Miscellaneous
+
+### Difference between defer and async
+
+When you hit an web url in browser, first the HTML content is downloaded and browser starts parsing the HTML. During HTML parsing if it encounters a script block, HTML parsing halts. It makes a call to fetch the script (if external ) and then executes the script, before resuming HTML parsing.
+
+If we use **async**, HTML parsing doesn’t stop whilst file is fetched, but once it’s fetched, HTML parsing stops to execute the script.
+
+If we use **defer** browser downloads the JS during HTML parsing, and executes the JS only when HTML parsing is [_done_](http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html).
+
 ### Pass By Value & Pass By Reference In JavaScript
 
 Javascript uses a **pass by value** strategy for **primitives** but uses **pass by reference** for **objects including arrays** (AKA [call by sharing](https://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_sharing)).
@@ -1408,7 +1352,7 @@ Memoization is a way to lower a function's time cost in exchange for space cost;
 
 # Design Patterns
 
-### Decorator
+## Decorator
 
 [Decorator](https://addyosmani.com/resources/essentialjsdesignpatterns/book/#decoratorpatternjavascript)
 
@@ -1464,7 +1408,7 @@ console.log(mb.cost()); // Outputs: 1522
 console.log(mb.screenSize()); // Outputs: 11.6
 ```
 
-### Factory
+## Factory
 
 [Factory](https://addyosmani.com/resources/essentialjsdesignpatterns/book/#factorypatternjavascript)
 
@@ -1487,7 +1431,7 @@ When applied to the wrong type of problem, this pattern can introduce an unneces
 
 Due to the fact that the process of object creation is effectively abstracted behind an interface, this can also introduce problems with unit testing depending on just how complex this process might be.
 
-### Singleton
+## Singleton
 
 [Singleton](https://addyosmani.com/resources/essentialjsdesignpatterns/book/#singletonpatternjavascript)
 
@@ -1531,7 +1475,7 @@ let second = new Singleton();
 console.log(first===second); //output: true
 ```
 
-### Module
+## Module
 
 The Module pattern was originally defined as a way to provide both private and public encapsulation for classes in conventional software engineering.
 
@@ -1545,7 +1489,7 @@ This gives us a clean solution for shielding logic doing the heavy lifting whils
 
 It should be noted that there isn't really an explicitly true sense of "privacy" inside JavaScript because unlike some traditional languages, it doesn't have access modifiers. Variables can't technically be declared as being public nor private and so we use function scope to simulate this concept. Within the Module pattern, variables or methods declared are only available inside the module itself thanks to closure. Variables or methods defined within the returning object however are available to everyone.
 
-### Facade
+## Facade
 
 [Facade](https://addyosmani.com/resources/essentialjsdesignpatterns/book/#facadepatternjavascript)
 
@@ -1559,7 +1503,7 @@ The jQuery core methods should be considered intermediate abstractions. The more
 
 To build on what we've learned, **the Facade pattern both simplifies the interface of a class and it also decouples the class from the code that utilizes it**. This gives us the ability to indirectly interact with subsystems in a way that can sometimes be less prone to error than accessing the subsystem directly. A Facade's advantages include ease of use and often a small size-footprint in implementing the pattern.
 
-### Observer
+## Observer
 
 [Observer](https://addyosmani.com/resources/essentialjsdesignpatterns/book/#observerpatternjavascript)
 
@@ -1573,7 +1517,7 @@ It's often useful to refer back to published definitions of design patterns that
 
 > One or more observers are interested in the state of a subject and register their interest with the subject by attaching themselves. When something changes in our subject that the observer may be interested in, a notify message is sent which calls the update method in each observer. When the observer is no longer interested in the subject's state, they can simply detach themselves.
 
-### Strategy Pattern
+## Strategy Pattern
 
 > Strategy - defines a family of algorithms, encapsulates each, and makes them interchangeable. Strategy lets the algorithm vary independently form clients that use it.
 
@@ -1625,21 +1569,21 @@ friendlyGreeter.greet(); //=> Hey!
 boredGreeter.greet(); //=> sup.
 ```
 
-### Inversion of Control
+## Inversion of Control
 
 IoC and DIP are high level design principles which should be used while designing application classes. These are principles, so they only recommend certain best practices but do not provide any specific implementation details. Dependency Injection (DI) is a pattern and IoC container is a framework.
 
-#### ![ioc-principles-and-patterns](assets/ioc-principles-and-patterns.png)
+### ![ioc-principles-and-patterns](assets/img/ioc-principles-and-patterns.png)
 
 **IoC** is a design principle which recommends inversion of different kinds of controls in object oriented design to achieve loose coupling between the application classes. Here, the control means any additional responsibilities a class has other than its main responsibility, such as control over the flow of an application, control over the dependent object creation and binding (Remember SRP-Single Responsibility Principle). If you want to do TDD (Test Driven Development) then you must use IoC principle without which TDD is not possible.
 
-#### **Dependency Inversion Principle**
+### Dependency Inversion Principle
 
 DIP principle also helps in achieving loose coupling between the classes. It is highly recommended to use DIP and IoC together in order to achieve loose coupling.
 
 DIP suggests that high-level modules should not depend on low level modules. Both should depend on abstraction.
 
-#### **Dependency Injection**
+### Dependency Injection
 
 Dependency Injection (DI) is a design pattern used to implement IoC where it allows creation of dependent objects outside of a class and provides those objects to a class through different ways. Using DI, we move the creation and binding of the dependent objects outside of the class that depends on it.
 
@@ -1670,7 +1614,7 @@ Dependency injection is **not** effective if:
 
 If you know you will never change the implementation or configuration of some dependency, there is no benefit in using dependency injection.
 
-#### IoC Container
+### IoC Container
 
 IoC Container (a.k.a. DI Container) is a framework for implementing automatic dependency injection. It manages object creating and its life time and also injects dependencies to the class.
 
@@ -1682,7 +1626,7 @@ All the containers must provide easy support for the following DI lifecycle.
 - **Resolve:** When using IoC container, we don't need to create objects manually. Container does it for us. This is called resolution. Container must include some methods to resolve the specified type; container creates an object of specified type, injects required dependencies if any and returns it.
 - **Dispose:** Container must manage the lifetime of dependent objects. Most IoC containers include different lifetime managers to manage an object's lifecycle and dispose of it.
 
-### Composition vs Inheritance
+## Composition vs Inheritance
 
 _Prefer composition over inheritance as it is easy to modify later, but do not use a compose-always approach._
 
@@ -1696,7 +1640,7 @@ Initial design is simplified by identifying system object behaviors in separate 
 
 # HTML / CSS
 
-### Flexbox
+## Flexbox
 
 The Flexible Box Module, usually referred to as flexbox, was designed as a one-dimensional layout model, and as a method that could offer space distribution between items in an interface and powerful alignment capabilities.
 
@@ -1721,7 +1665,7 @@ If your main axis is `column` or `column-reverse` then the cross axis runs along
 
 Understanding which axis is which is important when we start to look at aligning and justifying flex items; flexbox features properties that align and justify content along one axis or the other.
 
-### Transforms
+## Transforms
 
 The **transform** [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) property lets you rotate, scale, skew, or translate a given element. This is achieved by modifying the coordinate space of the CSS [visual formatting model](https://developer.mozilla.org/en-US/docs/Web/CSS/Visual_formatting_model).
 
@@ -1733,8 +1677,6 @@ transform: rotate(0.5turn);
 transform: skew(30deg, 20deg);
 transform: scale(0.5) translate(-100%, -100%);
 ```
-
-## Design Systems
 
 ## Accessibility
 
@@ -2106,36 +2048,32 @@ There's no answer here - yet! Suggest one by [creating a pull request 🙏](http
 <br>
 
 ```javascript
-
 let arr = ["a", "b", "c", "d", "e", "f"];
 const indices = [2, 3, 4, 0, 5, 1];
 //should return  ["d", "f", "a", "b", "c", "e"]
-
 ```
 
-1) O(n) space and O(n) time solution:
-```javascript
+1. O(n) space and O(n) time solution:
 
+```javascript
 const indicesMap = indices.reduce((map, item, index) => {
-    map.set(item, index);
-    return map;
+  map.set(item, index);
+  return map;
 }, new Map());
 
 arr = indices.map((val, index) => {
-    return arr[indicesMap.get(index)];
+  return arr[indicesMap.get(index)];
 });
 
 console.log(arr);
-
 ```
 
-2) O(n2) (n*n) time solution:
+2. O(n2) (n\*n) time solution:
+
 ```javascript
-
 arr = indices.map((val, index) => {
-    return arr[indices.indexOf(index)];
+  return arr[indices.indexOf(index)];
 });
-
 ```
 
 </details>
