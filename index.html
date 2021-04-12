@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mega Interview Guide</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="assets/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+  </head>
+  <body>
+    <main>
+        
+    </main>
+    <script>
+        async function init() {
+            marked.setOptions({
+                highlight: function(code, lang, callback) {
+                    const validLanguage = hljs.getLanguage(lang) ? lang : 'plaintext';
+                    return hljs.highlight(validLanguage, code).value;
+                }
+            });
+            const r = await fetch('README.md');
+            const readmeText = await r.text();
+            document.querySelector('main').innerHTML = marked(readmeText);
+        }
+        
+        init();
+    </script>
+  </body>
+</html>

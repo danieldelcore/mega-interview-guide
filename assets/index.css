@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    --primary-color: #E76F51;
+}
+main {
+    padding: 0 32px;
+}
+
+h1 {
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--primary-color);
+}
+strong {
+    font-weight: bolder;
+}
+a {
+    color: var(--primary-color);
+}
+pre {
+    background: #EBEBEB;
+    padding: 1rem;
+}
