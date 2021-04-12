@@ -1,0 +1,1972 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>The Mega Interview Guide</title>
+    <meta
+      name="description"
+      content="A humble guide to give developers the tools they need to nail technical interviews!"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/img/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/img/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/img/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/img/favicons/site.webmanifest" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/atom-one-dark.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <p align="center">
+  <img width="500" src="assets/img/logos/logo.png" alt="Mega interview guide logo">
+</p>
+
+<h1 align="center">
+  The MEGA Interview Guide
+</h1>
+<p align="center">
+  A humble guide to give developers the tools they need to nail technical interviews!
+</p>
+<p align="center">
+  <strong>❤️ PRs Welcome ❤️</strong>
+</p>
+
+<!-- toc -->
+
+<ul>
+<li><a href="#how-to-prepare">How to Prepare</a></li>
+<li><a href="#resources">Resources</a><ul>
+<li><a href="#suggested-reading">Suggested reading</a></li>
+<li><a href="#videos">Videos</a></li>
+<li><a href="#misc">Misc.</a></li>
+</ul>
+</li>
+<li><a href="#computer-science">Computer Science</a><ul>
+<li><a href="#data-structures">Data Structures</a></li>
+<li><a href="#algorithms">Algorithms</a></li>
+<li><a href="#complexity">Complexity</a></li>
+</ul>
+</li>
+<li><a href="#javascript--web-apis">JavaScript + Web APIs</a><ul>
+<li><a href="#prototypal-inheritance">Prototypal Inheritance</a></li>
+<li><a href="#scope">Scope</a></li>
+<li><a href="#closures">Closures</a></li>
+<li><a href="#event-bubbling">Event bubbling</a></li>
+<li><a href="#apply-call-and-bind">Apply, call, and bind</a></li>
+<li><a href="#hoisting">Hoisting</a></li>
+<li><a href="#var-let--const">Var, Let &amp; Const</a></li>
+<li><a href="#arrow-functions">Arrow Functions</a></li>
+<li><a href="#generator-functions">Generator Functions</a></li>
+<li><a href="#map-vs-object">Map vs Object</a></li>
+<li><a href="#virtual-dom">Virtual DOM</a></li>
+<li><a href="#shadow-dom">Shadow DOM</a></li>
+<li><a href="#async--await">Async / Await</a></li>
+<li><a href="#web-workers">Web Workers</a></li>
+<li><a href="#service-workers">Service Workers</a></li>
+<li><a href="#miscellaneous">Miscellaneous</a></li>
+</ul>
+</li>
+<li><a href="#design-patterns">Design Patterns</a><ul>
+<li><a href="#decorator">Decorator</a></li>
+<li><a href="#factory">Factory</a></li>
+<li><a href="#singleton">Singleton</a></li>
+<li><a href="#module">Module</a></li>
+<li><a href="#facade">Facade</a></li>
+<li><a href="#observer">Observer</a></li>
+<li><a href="#strategy-pattern">Strategy Pattern</a></li>
+<li><a href="#inversion-of-control">Inversion of Control</a></li>
+<li><a href="#composition-vs-inheritance">Composition vs Inheritance</a></li>
+</ul>
+</li>
+<li><a href="#html--css">HTML / CSS</a><ul>
+<li><a href="#flexbox">Flexbox</a></li>
+<li><a href="#transforms">Transforms</a></li>
+<li><a href="#accessibility">Accessibility</a></li>
+</ul>
+</li>
+<li><a href="#questions">Questions</a></li>
+</ul>
+<!-- tocstop -->
+
+<h1 id="how-to-prepare">How to Prepare</h1>
+<p>Invest time in preparing: It&#39;s important for any engineer, even senior ones, to brush up on their interview skills, coding skills and algorithms. An interview is typically different from your day-to-day job.</p>
+<p><strong>Practice answering many different coding questions:</strong> Practice answering a coding question with the most efficient bug-free solution without using a compiler. A few resources that offer coding questions to use for practice: <a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.careercup.com%2Fpage&amp;h=ATNXGEU22051CK2jrQZuz0-_xpFzm-N44vARqRRGaN11C-Bj2vvn7WakmxepET56eZiatvTQ5pvqo_-swS4N6QtW0wLyqika349D8d17ymipgFcPjfwzH5Ij6wH7PmPc-MTcx2YwK5Yovm8v&amp;s=1">Careercup</a>, <a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.topcoder.com%2F&amp;h=ATM84NVzQHwje5rS4KBb5NHBfgwbX2g_4I-v4q3gW9I31bL155_2HLWALBAaz-u1XIGY8T7w1xFngHX7f9JT4IzFUw-OECGgW0kHns9mvkGq7tkFG9sQz_Oy3oKpwcwOwnJoXMEin1QmB7id&amp;s=1">Topcoder</a>, <a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fprojecteuler.net%2Findex.php&amp;h=ATPG4D_F0Q_s08m-PKCq6owpQh-cUzeLVDZO2hpdW2Sz03dK80GOAQBL45uEyK73sTqcVHOpXPG-Sd-naTXSuOVwa7TKMiqHcJ72OMhzpwUay472i7xcEjrivGdjUlnSu39Rl-gh3G1T8a-s&amp;s=1">Project Euler</a>, or <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fcodelab.interviewbit.com%2F&amp;h=ATMMRfsaHRYEOnw7HsLuQSRHKv2q_tQz63MRO-4U9xFgmowjsV9YadpCd4pxMEPnpm2RnXJ8idkl23HwzzMTmFbwK0VAu8MYvxrPs2jqY0TMHs4VJe-df8N0qAG3D15gW4ZKAjGQKCE2SAni&amp;s=1">Facebook Code Lab</a>.</p>
+<p><strong>Go over data structures, algorithms and complexity</strong>: Be able to discuss the <strong>big-O complexity</strong> of your approaches. Don&#39;t forget to brush up on your <strong>data structures like lists, arrays, hash tables, hash maps, stacks, queues, graphs, trees, heaps</strong>. Also <strong>sorts, searches, and traversals (BFS, DFS)</strong>.</p>
+<p>Also review <strong>recursion and iterative approaches</strong>.</p>
+<p><strong>Think about your 2-5 years career aspirations:</strong> You will be asked to talk about your interest and your strengths as an engineer.</p>
+<p><strong>Prepare 1-2 questions to ask your interviewer:</strong> There is generally 5 minutes at the end of a typical interview for this.</p>
+<h1 id="resources">Resources</h1>
+<h2 id="suggested-reading">Suggested reading</h2>
+<ul>
+<li><a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.amazon.com%2Fdp%2F0984782850%2F&amp;h=ATMZRtbfTrzQcLHngryrTjFT_XCq2o3nid4NoEE88Unt61VMu5gFILsu62CeZiwgbMGZEsXHIio3myVajcoWduG6CmE2SNFwxgOsHYHdaHWJIaSz20A7UL-X0oS1_Y4HnsCjr2FMWV3QabQf&amp;s=1">Cracking the Coding Interview</a></li>
+<li><a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.amazon.com%2Fdp%2F0262033844&amp;h=ATOR-C75elaqF-869Wl2vEifzniqLLc-mNpQXeueUSB7OVXcUN7-lehuzUCmjAgZ_VvnNPPra-ogSE4exCDEjTb2hxaQHSzun9WU0eN94HDmr58g7ibkPOCFv2Cns6eQcvcH72WAD9yfxcyI&amp;s=1">Introduction to Algorithms</a></li>
+<li><a href="http://www.amazon.com/Algorithms-Parts-1-5-Bundle-Fundamentals/dp/0201756080">Algorithms in C</a></li>
+<li><a href="http://lib.mdp.ac.id/ebook/Karya%20Umum/Dsa.pdf">Data Structures and Algorithms</a> and <a href="http://bigocheatsheet.com/">Big-O Cheat Sheet</a></li>
+<li><a href="https://www.coursera.org/learn/algorithms-part1">Coursera - Algorithms, Part 1</a></li>
+<li><a href="https://www.coursera.org/learn/algorithms-part2">Coursera - Algorithms, Part 2</a></li>
+<li><a href="https://www.udacity.com/course/intro-to-algorithms--cs215">Udacity - Intro to Algorithms</a></li>
+<li><a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2008/">MIT Open courseware - Introduction to Algorithms</a></li>
+<li>“You Don’t Know JS” by Kyle Simpson - <a href="https://github.com/getify/You-Dont-Know-JS">https://github.com/getify/You-Dont-Know-JS</a></li>
+<li><a href="https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d">Cracking the javascript interview</a></li>
+<li><a href="https://github.com/careercup/CtCI-6th-Edition-JavaScript">Cracking the Coding Interview (JS) Solutions</a></li>
+</ul>
+<h3 id="practice-questions">Practice questions</h3>
+<ul>
+<li><a href="https://techiedelight.quora.com/500-Data-Structures-and-Algorithms-practice-problems-and-their-solutions?share=1&amp;utm_medium=email&amp;utm_source=hackernewsletter&amp;utm_term=code">500 Data Structures and Algorithms </a></li>
+<li><a href="http://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/">Top 10 Algos in Interview Questions</a></li>
+<li><a href="https://www.hackerrank.com/">HackerRank</a>, <a href="https://community.topcoder.com/tc?module=MatchDetails&amp;rd=15712">Topcoder</a>, <a href="http://codeforces.com/contests">Codeforces</a>, <a href="https://leetcode.com/">Leetcode</a>, <a href="https://www.interviewbit.com/">InterviewBit</a> or <a href="https://open.kattis.com/">Kattis.</a></li>
+<li>Problems from<a href="https://books.google.co.uk/books/about/Cracking_the_Coding_Interview.html?id=anhAXwAACAAJ&amp;hl=en"> Cracking the Coding Interview Book</a></li>
+<li>List of <a href="https://icpc.baylor.edu/worldfinals/problems">ACM-ICPC</a> and <a href="https://code.google.com/codejam/past-contests">Code Jam</a> past questions</li>
+</ul>
+<h2 id="videos">Videos</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=RlfLCWKxHJ0">Clean Code</a></li>
+</ul>
+<h2 id="misc">Misc.</h2>
+<ul>
+<li><a href="http://flexboxfroggy.com/">Flexbox Froggy</a></li>
+</ul>
+<h1 id="computer-science">Computer Science</h1>
+<h2 id="data-structures">Data Structures</h2>
+<p>Data structures can implement one or more particular abstract data types (ADT), which specify the operations that can be performed on a data structure and the computational complexity of those operations. In comparison, a data structure is a concrete implementation of the specification provided by an ADT.</p>
+<p>Different kinds of data structures are suited to different kinds of applications, and some are highly specialised to specific tasks. For example, relational databases commonly use B-tree indexes for data retrieval, while compiler implementations usually use hash tables to look up identifiers.</p>
+<p>Data structures provide a means to manage large amounts of data efficiently for uses such as large databases and internet indexing services. Usually, efficient data structures are key to designing efficient algorithms. Some formal design methods and programming languages emphasise data structures, rather than algorithms, as the key organising factor in software design. Data structures can be used to organise the storage and retrieval of information stored in both main memory and secondary memory.</p>
+<h3 id="lists">Lists</h3>
+<p>A <strong>linked list</strong> is a linear collection of data elements, in which linear order is not given by their physical placement in memory. Each pointing to the next node by means of a <a href="https://en.wikipedia.org/wiki/Pointer_(computer_programming)">pointer</a>. It is a <a href="https://en.wikipedia.org/wiki/Data_structure">data structure</a> consisting of a group of <a href="https://en.wikipedia.org/wiki/Node_(computer_science)">nodes</a> which together represent a <a href="https://en.wikipedia.org/wiki/Sequence">sequence</a>. Under the simplest form, each node is composed of data and a <a href="https://en.wikipedia.org/wiki/Reference_(computer_science)">reference</a> (in other words, a <em>link</em>) to the next node in the sequence. This structure allows for efficient insertion or removal of elements from any position in the sequence during iteration. More complex variants add additional links, allowing efficient insertion or removal from arbitrary element references.</p>
+<p>Linked lists are among the simplest and most common data structures. They can be used to implement several other common <a href="https://en.wikipedia.org/wiki/Abstract_data_type">abstract data types</a>, including <a href="https://en.wikipedia.org/wiki/List_(abstract_data_type)">lists</a> (the abstract data type), <a href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type)">stacks</a>, <a href="https://en.wikipedia.org/wiki/Queue_(abstract_data_type)">queues</a>, <a href="https://en.wikipedia.org/wiki/Associative_array">associative arrays</a>, and <a href="https://en.wikipedia.org/wiki/S-expression">S-expressions</a>, though it is not uncommon to implement the other data structures directly without using a list as the basis of implementation.</p>
+<h3 id="stacks">Stacks</h3>
+<p>A <strong>stack</strong> is an <a href="https://en.wikipedia.org/wiki/Abstract_data_type">abstract data type</a> that serves as a <a href="https://en.wikipedia.org/wiki/Collection_(computing)">collection</a> of elements, with two principal operations: <em>push</em>, which adds an element to the collection, and <em>pop</em>, which removes the most recently added element that was not yet removed. The order in which elements come off a stack gives rise to its alternative name, <strong>LIFO</strong>(for <strong>last in, first out</strong>). Additionally, a <a href="https://en.wikipedia.org/wiki/Peek_(data_type_operation)"><em>peek</em></a> operation may give access to the top without modifying the stack.</p>
+<p>The name &quot;stack&quot; for this type of structure comes from the analogy to a set of physical items stacked on top of each other, which makes it easy to take an item off the top of the stack, while getting to an item deeper in the stack may require taking off multiple other items first.[<a href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type)#cite_note-clrs-1">1]</a></p>
+<p>Considered as a <a href="https://en.wikipedia.org/wiki/Linear_data_structure">linear data structure</a>, or more abstractly a sequential collection, the push and pop operations occur only at one end of the structure, referred to as the <em>top</em> of the stack. This makes it possible to implement a stack as a <a href="https://en.wikipedia.org/wiki/Singly_linked_list">singly linked list</a> and a pointer to the top element.</p>
+<p>A stack may be implemented to have a bounded capacity. If the stack is full and does not contain enough space to accept an entity to be pushed, the stack is then considered to be in an <a href="https://en.wikipedia.org/wiki/Stack_overflow">overflow</a> state. The pop operation removes an item from the top of the stack.</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> stack = [];
+
+stack.push(<span class="hljs-number">2</span>); <span class="hljs-comment">// stack is now [2]</span>
+stack.push(<span class="hljs-number">5</span>); <span class="hljs-comment">// stack is now [2, 5]</span>
+
+<span class="hljs-keyword">var</span> i = stack.pop(); <span class="hljs-comment">// stack is now [2]</span>
+
+alert(i); <span class="hljs-comment">// displays 5</span>
+</code></pre>
+<h3 id="queues">Queues</h3>
+<p>A <strong>queue</strong> is a particular kind of <a href="https://en.wikipedia.org/wiki/Abstract_data_type">abstract data type</a> or <a href="https://en.wikipedia.org/wiki/Collection_(abstract_data_type)">collection</a> in which the entities in the collection are kept in order and the principal (or only) operations on the collection are the addition of entities to the rear terminal position, known as <em>enqueue,</em> and removal of entities from the front terminal position, known as <em>dequeue</em>. This makes the queue a <a href="https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics)">First-In-First-Out (FIFO) data structure</a>. In a FIFO data structure, the first element added to the queue will be the first one to be removed. This is equivalent to the requirement that once a new element is added, all elements that were added before have to be removed before the new element can be removed. Often a <em>peek</em> or <em>front</em> operation is also entered, returning the value of the front element without dequeuing it. A queue is an example of a <a href="https://en.wikipedia.org/wiki/Linear_data_structure">linear data structure</a>, or more abstractly a sequential collection.</p>
+<p>Queues provide services in <a href="https://en.wikipedia.org/wiki/Computer_science">computer science</a>, <a href="https://en.wikipedia.org/wiki/Transport">transport</a>, and <a href="https://en.wikipedia.org/wiki/Operations_research">operations research</a> where various entities such as data, objects, persons, or events are stored and held to be processed later. In these contexts, the queue performs the function of a <a href="https://en.wikipedia.org/wiki/Buffer_(computer_science)">buffer</a>.</p>
+<p>Queues are common in computer programs, where they are implemented as data structures coupled with access routines, as an <a href="https://en.wikipedia.org/wiki/Abstract_data_structure">abstract data structure</a> or in object-oriented languages as classes. Common implementations are <a href="https://en.wikipedia.org/wiki/Circular_buffer">circular buffers</a> and <a href="https://en.wikipedia.org/wiki/Linked_list">linked lists</a>.</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> queue = [];
+
+queue.push(<span class="hljs-number">2</span>); <span class="hljs-comment">// queue is now [2]</span>
+queue.push(<span class="hljs-number">5</span>); <span class="hljs-comment">// queue is now [2, 5]</span>
+
+<span class="hljs-keyword">var</span> i = queue.shift(); <span class="hljs-comment">// queue is now [5]</span>
+
+alert(i); <span class="hljs-comment">// displays 2</span>
+</code></pre>
+<h3 id="priority-queue">Priority Queue</h3>
+<p>Priority Queue is similar to queue where we insert an element from the back and remove an element from front, but with a one difference that the logical order of elements in the priority queue depends on the priority of the elements. The element with highest priority will be moved to the front of the queue and one with lowest priority will move to the back of the queue. Thus it is possible that when you enqueue an element at the back in the queue, it can move to front because of its highest priority.</p>
+<p>Let’s say we have an array of 5 elements : {4, 8, 1, 7, 3} and we have to insert all the elements in the max-priority queue.</p>
+<ul>
+<li>First as the priority queue is empty, so 4 will be inserted initially.</li>
+<li>Now when 8 will be inserted it will moved to front as 8 is greater than 4.</li>
+<li>While inserting 1, as it is the current minimum element in the priority queue, it will remain in the back of priority queue.</li>
+<li>Now 7 will be inserted between 8 and 4 as 7 is smaller than 8.</li>
+<li>Now 3 will be inserted before 1 as it is the 2nd minimum element in the priority queue.</li>
+</ul>
+<p><strong>Naive Approach:</strong>
+Suppose we have N elements and we have to insert these elements in the priority queue. We can use list and can insert elements in O(N) time and can sort them to maintain a priority queue in O(N logN ) time.</p>
+<p><strong>Efficient Approach:</strong>
+We can use <strong>heaps to implement the priority queue</strong>. It will take O(log N) time to insert and delete each element in the priority queue.</p>
+<p>Based on heap structure, priority queue also has two types max-priority queue and min-priority queue.</p>
+<p>Example Implementation:</p>
+<pre><code class="language-javascript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MaxHeap</span> </span>{
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>._heap = [];
+  }
+
+  <span class="hljs-function"><span class="hljs-title">_getParent</span>(<span class="hljs-params">index</span>)</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._heap[(index - <span class="hljs-number">1</span>) / <span class="hljs-number">2</span>];
+  }
+
+  <span class="hljs-function"><span class="hljs-title">_getLeftChild</span>(<span class="hljs-params">parentIndex</span>)</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._heap[<span class="hljs-number">2</span> * parentIndex + <span class="hljs-number">1</span>];
+  }
+
+  <span class="hljs-function"><span class="hljs-title">_getRightChild</span>(<span class="hljs-params">parentIndex</span>)</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._heap[<span class="hljs-number">2</span> * parentIndex + <span class="hljs-number">2</span>];
+  }
+
+  <span class="hljs-function"><span class="hljs-title">_bubbleUp</span>(<span class="hljs-params">index</span>)</span> {
+    <span class="hljs-keyword">const</span> parentIndex = (index - <span class="hljs-number">1</span>) / <span class="hljs-number">2</span>;
+
+    <span class="hljs-keyword">if</span> (parentIndex === <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span>;
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>._getParent(index) &lt; <span class="hljs-built_in">this</span>._heap[index]) {
+      <span class="hljs-built_in">this</span>._swap(parentIndex, index);
+      <span class="hljs-built_in">this</span>._bubbleUp(parentIndex);
+    }
+  }
+
+  <span class="hljs-function"><span class="hljs-title">_sinkDown</span>(<span class="hljs-params">index</span>)</span> {
+    <span class="hljs-keyword">const</span> rightChildIndex = <span class="hljs-number">2</span> * parentIndex + <span class="hljs-number">2</span>;
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>._getRightChild(index) &gt; <span class="hljs-built_in">this</span>._heap.length) {
+      <span class="hljs-keyword">return</span>;
+    }
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>._getRightChild(index) &gt; <span class="hljs-built_in">this</span>._heap[index]) {
+      <span class="hljs-built_in">this</span>._swap(index, rightChildIndex);
+      <span class="hljs-built_in">this</span>._sinkDown(rightChildIndex);
+    }
+  }
+
+  <span class="hljs-function"><span class="hljs-title">_swap</span>(<span class="hljs-params">indexOne, indexTwo</span>)</span> {
+    <span class="hljs-keyword">const</span> temp = <span class="hljs-built_in">this</span>._heap[indexOne];
+    <span class="hljs-built_in">this</span>._heap[indexOne] = <span class="hljs-built_in">this</span>._heap[indexTwo];
+    <span class="hljs-built_in">this</span>._heap[indexTwo] = temp;
+  }
+
+  <span class="hljs-function"><span class="hljs-title">push</span>(<span class="hljs-params">value</span>)</span> {
+    <span class="hljs-built_in">this</span>._heap.push(value);
+
+    <span class="hljs-comment">// Insert an element to the end of the heap</span>
+    <span class="hljs-comment">// If it&#x27;s parent is smaller (max heap) or larger (min heap) It means we have</span>
+    <span class="hljs-comment">// a heap violation. We should swap the child (newly added value)</span>
+    <span class="hljs-comment">// with the parent until we restore the heap property</span>
+    <span class="hljs-built_in">this</span>._bubbleUp(<span class="hljs-built_in">this</span>.heap.length);
+  }
+
+  <span class="hljs-function"><span class="hljs-title">pop</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-comment">// Remove the first element in the heap. Swap the last element in the heap to the front.</span>
+    <span class="hljs-comment">// Sink down swapping with the right child until a position is found</span>
+    <span class="hljs-keyword">const</span> max = <span class="hljs-built_in">this</span>._heap.shift();
+    <span class="hljs-built_in">this</span>._swap(<span class="hljs-number">0</span>, <span class="hljs-built_in">this</span>._heap.length);
+    <span class="hljs-built_in">this</span>._heap.pop();
+    <span class="hljs-built_in">this</span>._sinkDown();
+
+    <span class="hljs-keyword">return</span> max;
+  }
+
+  <span class="hljs-function"><span class="hljs-title">peek</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>._heap[<span class="hljs-number">0</span>];
+  }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PriorityQueue</span> </span>{
+  <span class="hljs-comment">// <span class="hljs-doctag">NOTE:</span> Passing your heap implementation will</span>
+  <span class="hljs-comment">// allow you to switch from min to max heap with ease</span>
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">heap</span>)</span> {
+    <span class="hljs-built_in">this</span>._heap = heap;
+  }
+  <span class="hljs-function"><span class="hljs-title">enqueue</span>(<span class="hljs-params">value</span>)</span> {
+    <span class="hljs-built_in">this</span>._heap.push(value);
+  }
+  <span class="hljs-function"><span class="hljs-title">dequeue</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>._heap.pop(value);
+  }
+  <span class="hljs-function"><span class="hljs-title">peek</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>._heap.peek();
+  }
+}
+
+<span class="hljs-keyword">const</span> priorityQueue = <span class="hljs-keyword">new</span> PriorityQueue(<span class="hljs-keyword">new</span> MaxHeap());
+</code></pre>
+<h3 id="hash-tables">Hash Tables</h3>
+<p>A <strong>hash table</strong> (<strong>hash map</strong>) is a data structure which implements an associative array abstract data type, a structure that can map keys to values. A hash table uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found.</p>
+<p>Ideally, the hash function will assign each key to a unique bucket, but most hash table designs employ an imperfect hash function, which might cause hash <em>collisions</em> where the hash function generates the same index for more than one key. Such collisions must be accommodated in some way.</p>
+<p>In a well-dimensioned hash table, the average cost (number of instructions) for each lookup is independent of the number of elements stored in the table. Many hash table designs also allow arbitrary insertions and deletions of key-value pairs, at constant average cost per operation.</p>
+<p>In many situations, <strong>hash tables turn out to be more efficient than search trees or any other table lookup structure.</strong> For this reason, <strong>they are widely used in many kinds of computer software, particularly for associative arrays, database indexing, caches, and sets</strong>.</p>
+<h4 id="hash-functions">Hash functions</h4>
+<p>All a hash function does is turn a value into an array index. The hash function in turn is composed of two parts.</p>
+<p>The first part, the <em>hash code</em>, takes a value and returns an integer. A function that always returned zero would be a hash coding function, but it would be a terrible one. More terrible ones include adding the ASCII values of a string together, multiplying the digits of a number, etc. A good hashing function minimizes the chance of a hash collision; a hash collision is when two distinct values have the same hash code. Good hashing functions, like SHA-256, have extremely small probabilities of hash collisions. I&#39;ve heard that it&#39;s much more likely that a giant asteroid will impact the earth than a collision of SHA-256 ever happening in the wild. The second part of hash functions is the <em>compression mapping</em>. All this does is maps the integer to an array index using the modulus operator and the length of the underlying array.</p>
+<p>A good hash function should be extremely fast to compute. Cryptographic-strength has functions often are relatively slow to compute, so faster ones are used that have higher collision rates. So how do we manage collisions?</p>
+<h3 id="graphs">Graphs</h3>
+<p>A <strong>graph</strong> is an <a href="https://en.wikipedia.org/wiki/Abstract_data_type">abstract data type</a> that is meant to implement the <a href="https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)">undirected graph</a> and <a href="https://en.wikipedia.org/wiki/Directed_graph">directed graph</a> concepts from <a href="https://en.wikipedia.org/wiki/Mathematics">mathematics</a>, specifically the field of <a href="https://en.wikipedia.org/wiki/Graph_theory">graph theory</a>.</p>
+<p>A graph data structure consists of a finite (and possibly mutable) <a href="https://en.wikipedia.org/wiki/Set_(computer_science)">set</a> of <em>vertices</em> or <em>nodes</em>, together with a set of unordered pairs of these vertices for an undirected graph or a set of ordered pairs for a directed graph. These pairs are known as <em>edges</em>, <em>arcs</em>, or <em>lines</em> for an undirected graph and as <em>arrows</em>, <em>directed edges</em>, <em>directed arcs</em>, or <em>directed lines</em> for a directed graph. The vertices may be part of the graph structure, or may be external entities represented by integer indices or <a href="https://en.wikipedia.org/wiki/Reference_(computer_science)">references</a>.</p>
+<p>A graph data structure may also associate to each edge some <em>edge value</em>, such as a symbolic label or a numeric attribute (cost, capacity, length, etc.).</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Directed.svg/250px-Directed.svg.png" alt="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Directed.svg/250px-Directed.svg.png"></p>
+<h3 id="trees">Trees</h3>
+<p>A <strong>tree</strong> is a widely used <a href="https://en.wikipedia.org/wiki/Abstract_data_type">abstract data type</a> (ADT)—or <a href="https://en.wikipedia.org/wiki/Data_structure">data structure</a> implementing this ADT—that simulates a hierarchical <a href="https://en.wikipedia.org/wiki/Tree_structure">tree structure</a>, with a root value and <a href="https://en.wikipedia.org/wiki/Subtrees">subtrees</a> of children with a parent node, represented as a set of linked <a href="https://en.wikipedia.org/wiki/Vertex_(graph_theory)">nodes</a>.</p>
+<p>A tree data structure can be defined <a href="https://en.wikipedia.org/wiki/Recursion">recursively</a> (locally) as a collection of <a href="https://en.wikipedia.org/wiki/Node_(computer_science)">nodes</a> (starting at a root node), where each node is a data structure consisting of a value, together with a list of references to nodes (the &quot;children&quot;), with the constraints that no reference is duplicated, and none points to the root.</p>
+<p>Alternatively, a tree can be defined abstractly as a whole (globally) as an <a href="https://en.wikipedia.org/wiki/Ordered_tree">ordered tree</a>, with a value assigned to each node. Both these perspectives are useful: while a tree can be analyzed mathematically as a whole, when actually represented as a data structure it is usually represented and worked with separately by node (rather than as a list of nodes and an <a href="https://en.wikipedia.org/wiki/Adjacency_list">adjacency list</a> of edges between nodes, as one may represent a <a href="https://en.wikipedia.org/wiki/Tree_(data_structure)#Digraphs">digraph</a>, for instance). For example, looking at a tree as a whole, one can talk about &quot;the parent node&quot; of a given node, but in general as a data structure a given node only contains the list of its children, but does not contain a reference to its parent (if any)</p>
+<p><strong>Terminoligy</strong></p>
+<ul>
+<li><strong>Root:</strong> The top node in a tree.</li>
+<li><strong>Child:</strong> A node directly connected to another node when moving away from the Root.</li>
+<li><strong>Parent:</strong> The converse notion of a child.</li>
+<li><strong>Siblings:</strong> A group of nodes with the same parent.</li>
+<li><strong>Descendant:</strong> A node reachable by repeated proceeding from parent to child.</li>
+<li><strong>Ancestor:</strong> A node reachable by repeated proceeding from child to parent.</li>
+<li><strong>Leaf:</strong> A node with no children.</li>
+</ul>
+<h3 id="binary-trees">Binary Trees</h3>
+<p>A <strong>binary tree</strong> is a <a href="https://en.wikipedia.org/wiki/Tree_structure">tree</a> <a href="https://en.wikipedia.org/wiki/Data_structure">data structure</a> in which <strong>each node has at most two <a href="https://en.wikipedia.org/wiki/Child_node">children</a></strong>, which are referred to as the <em>left child</em> and the <em>right child</em>. A <a href="https://en.wikipedia.org/wiki/Recursive_definition">recursive definition</a> using just <a href="https://en.wikipedia.org/wiki/Set_theory">set theory</a> notions is that a (non-empty) binary tree is a <a href="https://en.wikipedia.org/wiki/Tuple">triple</a> (<em>L</em>, <em>S</em>, <em>R</em>), where <em>L</em> and <em>R</em> are binary trees or the <a href="https://en.wikipedia.org/wiki/Empty_set">empty set</a> and <em>S</em> is a <a href="https://en.wikipedia.org/wiki/Singleton_set">singleton set</a>. Some authors allow the binary tree to be the empty set as well.</p>
+<p>From a <a href="https://en.wikipedia.org/wiki/Graph_theory">graph theory</a> perspective, binary (and K-ary) trees as defined here are actually <a href="https://en.wikipedia.org/wiki/Arborescence_(graph_theory)">arborescences</a>. A binary tree may thus be also called a <strong>bifurcating arborescence</strong>—a term which appears in some very old programming books, before the modern computer science terminology prevailed. It is also possible to interpret a binary tree as an <a href="https://en.wikipedia.org/wiki/Undirected_graph">undirected</a>, rather than a <a href="https://en.wikipedia.org/wiki/Directed_graph">directed graph</a>, in which case a binary tree is an <a href="https://en.wikipedia.org/wiki/Ordered_tree">ordered</a>, <a href="https://en.wikipedia.org/wiki/Rooted_tree">rooted tree</a>. Some authors use <strong>rooted binary tree</strong> instead of <em>binary tree</em> to emphasize the fact that the tree is rooted, but as defined above, a binary tree is always rooted. A binary tree is a special case of an ordered <a href="https://en.wikipedia.org/wiki/K-ary_tree">K-ary tree</a>, where <em>k</em> is 2.</p>
+<p>In computing, binary trees are seldom used solely for their structure. Much more typical is to define a labeling function on the nodes, which associates some value to each node. Binary trees labelled this way are used to implement <a href="https://en.wikipedia.org/wiki/Binary_search_tree">binary search trees</a> and <a href="https://en.wikipedia.org/wiki/Binary_heap">binary heaps</a>, and are used for efficient <a href="https://en.wikipedia.org/wiki/Search_algorithm">searching</a> and <a href="https://en.wikipedia.org/wiki/Sorting_algorithm">sorting</a>. The designation of non-root nodes as left or right child even when there is only one child present matters in some of these applications, in particular it is significant in binary search trees. In mathematics, what is termed <em>binary tree</em> can vary significantly from author to author. Some use the definition commonly used in computer science, but others define it as every non-leaf having exactly two children and don&#39;t necessarily order (as left/right) the children either.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Binary_tree.svg/384px-Binary_tree.svg.png" alt="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Binary_tree.svg/384px-Binary_tree.svg.png"></p>
+<h3 id="binary-search-trees">Binary Search Trees</h3>
+<p><strong>Binary Search Trees (BST)</strong>, are a particular type of data structure. They allow fast lookup, addition and removal of items, and can be used to implement either dynamic sets of items, or lookup tables that allow finding an item by its key (e.g., finding the phone number of a person by name).</p>
+<p><strong>Binary search trees keep their keys in sorted order</strong>, so that lookup and other operations can use the principle of <strong>binary search</strong>: when looking for a key in a tree (or a place to insert a new key), they traverse the tree from root to leaf, making comparisons to keys stored in the nodes of the tree and deciding, based on the comparison, to continue searching in the left or right subtrees. On average, this means that each comparison allows the operations to skip about half of the tree, so that each lookup, insertion or deletion takes time proportional to the logarithm of the number of items stored in the tree. This is much better than the linear time required to find items by key in an (unsorted) array, but slower than the corresponding operations on hash tables.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Binary_search_tree.svg/400px-Binary_search_tree.svg.png" alt="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Binary_search_tree.svg/400px-Binary_search_tree.svg.png"></p>
+<p><strong>Searching</strong></p>
+<p>Searching a binary search tree for a specific key can be programmed recursively or iteratively.</p>
+<p>Begin by examining the root node. If the tree is null, the key we are searching for does not exist in the tree. Otherwise, if the key equals that of the root, the search is successful and we return the node. If the key is less than that of the root, we search the left subtree. Similarly, if the key is greater than that of the root, we search the right subtree. This process is repeated until the key is found or the remaining subtree is null. If the searched key is not found after a null subtree is reached, then the key is not present in the tree. This is easily expressed as a recursive algorithm (implemented in Python):</p>
+<pre><code class="language-python"><span class="hljs-number">1</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">search_recursively</span>(<span class="hljs-params">key, node</span>):</span>
+<span class="hljs-number">2</span>     <span class="hljs-keyword">if</span> node <span class="hljs-keyword">is</span> <span class="hljs-literal">None</span> <span class="hljs-keyword">or</span> node.key == key:
+<span class="hljs-number">3</span>         <span class="hljs-keyword">return</span> node
+<span class="hljs-number">4</span>     <span class="hljs-keyword">if</span> key &lt; node.key:
+<span class="hljs-number">5</span>         <span class="hljs-keyword">return</span> search_recursively(key, node.left)
+<span class="hljs-number">6</span>     <span class="hljs-comment"># key &gt; node.key</span>
+<span class="hljs-number">7</span>     <span class="hljs-keyword">return</span> search_recursively(key, node.right)
+</code></pre>
+<p>The same algorithm can be implemented iteratively:</p>
+<pre><code class="language-python"> <span class="hljs-number">1</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">search_iteratively</span>(<span class="hljs-params">key, node</span>):</span>
+ <span class="hljs-number">2</span>     current_node = node
+ <span class="hljs-number">3</span>     <span class="hljs-keyword">while</span> current_node <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span>:
+ <span class="hljs-number">4</span>         <span class="hljs-keyword">if</span> key == current_node.key:
+ <span class="hljs-number">5</span>             <span class="hljs-keyword">return</span> current_node
+ <span class="hljs-number">6</span>         <span class="hljs-keyword">elif</span> key &lt; current_node.key:
+ <span class="hljs-number">7</span>             current_node = current_node.left
+ <span class="hljs-number">8</span>         <span class="hljs-keyword">else</span>: <span class="hljs-comment"># key &gt; current_node.key:</span>
+ <span class="hljs-number">9</span>             current_node = current_node.right
+<span class="hljs-number">10</span>     <span class="hljs-keyword">return</span> <span class="hljs-literal">None</span>
+</code></pre>
+<h3 id="heaps">Heaps</h3>
+<p>Heap is a special case of balanced binary tree data structure where the root-node key is compared with its children and arranged accordingly.</p>
+<p>If <strong>α</strong> has child node <strong>β</strong> then − <strong>key(α) ≥ key(β)</strong></p>
+<p>As the value of parent is greater than that of child, this property generates <strong>Max Heap</strong>. Based on this criteria, a heap can be of two types −</p>
+<p><strong>Max-Heap</strong> − Where the value of the root node is greater than or equal to either of its children.</p>
+<p><img src="assets/img/maxheap.png" alt="maxheap"></p>
+<p><strong>Min-Heap</strong> − Where the value of the root node is less than or equal to either of its children.</p>
+<p><img src="assets/img/minheap.png" alt="minheap"></p>
+<p>The heap is one maximally efficient implementation of an <a href="https://en.wikipedia.org/wiki/Abstract_data_type">abstract data type</a> called a <a href="https://en.wikipedia.org/wiki/Priority_queue">priority queue</a>, and in fact priority queues are often referred to as &quot;heaps&quot;, regardless of how they may be implemented.</p>
+<p>Heaps are also crucial in several efficient <a href="https://en.wikipedia.org/wiki/Graph_theory">graph</a> <a href="https://en.wikipedia.org/wiki/Algorithm">algorithms</a> such as <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">Dijkstra&#39;s algorithm</a>. In a heap, the highest (or lowest) priority element is always stored at the root. A heap is not a sorted structure and can be regarded as partially ordered. As visible from the heap-diagram, there is no particular relationship among nodes on any given level, even among the siblings. When a heap is a complete binary tree, it has a smallest possible height—a heap with N nodes always has <strong>log N height</strong>.</p>
+<p>A heap is a useful data structure when you need to remove the object with the highest (or lowest) priority.</p>
+<h2 id="algorithms">Algorithms</h2>
+<h3 id="bubble-sort">Bubble sort</h3>
+<p>A <strong>simple</strong> sorting algorithm that repeatedly steps through the list to be sorted, <strong>compares each pair of adjacent items and swaps them if they are in the wrong order (ie if 4 is next to 1, they will be swapped.</strong> The pass through the list is repeated until no swaps are needed, which indicates that the list is sorted. The algorithm, which is a <a href="https://en.wikipedia.org/wiki/Comparison_sort">comparison sort</a>, is named for the way smaller or larger elements &quot;bubble&quot; to the top of the list. Although the algorithm is simple, it is too slow and impractical for most problems even when compared to insertion sort. It can be practical if the input is usually in sorted order but may occasionally have some out-of-order elements nearly in position.</p>
+<h3 id="insertion-sort">Insertion sort</h3>
+<p><strong>Insertion sort</strong> is a simple <a href="https://en.wikipedia.org/wiki/Sorting_algorithm">sorting algorithm</a> that builds the final <a href="https://en.wikipedia.org/wiki/Sorted_array">sorted array</a> (or list) one item at a time. It is much less efficient on large lists than more advanced algorithms such as <a href="https://en.wikipedia.org/wiki/Quicksort">quicksort</a>, <a href="https://en.wikipedia.org/wiki/Heapsort">heapsort</a>, or <a href="https://en.wikipedia.org/wiki/Merge_sort">merge sort</a>. However, insertion sort provides several advantages:</p>
+<ul>
+<li>Simple implementation</li>
+<li>Efficient for (quite) small data sets, much like other quadratic sorting algorithms</li>
+<li>More efficient in practice than most other simple quadratic (i.e., <a href="https://en.wikipedia.org/wiki/Big_O_notation">O</a>(<em>n</em>2)) algorithms such as <a href="https://en.wikipedia.org/wiki/Selection_sort">selection sort</a> or <a href="https://en.wikipedia.org/wiki/Bubble_sort">bubble sort</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Adaptive_sort">Adaptive</a>, i.e., efficient for data sets that are already substantially sorted: the <a href="https://en.wikipedia.org/wiki/Time_complexity">time complexity</a> is <em>O</em>(<em>nk</em>) when each element in the input is no more than k places away from its sorted position</li>
+<li><a href="https://en.wikipedia.org/wiki/Stable_sort">Stable</a>; i.e., does not change the relative order of elements with equal keys</li>
+<li><a href="https://en.wikipedia.org/wiki/In-place_algorithm">In-place</a>; i.e., only requires a constant amount O(1) of additional memory space</li>
+<li><a href="https://en.wikipedia.org/wiki/Online_algorithm">Online</a>; i.e., can sort a list as it receives it</li>
+</ul>
+<p>When people manually sort cards in a bridge hand, most use a method that is similar to insertion sort.</p>
+<h3 id="merge-sort">Merge sort</h3>
+<p><strong>merge sort</strong> (also commonly spelled <strong>mergesort</strong>) is an efficient, general-purpose, <a href="https://en.wikipedia.org/wiki/Comparison_sort">comparison-based</a> <a href="https://en.wikipedia.org/wiki/Sorting_algorithm">sorting algorithm</a>. Most implementations produce a <a href="https://en.wikipedia.org/wiki/Sorting_algorithm#Stability">stable sort</a>, which means that the implementation preserves the input order of <a href="https://en.wikipedia.org/wiki/Equality_(mathematics)">equal</a> elements in the sorted output. Mergesort is a divide and conquer algorithm.</p>
+<p>An example of merge sort. First divide the list into the smallest unit (1 element), then compare each element with the adjacent list to sort and merge the two adjacent lists. Finally all the elements are sorted and merged.</p>
+<h3 id="quick-sort">Quick sort</h3>
+<p>Quicksort (sometimes called partition-exchange sort) is an efficient sorting algorithm, serving as a systematic method for placing the elements of an array in order.</p>
+<p>Quicksort is a comparison sort, meaning that it can sort items of any type for which a &quot;less-than&quot; relation (formally, a total order) is defined. In efficient implementations it is not a stable sort, meaning that the relative order of equal sort items is not preserved. Quicksort can operate in-place on an array, requiring small additional amounts of memory to perform the sorting.</p>
+<p>Mathematical analysis of quicksort shows that, on average, the algorithm takes O(n log n) comparisons to sort n items. In the worst case, it makes O(n2) comparisons, though this behavior is rare.</p>
+<p>Quicksort first divides a large array into two smaller sub-arrays: the low elements and the high elements. Quicksort can then recursively sort the sub-arrays.</p>
+<p><strong>The steps are:</strong></p>
+<ul>
+<li>Pick an element, called a pivot, from the array.</li>
+<li>Partitioning: reorder the array so that all elements with values less than the pivot come before the pivot, while all elements with values greater than the pivot come after it (equal values can go either way). After this partitioning, the pivot is in its final position. This is called the partition operation.</li>
+<li>Recursively apply the above steps to the sub-array of elements with smaller values and separately to the sub-array of elements with greater values.</li>
+</ul>
+<p>The base case of the recursion is arrays of size zero or one, which never need to be sorted.</p>
+<p>The pivot selection and partitioning steps can be done in several different ways; the choice of specific implementation schemes greatly affects the algorithm&#39;s performance.</p>
+<h3 id="selection-sort">Selection sort</h3>
+<p>In computer science, selection sort is a sorting algorithm, specifically an in-place comparison sort. It has O(n2) time complexity, making it inefficient on large lists, and generally performs worse than the similar insertion sort. Selection sort is noted for its simplicity, and it has performance advantages over more complicated algorithms in certain situations, particularly where auxiliary memory is limited.</p>
+<p>The algorithm divides the input list into two parts: the sublist of items already sorted, which is built up from left to right at the front (left) of the list, and the sublist of items remaining to be sorted that occupy the rest of the list. Initially, the sorted sublist is empty and the unsorted sublist is the entire input list. The algorithm proceeds by finding the smallest (or largest, depending on sorting order) element in the unsorted sublist, exchanging (swapping) it with the leftmost unsorted element (putting it in sorted order), and moving the sublist boundaries one element to the right.</p>
+<h3 id="searches">Searches</h3>
+<p><strong>Binary search</strong>: Finds the position of a target value within a <strong>sorted array</strong>. Binary search compares the target value to the middle element of the array; if they are unequal, the half in which the target cannot lie is eliminated and the search continues on the remaining half until it is successful. If the search ends with the remaining half being empty, the target is not in the array.</p>
+<h3 id="traversals">Traversals</h3>
+<p>Graph traversal means visiting every vertex and edge exactly once in a well-defined order. While using certain graph algorithms, you must ensure that each vertex of the graph is visited exactly once. The order in which the vertices are visited are important and may depend upon the algorithm or question that you are solving.</p>
+<p>During a traversal, it is important that you track which vertices have been visited. The most common way of tracking vertices is to mark them.</p>
+<h3 id="breadth-first-search-bfs">Breadth First Search (BFS)</h3>
+<p>BFS is the most commonly used approach to traverse a graph.</p>
+<p>BFS is a traversing algorithm where you should start traversing from a <strong>selected node (source or starting node)</strong> and traverse the graph <strong>layerwise</strong> thus exploring the neighbour nodes (nodes which are directly connected to source node). You must then move towards the next-level neighbour nodes.</p>
+<p>As the name BFS suggests, you are required to traverse the graph breadthwise as follows:</p>
+<ol>
+<li>First move horizontally and visit all the nodes of the current layer</li>
+<li>Move to the next layer</li>
+</ol>
+<p><img src="https://he-s3.s3.amazonaws.com/media/uploads/fdec3c2.jpg" alt="https://he-s3.s3.amazonaws.com/media/uploads/fdec3c2.jpg"></p>
+<p>The distance between the nodes in layer 1 is comparitively lesser than the distance between the nodes in layer 2. Therefore, in BFS, you must traverse all the nodes in layer 1 before you move to the nodes in layer 2.</p>
+<p><strong>Traversing child nodes</strong></p>
+<p>A graph can contain cycles, which may bring you to the same node again while traversing the graph. To avoid processing of same node again, use a boolean array which marks the node after it is processed. While visiting the nodes in the layer of a graph, store them in a manner such that you can traverse the corresponding child nodes in a similar order.</p>
+<p>In the earlier diagram, start traversing from 0 and visit its child nodes 1, 2, and 3. Store them in the order in which they are visited. This will allow you to visit the child nodes of 1 first (i.e. 4 and 5), then of 2 (i.e. 6 and 7), and then of 3 (i.e. 7) etc.</p>
+<p>To make this process easy, use a queue to store the node and mark it as &#39;visited&#39; until all its neighbours (vertices that are directly connected to it) are marked. The queue follows the First In First Out (FIFO) queuing method, and therefore, the neigbors of the node will be visited in the order in which they were inserted in the node i.e. the node that was inserted first will be visited first, and so on.</p>
+<pre><code>BFS (G, s)                   //Where G is the graph and s is the source node
+    let Q be queue.
+    Q.enqueue( s ) //Inserting s in queue until all its neighbour vertices are marked.
+
+    mark s as visited.
+    while ( Q is not empty)
+        //Removing that vertex from queue,whose neighbour will be visited now
+        v  =  Q.dequeue( )
+
+        //processing all the neighbours of v
+        for all neighbours w of v in Graph G
+           if w is not visited
+               Q.enqueue( w )             //Stores w in Q to further visit its neighbour
+               mark w as visited.
+</code></pre>
+<h3 id="depth-first-search-dfs">Depth First Search (DFS)</h3>
+<p>The DFS algorithm is a recursive algorithm that uses the idea of <strong>backtracking</strong>. It involves exhaustive searches of all the nodes by going ahead, if possible, else by backtracking.</p>
+<p>Here, the word backtrack means that when you are moving forward and there are no more nodes along the current path, you move backwards on the same path to find nodes to traverse. All the nodes will be visited on the current path till all the unvisited nodes have been traversed after which the next path will be selected.</p>
+<p><img src="https://he-s3.s3.amazonaws.com/media/uploads/9fa1119.jpg" alt="https://he-s3.s3.amazonaws.com/media/uploads/9fa1119.jpg"></p>
+<p>This recursive nature of DFS can be implemented using stacks. The basic idea is as follows:</p>
+<ol>
+<li>Pick a starting node and push all its adjacent nodes into a stack.</li>
+<li>Pop a node from stack to select the next node to visit and push all its adjacent nodes into a stack.</li>
+<li>Repeat this process until the stack is empty. However, ensure that the nodes that are visited are marked. This will prevent you from visiting the same node more than once. If you do not mark the nodes that are visited and you visit the same node more than once, you may end up in an infinite loop.</li>
+</ol>
+<pre><code>// iterative
+DFS-iterative (G, s):  //Where G is graph and s is source vertex
+      let S be stack
+      S.push( s )            //Inserting s in stack
+      mark s as visited.
+      while ( S is not empty):
+          //Pop a vertex from stack to visit next
+          v  =  S.top( )
+         S.pop( )
+         //Push all the neighbours of v in stack that are not visited
+        for all neighbours w of v in Graph G:
+            if w is not visited :
+                     S.push( w )
+                    mark w as visited
+
+// recursive
+DFS-recursive(G, s):
+        mark s as visited
+        for all neighbours w of s in Graph G:
+            if w is not visited:
+                DFS-recursive(G, w)
+</code></pre>
+<h2 id="complexity">Complexity</h2>
+<p><a href="https://en.wikipedia.org/wiki/Big_O_notation">https://en.wikipedia.org/wiki/Big_O_notation</a></p>
+<p><img src="assets/img/bigo.png" alt="bigo"></p>
+<p><strong>Big O notation is the language we use for articulating how long an algorithm takes to run</strong>. It&#39;s how we compare the efficiency of different approaches to a problem.</p>
+<p>With big O notation we express the runtime in terms of how quickly it grows relative to the input, as the input gets arbitrarily large.</p>
+<ol>
+<li><strong>how quickly the runtime grows</strong>—Some external factors affect the time it takes for a function to run: the speed of the processor, what else the computer is running, etc. So it&#39;s hard to make strong statements about the <em>exact runtime</em> of an algorithm. Instead we use big O notation to express <em>how quickly its runtime grows</em>.</li>
+<li><strong>relative to the input</strong>—Since we&#39;re not looking at an exact number, we need to phrase our runtime growth in terms of something. We use the size of the input. So we can say things like the runtime grows &quot;on the order of the size of the input&quot; (O(n)O(n)) or &quot;on the order of the square of the size of the input&quot; (O(n^2)O(n2)).</li>
+<li><strong>as the input gets arbitrarily large</strong>—Our algorithm may have steps that seem expensive when nn is small but are eclipsed eventually by other steps as nn gets huge. For big O analysis, we care most about the stuff that grows fastest as the input grows, because everything else is quickly eclipsed as nn gets very large. If you know what an asymptote is, you might see why &quot;big O analysis&quot; is sometimes called &quot;asymptotic analysis.&quot;</li>
+</ol>
+<p><strong>Note:</strong> Often this &quot;worst case&quot; stipulation is implied.</p>
+<p><img src="assets/img/sorting-complexity.png" alt="sorting-complexity"></p>
+<h3 id="examples">Examples</h3>
+<p><strong>This function runs in O(1) time (or &quot;constant time&quot;) relative to its input</strong>. The input arraycould be 1 item or 1,000 items, but this function would still just require one &quot;step.&quot;</p>
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">printFirstItem</span>(<span class="hljs-params">arrayOfItems</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(arrayOfItems[<span class="hljs-number">0</span>]);
+}
+</code></pre>
+<p><strong>This function runs in O(n) time (or &quot;linear time&quot;), where n is the number of items in the array</strong>. If the array has 10 items, we have to print 10 times. If it has 1,000 items, we have to print 1,000 times.</p>
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">printAllItems</span>(<span class="hljs-params">arrayOfItems</span>) </span>{
+  arrayOfItems.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">item</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(item);
+  });
+}
+</code></pre>
+<p>Here we&#39;re nesting two loops. If our array has n items, our outer loop runs n times and our inner loop runs <em>n times for each iteration of the outer loop</em>, giving us n^2 total prints. Thus <strong>this function runs in O(n^2) time (or &quot;quadratic time&quot;)</strong>. If the array has 10 items, we have to print 100 times. If it has 1,000 items, we have to print 1,000,000 times.</p>
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">printAllPossibleOrderedPairs</span>(<span class="hljs-params">arrayOfItems</span>) </span>{
+  arrayOfItems.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">firstItem</span>) </span>{
+    arrayOfItems.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">secondItem</span>) </span>{
+      <span class="hljs-built_in">console</span>.log(firstItem, secondItem);
+    });
+  });
+}
+</code></pre>
+<h3 id="drop-the-constants">Drop the constants</h3>
+<p>When you&#39;re calculating the big O complexity of something, you just throw out the constants. So the below is O(2n), which we just call O(n).</p>
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">printAllItemsTwice</span>(<span class="hljs-params">theArray</span>) </span>{
+  theArray.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">item</span>) </span>{
+    <span class="hljs-comment">// O(n)</span>
+    <span class="hljs-built_in">console</span>.log(item);
+  });
+
+  <span class="hljs-comment">// once more, with feeling</span>
+  theArray.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">item</span>) </span>{
+    <span class="hljs-comment">// O(n)</span>
+    <span class="hljs-built_in">console</span>.log(item);
+  });
+
+  <span class="hljs-comment">// O(n) + O(n) = O(n^2)</span>
+  <span class="hljs-comment">//             = O(n)</span>
+}
+</code></pre>
+<h3 id="logarithms">Logarithms</h3>
+<p>A common example of a logarithms is the Binary search:</p>
+<p><strong>Binary search</strong> is a technique used to search sorted data sets. It works by selecting the middle element of the data set, and compares it against a target value. If the values match it will return success. If the target value is higher than the value of the probe element it will take the upper half of the data set and perform the same operation against it. Likewise, if the target value is lower than the value of the probe element it will perform the operation against the lower half. It will continue to halve the data set with each iteration until the value has been found or until it can no longer split the data set.</p>
+<p>This type of algorithm is described as <strong>O(log N)</strong>. The iterative halving of data sets described in the binary search example produces a growth curve that peaks at the beginning and slowly flattens out as the size of the data sets increase e.g. an input data set containing 10 items takes one second to complete, a data set containing 100 items takes two seconds, and a data set containing 1000 items will take three seconds. Doubling the size of the input data set has little effect on its growth as after a single iteration of the algorithm the data set will be halved and therefore on a par with an input data set half the size. This makes algorithms like binary search extremely efficient when dealing with large data sets.</p>
+<h1 id="javascript--web-apis">JavaScript + Web APIs</h1>
+<p><a href="https://www.sitepoint.com/5-typical-javascript-interview-exercises/">https://www.sitepoint.com/5-typical-javascript-interview-exercises/</a></p>
+<h2 id="prototypal-inheritance">Prototypal Inheritance</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Prototypal inheritance</a></p>
+<p>When it comes to inheritance, JavaScript only has one construct: objects. Each object has a private property (referred to as <code>[[Prototype]]</code> ) which holds a link to another object called its <strong>prototype</strong>. That prototype object has a prototype of its own, and so on until an object is reached with <code>null</code> as its prototype. By definition, <code>null</code> has no prototype, and acts as the final link in this <strong>prototype chain</strong>.</p>
+<p>Nearly all objects in JavaScript are instances of <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a> which sits on the top of a prototype chain.</p>
+<p>While this is often considered to be one of JavaScript&#39;s weaknesses, the prototypal inheritance model is in fact more powerful than the classic model. It is, for example, fairly trivial to build a classic model on top of a prototypal model.</p>
+<h3 id="whats-the-difference-between-class--prototypal-inheritance">What’s the Difference Between Class &amp; Prototypal Inheritance?</h3>
+<p><strong>Class Inheritance:</strong> <strong>A class is like a blueprint — a description of the object to be created.</strong> Classes inherit from classes and <strong>create subclass relationships</strong>: hierarchical class taxonomies.</p>
+<p>Instances are typically instantiated via constructor functions with the *<code>new</code>*keyword. Class inheritance may or may not use the <em><code>class</code></em> keyword from ES6. Classes as you may know them from languages like Java don’t technically exist in JavaScript. Constructor functions are used, instead. The ES6 <em><code>class</code></em> keyword desugars to a constructor function:</p>
+<pre><code>class Foo {}
+typeof Foo // &#x27;function&#x27;
+</code></pre>
+<p>In JavaScript, class inheritance is implemented on top of prototypal inheritance, but that does not mean that it does the same thing:</p>
+<p>JavaScript’s class inheritance uses <strong>the prototype chain</strong> to wire the child <em><code>Constructor.prototype</code></em> to the parent <em><code>Constructor.prototype</code></em> for delegation. Usually, the <em><code>super()</code></em> constructor is also called. Those steps form <strong>single-ancestor parent/child hierarchies</strong> and <strong>create the tightest coupling available in OO design.</strong></p>
+<p><strong>Prototypal Inheritance:</strong> <strong>A prototype is a working object instance.</strong> Objects inherit directly from other objects.</p>
+<p>Instances may be composed from many different source objects, allowing for easy selective inheritance and a flat [[Prototype]] delegation hierarchy. In other words, <strong>class taxonomies are not an automatic side-effect of prototypal OO</strong>: <em>a critical distinction.</em></p>
+<p>Instances are typically instantiated via factory functions, object literals, or <em><code>Object.create()</code></em>.</p>
+<h2 id="scope">Scope</h2>
+<p><a href="https://spin.atomicobject.com/2014/10/20/javascript-scope-closures/">Scoping</a></p>
+<p>JavaScript has <em>lexical scoping</em> with <em>function scope</em>. In other words, even though JavaScript looks like it should have block scope because it uses curly braces { }, <strong>a new scope is created only when you create a new function.</strong></p>
+<blockquote>
+<p><strong>Lexical scoping</strong> (sometimes known as static <strong>scoping</strong> ) is a convention used with many programming languages that sets the <strong>scope</strong> (range of functionality) of a variable so that it may only be called (referenced) from within the block of code in which it is defined.</p>
+</blockquote>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> outerFunction = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">if</span> (<span class="hljs-literal">true</span>) {
+    <span class="hljs-keyword">var</span> x = <span class="hljs-number">5</span>;
+    <span class="hljs-comment">//console.log(y); //line 1, ReferenceError: y not defined</span>
+  }
+
+  <span class="hljs-keyword">var</span> nestedFunction = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">if</span> (<span class="hljs-literal">true</span>) {
+      <span class="hljs-keyword">var</span> y = <span class="hljs-number">7</span>;
+      <span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">//line 2, x will still be known prints 5</span>
+    }
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-literal">true</span>) {
+      <span class="hljs-built_in">console</span>.log(y); <span class="hljs-comment">//line 3, prints 7</span>
+    }
+  };
+
+  <span class="hljs-keyword">return</span> nestedFunction;
+};
+
+<span class="hljs-keyword">var</span> myFunction = outerFunction();
+myFunction();
+</code></pre>
+<p>In this example, the variable <code>x</code> is available everywhere inside of <code>outerFunction()</code>. Also, the variable <code>y</code> is available everywhere within the <code>nestedFunction()</code>, but neither are available outside of the function where they were defined. The reason for this can be explained by lexical scoping. The scope of variables is defined by their position in source code. In order to resolve variables, JavaScript starts at the innermost scope and searches outwards until it finds the variable it was looking for. Lexical scoping is nice, because we can easily figure out what the value of a variable will be by looking at the code; whereas in dynamic scoping, the meaning of a variable can change at runtime, making it more difficult.</p>
+<h2 id="closures">Closures</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures">Closures</a></p>
+<blockquote>
+<p>A closure is a special kind of object that combines two things: a function, and the environment in which that function was created. The environment consists of any local variables that were in-scope at the time that the closure was created.</p>
+</blockquote>
+<p>A closure is an inner function that has access to the outer (enclosing) function’s variables—scope chain.</p>
+<p><strong>The closure has three scope chains:</strong> it has access to its <strong>own scope</strong> (variables defined between its curly brackets), it has access to the <strong>outer function’s variables</strong>, and it has access to the <strong>global variables</strong>.</p>
+<p>The inner function has access not only to the outer function’s variables, but also to the outer function’s parameters. Note that the inner function cannot call the outer function’s <em>arguments</em> object, however, even though it can call the outer function’s parameters directly.</p>
+<p><strong>A closure is created by adding a function inside another function.</strong></p>
+<blockquote>
+<p>A <em>closure</em> is the combination of a function and the lexical environment within which that function was declared.</p>
+</blockquote>
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">init</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">var</span> name = <span class="hljs-string">&quot;Mozilla&quot;</span>; <span class="hljs-comment">// name is a local variable created by init</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">displayName</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// displayName() is the inner function, a closure</span>
+    alert(name); <span class="hljs-comment">// use variable declared in the parent function</span>
+  }
+
+  displayName();
+}
+
+init();
+</code></pre>
+<h2 id="event-bubbling">Event bubbling</h2>
+<p><a href="http://javascript.info/tutorial/bubbling-and-capturing">Event bubbling</a></p>
+<p><a href="https://www.sitepoint.com/event-bubbling-javascript/">https://www.sitepoint.com/event-bubbling-javascript/</a></p>
+<p><strong>Event bubbling</strong> relates to the order in which event handlers are called when one element is nested inside a second element, and both elements have registered a listener for the same event (a click, for example). But event bubbling is only one piece of the puzzle. It is often mentioned in conjunction with <strong>event capturing</strong> and <strong>event propagation</strong>.</p>
+<p><strong>What is the Event Propagation?</strong></p>
+<p>Let’s start with event propagation. <strong>This is the blanket term for both event bubbling and event capturing</strong>. A click on an image does not only generate a <code>click</code> event for the corresponding <code>IMG</code> element, but also for the parent <code>A</code>, for the grandfather <code>LI</code> and so on, going all the way up through all the element’s ancestors, before terminating at the <code>window</code> object.</p>
+<p>In DOM terminology, the image is the <em>event target</em>, the innermost element over which the click originated. The event target, plus its ancestors, from its parent up through to the <code>window</code> object, form a branch in the DOM tree. For example, in the image gallery, this branch will be composed of the nodes: <code>IMG</code>, <code>A</code>, <code>LI</code>, <code>UL</code>, <code>BODY</code>, <code>HTML</code>, <code>document</code>, <code>window</code>.</p>
+<p>This branch is important because it is the path along which the events propagate (or flow). This propagation is the process of calling all the listeners for the given event type, attached to the nodes on the branch. Each listener will be called with an <code>event</code> object that gathers information relevant to the event.</p>
+<p>Remember that several listeners can be registered on a node for the same event type. When the propagation reaches one such node, listeners are invoked in the order of their registration.</p>
+<p><strong>The propagation is bidirectional, from the window to the event target and back. This propagation can be divided into three phases:</strong></p>
+<ol>
+<li>From the window to the event target parent: this is the <strong>capture phase</strong></li>
+<li>The event target itself: this is the <strong>target phase</strong></li>
+<li>From the event target parent back to the window: the <strong>bubble phase</strong></li>
+</ol>
+<p><strong>The Event Capture Phase</strong></p>
+<p>In this phase only the <em>capturer</em> listeners are called, namely, those listeners that were registered using a value of <code>true</code> for the third parameter of <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a>:</p>
+<pre><code>el.addEventListener(&#x27;click&#x27;, listener, true)
+</code></pre>
+<p>If this parameter is omitted, its default value is false and the listener is not a capturer.</p>
+<p>So, during this phase, only the capturers found on the path from the window to the event target parent are called.</p>
+<p><strong>The Event Target Phase</strong></p>
+<p>In this phase all the listeners registered on the event target will be invoked, regardless of the value of their capture flag.</p>
+<p><strong>The Event Bubbling Phase</strong></p>
+<p>During the event bubbling phase only the non-capturers will be called. That is, only the listeners registered with a value of <code>false</code> for the third parameter of <code>addEventListener()</code>:</p>
+<pre><code>el.addEventListener(&#x27;click&#x27;, listener, false) // listener doesn&#x27;t capture
+el.addEventListener(&#x27;click&#x27;, listener) // listener doesn&#x27;t capture
+</code></pre>
+<p>Note that while all events flow down to the event target with the capture phase, <code>focus</code>, <code>blur</code>, <code>load</code> and some others, don’t bubble up. That is, their travel stops after the <em>target</em> phase.</p>
+<p><img src="assets/img/eventprop.png" alt="eventprop"></p>
+<h3 id="preventdefault-vs-stoppropagation"><code>preventDefault</code> vs. <code>stopPropagation</code></h3>
+<ul>
+<li><code>stopPropagation</code> stops the event from bubbling up the event chain.</li>
+<li><code>preventDefault</code> prevents the default action the browser makes on that event.</li>
+</ul>
+<p>With <code>stopPropagation</code> only the <strong>buttons click handler</strong> is called and the <strong>divs click handler</strong> never fires.</p>
+<p>Where as if you just <code>preventDefault</code> only the browsers default action is stopped but the div&#39;s click handler still fires.</p>
+<h2 id="apply-call-and-bind">Apply, call, and bind</h2>
+<p><a href="http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/">Apply, call, and bind</a></p>
+<p>Use <code>.bind()</code> when you want that <strong>function to later be called with a certain context, useful in events</strong>.</p>
+<p>Use <code>.call()</code> or <code>.apply()</code> when you want to <strong>invoke the function immediately, and modify the context</strong>.</p>
+<p><code>call</code> &amp;<code>apply</code> call the function immediately, whereas <code>bind</code> returns a function that, when later executed, will have the correct context set for calling the original function. This way you can maintain context in async callbacks and events.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">MyObject</span>(<span class="hljs-params">element</span>) </span>{
+  <span class="hljs-built_in">this</span>.elm = element;
+  element.addEventListener(<span class="hljs-string">&quot;click&quot;</span>, <span class="hljs-built_in">this</span>.onClick.bind(<span class="hljs-built_in">this</span>), <span class="hljs-literal">false</span>);
+}
+
+MyObject.prototype.onClick = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-keyword">var</span> t = <span class="hljs-built_in">this</span>; <span class="hljs-comment">//do something with [t]...</span>
+  <span class="hljs-comment">//without bind the context of this function wouldn&#x27;t be a MyObject</span>
+  <span class="hljs-comment">//instance as you would normally expect.</span>
+};
+</code></pre>
+<p>A simple, naive implementation of bind would be like:</p>
+<pre><code class="language-javascript"><span class="hljs-built_in">Function</span>.prototype.bind = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">ctx</span>) </span>{
+  <span class="hljs-keyword">var</span> fn = <span class="hljs-built_in">this</span>;
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    fn.apply(ctx, <span class="hljs-built_in">arguments</span>);
+  };
+};
+</code></pre>
+<p><strong>Bind()</strong></p>
+<p>The <code>bind()</code> method creates a new function that, when called, has its <code>this</code> keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.</p>
+<p><strong>Apply()</strong></p>
+<p>The <code>apply()</code> method calls a function with a given <code>this</code> value, and <code>arguments</code> provided as an array (or an <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects">array-like object</a>).</p>
+<p><strong>Call()</strong></p>
+<p>The <code>call()</code> method calls a function with a given <code>this</code> value and arguments provided individually.</p>
+<p><strong>Call vs. Apply</strong></p>
+<p>The difference is that <code>apply</code> lets you invoke the function with <code>arguments</code> as an array; <code>call</code>requires the parameters be listed explicitly. A useful mnemonic is *&quot;*<em>A** for <strong>a</strong>rray and <strong>C</strong> for **c**omma.&quot;</em></p>
+<p><strong>Pseudo syntax:</strong></p>
+<p><code>theFunction.apply(valueForThis, arrayOfArgs)</code></p>
+<p><code>theFunction.call(valueForThis, arg1, arg2, ...)</code></p>
+<p><strong>Sample code:</strong></p>
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">theFunction</span>(<span class="hljs-params">name, profession</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;My name is &quot;</span> + name + <span class="hljs-string">&quot; and I am a &quot;</span> + profession + <span class="hljs-string">&quot;.&quot;</span>);
+}
+theFunction(<span class="hljs-string">&quot;John&quot;</span>, <span class="hljs-string">&quot;fireman&quot;</span>);
+theFunction.apply(<span class="hljs-literal">undefined</span>, [<span class="hljs-string">&quot;Susan&quot;</span>, <span class="hljs-string">&quot;school teacher&quot;</span>]);
+theFunction.call(<span class="hljs-literal">undefined</span>, <span class="hljs-string">&quot;Claude&quot;</span>, <span class="hljs-string">&quot;mathematician&quot;</span>);
+theFunction.call(<span class="hljs-literal">undefined</span>, ...[<span class="hljs-string">&quot;Matthew&quot;</span>, <span class="hljs-string">&quot;physicist&quot;</span>]); <span class="hljs-comment">// used with the spread operator</span>
+
+<span class="hljs-comment">// Output:</span>
+
+<span class="hljs-comment">// My name is John and I am a fireman.</span>
+<span class="hljs-comment">// My name is Susan and I am a school teacher.</span>
+<span class="hljs-comment">// My name is Claude and I am a mathematician.</span>
+<span class="hljs-comment">// My name is Matthew and I am a physicist.</span>
+</code></pre>
+<h2 id="hoisting">Hoisting</h2>
+<p><a href="http://adripofjavascript.com/blog/drips/variable-and-function-hoisting">Variable and function hoisting</a></p>
+<blockquote>
+<p>Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution.</p>
+</blockquote>
+<p>Function declarations and variable declarations are always moved (“hoisted”) invisibly to the top of their containing scope by the JavaScript interpreter. Function parameters and language-defined names are, obviously, already there. This means that code like this:</p>
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>(<span class="hljs-params"></span>) </span>{
+  bar();
+  <span class="hljs-keyword">var</span> x = <span class="hljs-number">1</span>;
+}
+</code></pre>
+<p>is actually interpreted like this:</p>
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">var</span> x;
+  bar();
+  x = <span class="hljs-number">1</span>;
+}
+</code></pre>
+<h3 id="currying">Currying</h3>
+<p><a href="http://www.sitepoint.com/currying-in-functional-javascript/">Currying</a></p>
+<p>Currying is a way of constructing functions that allows partial application of a function’s arguments. What this means is that you can pass all of the arguments a function is expecting and get the result, or pass a subset of those arguments and get a function back that’s waiting for the rest of the arguments.</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> greetCurried = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">greeting</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">name</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(greeting + <span class="hljs-string">&quot;, &quot;</span> + name);
+  };
+};
+</code></pre>
+<p>The only problem is the syntax. As you build these curried functions up, you need to keep nesting returned functions, and call them with new functions that require multiple sets of parentheses, each containing its own isolated argument. It can get messy.</p>
+<p>To address that problem, one approach is to create a quick and dirty currying function that will take the name of an existing function that was written without all the nested returns. A currying function would need to pull out the list of arguments for that function, and use those to return a curried version of the original function:</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> curryIt = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">uncurried</span>) </span>{
+  <span class="hljs-keyword">var</span> parameters = <span class="hljs-built_in">Array</span>.prototype.slice.call(<span class="hljs-built_in">arguments</span>, <span class="hljs-number">1</span>);
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> uncurried.apply(
+      <span class="hljs-built_in">this</span>,
+      parameters.concat(<span class="hljs-built_in">Array</span>.prototype.slice.call(<span class="hljs-built_in">arguments</span>, <span class="hljs-number">0</span>))
+    );
+  };
+};
+</code></pre>
+<p>To use this, we pass it the name of a function that takes any number of arguments, along with as many of the arguments as we want to pre-populate. What we get back is a function that’s waiting for the remaining arguments:</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> greeter = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">greeting, separator, emphasis, name</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(greeting + separator + name + emphasis);
+};
+<span class="hljs-keyword">var</span> greetHello = curryIt(greeter, <span class="hljs-string">&quot;Hello&quot;</span>, <span class="hljs-string">&quot;, &quot;</span>, <span class="hljs-string">&quot;.&quot;</span>);
+greetHello(<span class="hljs-string">&quot;Heidi&quot;</span>); <span class="hljs-comment">//&quot;Hello, Heidi.&quot;</span>
+greetHello(<span class="hljs-string">&quot;Eddie&quot;</span>); <span class="hljs-comment">//&quot;Hello, Eddie.&quot;</span>
+</code></pre>
+<p><strong>Practical Applications</strong></p>
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">converter</span>(<span class="hljs-params">toUnit, factor, offset, input</span>) </span>{
+  offset = offset || <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">return</span> [((offset + input) * factor).toFixed(<span class="hljs-number">2</span>), toUnit].join(<span class="hljs-string">&quot; &quot;</span>);
+}
+
+<span class="hljs-keyword">var</span> milesToKm = converter.curry(<span class="hljs-string">&quot;km&quot;</span>, <span class="hljs-number">1.60936</span>, <span class="hljs-literal">undefined</span>);
+<span class="hljs-keyword">var</span> poundsToKg = converter.curry(<span class="hljs-string">&quot;kg&quot;</span>, <span class="hljs-number">0.4546</span>, <span class="hljs-literal">undefined</span>);
+<span class="hljs-keyword">var</span> farenheitToCelsius = converter.curry(<span class="hljs-string">&quot;degrees C&quot;</span>, <span class="hljs-number">0.5556</span>, -<span class="hljs-number">32</span>);
+
+milesToKm(<span class="hljs-number">10</span>); <span class="hljs-comment">// returns &quot;16.09 km&quot;</span>
+poundsToKg(<span class="hljs-number">2.5</span>); <span class="hljs-comment">// returns &quot;1.14 kg&quot;</span>
+farenheitToCelsius(<span class="hljs-number">98</span>); <span class="hljs-comment">// returns &quot;36.67 degrees C&quot;</span>
+</code></pre>
+<p>This relies on a curry extension of Function, although as you can see it only uses apply (nothing too fancy):</p>
+<pre><code class="language-javascript"><span class="hljs-built_in">Function</span>.prototype.curry = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">arguments</span>.length &lt; <span class="hljs-number">1</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>; <span class="hljs-comment">//nothing to curry with - return function</span>
+  }
+
+  <span class="hljs-keyword">var</span> __method = <span class="hljs-built_in">this</span>;
+  <span class="hljs-keyword">var</span> args = toArray(<span class="hljs-built_in">arguments</span>);
+
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> __method.apply(<span class="hljs-built_in">this</span>, args.concat([].slice.apply(<span class="hljs-literal">null</span>, <span class="hljs-built_in">arguments</span>)));
+  };
+};
+</code></pre>
+<h2 id="var-let--const">Var, Let &amp; Const</h2>
+<p><strong>Var</strong></p>
+<p>The most important thing to know about the <code>var</code> keyword is that it is <strong>function scoped</strong>. Scope refers to how a computer keeps track of all the variables in a program, specifically the environment in which each variable is accessible. Typically we talk about scope as either being <em>global</em> and therefore available everywhere or <em>local</em> and reserved for a specific block of code.</p>
+<p>When using <code>var</code> our local scope is within a function. This means that a variable with the same name can be used in two separate functions as each has their own local scope. In fact, we can use the same variable three times if we also include it in the global scope.</p>
+<p>The function-based nature of <code>var</code> also leads to JavaScript behavior such as <a href="https://wsvincent.com/javascript-hoisting/">hoisting</a>, where variable and function declarations are “hoisted” to the top of the scope before assignments.</p>
+<p><strong>Hoisting</strong></p>
+<p><em>Hoisting</em> is a behavior in JavaScript where variable and function declarations are “hoisted” to the top of their scope before code execution. This can result in confusing behaviour, such as the ability to call variables and functions before you wrote them.</p>
+<p><strong>Let</strong></p>
+<p>The <strong>let</strong> statement declares a local variable in a block scope. It is similar to <strong>var</strong>, in that we can optionally initialise the variable.</p>
+<p>The main difference between <code>let</code> and <code>var</code> is that variable declared with <code>let</code> is block scoped and variables declared with <code>var</code> is function scoped.</p>
+<p><strong>Const</strong></p>
+<p>The <strong>const declaration</strong> creates a read-only reference to a value. It does <strong>not</strong> mean the value it holds is immutable, just that the variable identifier cannot be reassigned. For instance, in the case where the content is an object, this means the object&#39;s contents (e.g., its parameters) can be altered.</p>
+<p><strong>Constants are block-scoped</strong>, much like variables defined using the <code>let</code> statement. The value of a constant cannot change through re-assignment, and it can&#39;t be redeclared.</p>
+<p><strong>Temporal Dead Zone:</strong></p>
+<p><strong>let</strong> bindings are created at the top of the (block) scope containing the declaration, commonly referred to as &quot;hoisting&quot;. Unlike variables declared with <code>var</code>, which will start with the value <code>undefined</code>, <code>let</code> variables are <em>not</em> initialized until their definition is evaluated. Accessing the variable before the initialization results in a <code>ReferenceError</code>. The variable is in a &quot;temporal dead zone&quot; from the start of the block until the initialization is processed.</p>
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">do_something</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(bar); <span class="hljs-comment">// undefined</span>
+  <span class="hljs-built_in">console</span>.log(foo); <span class="hljs-comment">// ReferenceError</span>
+  <span class="hljs-keyword">var</span> bar = <span class="hljs-number">1</span>;
+  <span class="hljs-keyword">let</span> foo = <span class="hljs-number">2</span>;
+}
+</code></pre>
+<h2 id="arrow-functions">Arrow Functions</h2>
+<p>An <strong>arrow function expression</strong> has a shorter syntax than a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</a> and does not have its own <code>this</code>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super">super</a>, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a>. These function expressions are best suited for non-method functions, and they cannot be used as constructors.</p>
+<p>There is one subtle difference in behavior between ordinary <code>function</code>functions and arrow functions. <strong>Arrow functions do not have their own this value.</strong> The value of <code>this</code> inside an arrow function is always inherited from the enclosing scope. In contrast <code>function</code> functions receive a <code>this</code> value automatically, whether they want one or not.</p>
+<h2 id="generator-functions">Generator Functions</h2>
+<p>Generators are functions which can be exited and later re-entered. Their context (variable bindings) will be saved across re-entrances.</p>
+<blockquote>
+<p>Generator functions are a feature introduced in ES6 that allows a function to <em>generate many values over time</em> by returning an object which can be iterated over… an iterable with a <em><code>.next()</code></em> method that returns objects</p>
+<p><a href="https://medium.com/javascript-scene/the-hidden-power-of-es6-generators-observable-async-flow-control-cfa4c7f31435">The hidden power of generators</a></p>
+</blockquote>
+<p>Generators in JavaScript -- especially when combined with Promises -- are a very powerful tool for asynchronous programming as they mitigate -- if not entirely eliminate -- the problems with callbacks, such as <a href="http://callbackhell.com/">Callback Hell</a> and <a href="https://frontendmasters.com/courses/rethinking-async-js/callback-problems-inversion-of-control/">Inversion of Control</a>.</p>
+<p><strong>This pattern is what <code>async</code> functions are built on top of...</strong></p>
+<p>Calling a generator function does not execute its body immediately; an <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterator">iterator</a> object for the function is returned instead. When the iterator&#39;s <code>next()</code> method is called, the generator function&#39;s body is executed until the first <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield"><code>yield</code></a> expression, which specifies the value to be returned from the iterator or, with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield*"><code>yield*</code></a>, delegates to another generator function. The <code>next()</code> method returns an object with a <code>value</code> property containing the yielded value and a <code>done</code> property which indicates whether the generator has yielded its last value as a boolean. Calling the <code>next()</code> method with an argument will resume the generator function execution, replacing the <code>yield</code> expression where execution was paused with the argument from <code>next()</code>.</p>
+<p>A <code>return</code> statement in a generator, when executed, will make the generator finished (i.e the <code>done</code> property of the object returned by it will be set to <code>true</code>). If a value is returned, it will be set as the <code>value</code> property of the object returned by the generator. Much like a <code>return</code> statement, an error thrown inside the generator will make the generator finished -- unless caught within the generator&#39;s body. When a generator is finished, subsequent <code>next</code> calls will not execute any  of that generator&#39;s code, they will just return an object of this form: <code>{value: undefined, done: true}</code>.</p>
+<p><strong>Example:</strong> Return statement in a generator</p>
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span>* <span class="hljs-title">yieldAndReturn</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">yield</span> <span class="hljs-string">&quot;Y&quot;</span>;
+  <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;R&quot;</span>;
+  <span class="hljs-keyword">yield</span> <span class="hljs-string">&quot;unreachable&quot;</span>;
+}
+
+<span class="hljs-keyword">var</span> gen = yieldAndReturn();
+<span class="hljs-built_in">console</span>.log(gen.next()); <span class="hljs-comment">// { value: &quot;Y&quot;, done: false }</span>
+<span class="hljs-built_in">console</span>.log(gen.next()); <span class="hljs-comment">// { value: &quot;R&quot;, done: true }</span>
+<span class="hljs-built_in">console</span>.log(gen.next()); <span class="hljs-comment">// { value: undefined, done: true }</span>
+</code></pre>
+<h2 id="map-vs-object">Map vs Object</h2>
+<p>The <strong>Map</strong> object holds key-value pairs. Any value (both objects and <a href="https://developer.mozilla.org/en-US/docs/Glossary/Primitive">primitive values</a>) may be used as either a key or a value. <strong>A Map</strong> object can iterate its elements in insertion order - a for..of loop will return an array of [key, value] for each iteration.</p>
+<p><strong>Objects</strong> are similar to <strong>Maps</strong> in that both let you set keys to values, retrieve those values, delete keys, and detect whether something is stored at a key. Because of this, Objects have been used as Maps historically; however, there are important differences between Objects and Maps that make using a Map better.</p>
+<p>An Object has a prototype, so there are default keys in the map. However, this can be bypassed using map = Object.create(null). The keys of an Object are Strings, where they can be any value for a Map. You can get the size of a Map easily while you have to manually keep track of size for an Object.</p>
+<p><strong>Use maps over objects when keys are unknown until run time, and when all keys are the same type and all values are the same type.</strong></p>
+<p><strong>Use objects when there is logic that operates on individual elements.</strong></p>
+<h2 id="virtual-dom">Virtual DOM</h2>
+<p><a href="https://medium.com/@deathmood/how-to-write-your-own-virtual-dom-ee74acc13060">source</a></p>
+<p>Virtual DOM is any kind of <strong>representation of a real DOM</strong></p>
+<p>When we change something in our Virtual DOM Tree, we get a new Virtual Tree. An algorithm then compares these two trees (old and new), finds differences and makes only necessary small changes to real DOM so it reflects it&#39;s virtual counterpart. So instead of updating the DOM when your application state changes, you simply create a virtual tree, which looks like the DOM state that you want. Virtual DOM will then figure out how to make the DOM look like this efficiently without recreating all of the DOM nodes.</p>
+<p>Virtual DOM allows you to update a view whenever state changes by creating a full virtual tree of the view and then patching the DOM efficiently to look exactly as you described it. This results in keeping manual DOM manipulation and previous state tracking out of your application code, promoting clean and maintainable rendering logic for web applications.</p>
+<p><strong>Why Virtual DOM?</strong></p>
+<p>DOM manipulation is the heart of the modern, interactive web. Unfortunately, it is also a lot slower than most JavaScript operations. This slowness is made worse by the fact that <strong>most JavaScript frameworks update the DOM much more than they have to.</strong></p>
+<p>For example: let&#39;s say that you have a list that contains ten items. You check off the first item. Most JavaScript frameworks would rebuild <em>the entire list</em>. That&#39;s ten times more work than necessary! Only one item changed, but the remaining nine get rebuilt exactly how they were before.</p>
+<p>Rebuilding a list is no big deal to a web browser, but modern websites can use huge amounts of DOM manipulation. Inefficient updating has become a serious problem.</p>
+<p>Manipulating the DOM is slow. Manipulating the virtual DOM is much faster, because nothing gets drawn onscreen. Think of manipulating the virtual DOM as editing a blueprint, as opposed to moving rooms in an actual house.</p>
+<p><strong>How it helps</strong></p>
+<p>In React, when you render a JSX element, every single virtual DOM object gets updated. This sounds incredibly inefficient, but the cost is insignificant because the <strong>virtual DOM can update so quickly</strong>.</p>
+<p>Once the virtual DOM has updated, then React compares the virtual DOM with a virtual DOM <em>snapshot</em> that was taken right before the update.</p>
+<p>By comparing the new virtual DOM with a pre-update version, React figures out <em>exactly which virtual DOM objects have changed.</em> This process is called &quot;diffing.&quot;</p>
+<p>Once React knows which virtual DOM objects have changed, then React updates those objects, <em>and only those objects,</em> on the real DOM. In our example from earlier, React would be smart enough to rebuild your one checked-off list-item, and leave the rest of your list alone.</p>
+<p>This makes a big difference! React can update only the necessary parts of the DOM. React&#39;s reputation for performance comes largely from this innovation.</p>
+<p>In summary, here&#39;s what happens when you try to update the DOM in React:</p>
+<ol>
+<li>The entire virtual DOM gets updated.</li>
+<li>The virtual DOM gets compared to what it looked like before you updated it. React figures out which objects have changed.</li>
+<li>The changed objects, and the changed objects only, get updated on the <em>real</em> DOM.</li>
+<li>Changes on the real DOM cause the screen to change.</li>
+</ol>
+<h2 id="shadow-dom">Shadow DOM</h2>
+<p>Shadow DOM is used to encapsulate a DOM subtree from the rest of the page. Useful if you are making plug and play widgets. This <strong>encapsulation means your document stylesheet can’t accidentally apply to encapsulated subtree</strong>. Your <strong>JavaScript can’t accidentally modify parts inside shadow Dom</strong>; your <strong>IDs wont overlap</strong> and so on.</p>
+<p>Following code will change the buttons text to Chinese. But interestingly <code>host.innerText</code> will still give us <code>Hello, world!</code> because the DOM subtree under the shadow root is encapsulated. HTML5 input type range , Video , Audio etc all uses shadow DOM.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>Hello, world!<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">var</span> host = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;button&quot;</span>);
+  <span class="hljs-keyword">var</span> root = host.createShadowRoot();
+
+  root.textContent = <span class="hljs-string">&quot;こんにちは、影の世界!&quot;</span>;
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h2 id="async--await">Async / Await</h2>
+<p><em>The await operator is used to wait for a Promise. It can only be used inside an async function.</em></p>
+<p>The <code>await</code> expression causes <code>async</code> function execution to pause until a <code>Promise</code> is resolved, that is fulfilled or rejected, and to resume execution of the <code>async</code> function after fulfillment. When resumed, the value of the <code>await</code> expression is that of the fulfilled <code>Promise</code>.</p>
+<p>If the <code>Promise</code> is rejected, the <code>await</code> expression throws the rejected value.</p>
+<p>If the value of the <em>expression</em> following the <code>await</code> operator is not a <code>Promise</code>, it&#39;s converted to a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve">resolved Promise</a>.</p>
+<p><strong>Example:</strong></p>
+<p>If a <code>Promise</code> is passed to an <code>await</code> expression, it waits for the <code>Promise</code> to be fulfilled and returns the fulfilled value.</p>
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">resolveAfter2Seconds</span>(<span class="hljs-params">x</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve</span>) =&gt;</span> {
+    <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> {
+      resolve(x);
+    }, <span class="hljs-number">2000</span>);
+  });
+}
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f1</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">var</span> x = <span class="hljs-keyword">await</span> resolveAfter2Seconds(<span class="hljs-number">10</span>);
+  <span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// 10</span>
+}
+f1();
+</code></pre>
+<p>If the value is not a <code>Promise</code>, it converts the value to a resolved <code>Promise</code>, and waits for it.</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f2</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">var</span> y = <span class="hljs-keyword">await</span> <span class="hljs-number">20</span>;
+  <span class="hljs-built_in">console</span>.log(y); <span class="hljs-comment">// 20</span>
+}
+f2();
+</code></pre>
+<p>If the <code>Promise</code> is rejected, the rejected value is thrown.</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f3</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">try</span> {
+    <span class="hljs-keyword">var</span> z = <span class="hljs-keyword">await</span> <span class="hljs-built_in">Promise</span>.reject(<span class="hljs-number">30</span>);
+  } <span class="hljs-keyword">catch</span> (e) {
+    <span class="hljs-built_in">console</span>.log(e); <span class="hljs-comment">// 30</span>
+  }
+}
+f3();
+</code></pre>
+<h2 id="web-workers">Web Workers</h2>
+<p>Web Workers is a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface. Once created, a worker can send messages to the JavaScript code that created it by posting messages to an event handler specified by that code (and vice versa).</p>
+<p>A worker is an object created using a constructor (e.g. <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/Worker"><code>Worker()</code></a>) that runs a named JavaScript file — this file contains the code that will run in the worker thread; workers run in another global context that is different from the current <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window"><code>window</code></a>.</p>
+<p><strong>Data is sent between workers and the main thread via a system of messages</strong> — both sides send their messages using the <code>postMessage()</code> method, and respond to messages via the <code>onmessage</code> event handler (the message is contained within the <code>Message</code> event&#39;s data attribute.) The data is copied rather than shared.</p>
+<p>Workers may, in turn, spawn new workers, as long as those workers are hosted within the same origin as the parent page.</p>
+<p><strong>Dedicated workers</strong></p>
+<p>Dedicated workers can be created like this:</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> myWorker = <span class="hljs-keyword">new</span> Worker(<span class="hljs-string">&quot;worker.js&quot;</span>);
+</code></pre>
+<p>Once created, you can send messages to and from the worker via <code>postMessage()</code> and listen on the <code>on message</code> event handler.</p>
+<p>When you want to send a message to the worker, you post messages to it like this (in the context of main.js):</p>
+<pre><code class="language-javascript">first.onchange = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  myWorker.postMessage([first.value, second.value]);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Message posted to worker&quot;</span>);
+};
+
+second.onchange = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  myWorker.postMessage([first.value, second.value]);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Message posted to worker&quot;</span>);
+};
+</code></pre>
+<p>So here we have two <code>&lt;input/&gt;</code> elements represented by the variables <code>first</code> and <code>second</code>; when the value of either is changed, <code>myWorker.postMessage([first.value,second.value])</code> is used to send the value inside to the worker, as an array. You can send pretty much anything you like in the message.</p>
+<p>In the worker, we can respond when the message is received by writing an event handler block like this (in the context of worker.js):</p>
+<pre><code class="language-javascript">onmessage = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Message received from main script&quot;</span>);
+
+  <span class="hljs-keyword">var</span> workerResult = <span class="hljs-string">&quot;Result: &quot;</span> + e.data[<span class="hljs-number">0</span>] * e.data[<span class="hljs-number">1</span>];
+
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Posting message back to main script&quot;</span>);
+  postMessage(workerResult);
+};
+</code></pre>
+<p>The <code>onmessage</code> handler allows us to run some code whenever a message is received, with the message itself being available in the <code>message</code> event&#39;s <code>data</code> attribute. Here we simply multiply together the two numbers then use <code>postMessage()</code> again, to post the result back to the main thread.</p>
+<p>Back in the main thread, we use <code>onmessage</code> again, to respond to the message sent back from the worker:</p>
+<pre><code class="language-javascript">myWorker.onmessage = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+  result.textContent = e.data;
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Message received from worker&quot;</span>);
+};
+</code></pre>
+<p>Here we grab the message event data and set it as the <code>textContent</code> of the result paragraph, so the user can see the result of the calculation.</p>
+<p>Notice that <code>onmessage</code> and <code>postMessage()</code> need to be hung off the <code>Worker</code>object when used in the main script thread, but not when used in the worker. This is because, inside the worker, the worker is effectively the global scope.</p>
+<blockquote>
+<p>Note: When a message is passed between the main thread and worker, it is copied, not shared.</p>
+</blockquote>
+<p>If you need to immediately terminate a running worker from the main thread, you can do so by calling the worker&#39;s <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker"><code>terminate</code></a> method:</p>
+<pre><code class="language-javascript">myWorker.terminate();
+</code></pre>
+<p>The worker thread is killed immediately without an opportunity to complete its operations or clean up after itself.</p>
+<p>In the worker thread, workers may close themselves by calling their own <a href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope"><code>close</code></a> method:</p>
+<pre><code class="language-javascript">close();
+</code></pre>
+<p><strong>Example:</strong></p>
+<p><strong>example.html</strong>: (the main page):</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> myWorker = <span class="hljs-keyword">new</span> Worker(<span class="hljs-string">&quot;my_task.js&quot;</span>);
+
+myWorker.onmessage = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">oEvent</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Worker said : &quot;</span> + oEvent.data);
+};
+
+myWorker.postMessage(<span class="hljs-string">&quot;ali&quot;</span>);
+</code></pre>
+<p><strong>my_task.js</strong> (the worker):</p>
+<pre><code class="language-javascript">postMessage(<span class="hljs-string">&quot;I&#x27;m working before postMessage(&#x27;ali&#x27;).&quot;</span>);
+
+onmessage = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">oEvent</span>) </span>{
+  postMessage(<span class="hljs-string">&quot;Hi &quot;</span> + oEvent.data);
+};
+</code></pre>
+<p>For more information, see: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">MDN - Using Web Workers</a></p>
+<h2 id="service-workers">Service Workers</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API">ServiceWorkers</a> essentially act as proxy servers that sit between web applications, and the browser and network (when available). <strong>They are intended to (amongst other things) enable the creation of effective offline experiences</strong>, intercepting network requests and taking appropriate action based on whether the network is available and updated assets reside on the server. They will also allow access to push notifications and background sync APIs.</p>
+<p>A service worker is run in a worker context: it therefore has no DOM access, and runs on a different thread to the main JavaScript that powers your app, so it is not blocking. It is designed to be fully async. <strong>Service workers only run over HTTPS, for security reasons</strong>. Having modified network requests, wide open to man in the middle attacks would be really bad.</p>
+<h3 id="throttle-vs-debounce">Throttle vs. Debounce</h3>
+<ul>
+<li><strong>Throttle</strong>: the original function be called <em>at most once per specified period.</em></li>
+<li><strong>Debounce</strong>: the original function be called after <em>the caller stops calling the decorated function after a specified period</em>.</li>
+</ul>
+<p>Throttle implementation:</p>
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">throttled</span>(<span class="hljs-params">delay, fn</span>) </span>{
+  <span class="hljs-keyword">let</span> lastCall = <span class="hljs-number">0</span>;
+
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">...args</span>) </span>{
+    <span class="hljs-keyword">const</span> now = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>().getTime();
+
+    <span class="hljs-keyword">if</span> (now - lastCall &lt; delay) <span class="hljs-keyword">return</span>;
+
+    lastCall = now;
+
+    <span class="hljs-keyword">return</span> fn(...args);
+  };
+}
+</code></pre>
+<p>Debounce implementation:</p>
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">debounce</span>(<span class="hljs-params">fn, interval</span>) </span>{
+  <span class="hljs-keyword">let</span> timeoutToken;
+
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">...args</span>) </span>{
+    <span class="hljs-built_in">clearTimeout</span>(timeoutToken);
+
+    timeoutToken = <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> {
+      timeoutToken = <span class="hljs-literal">null</span>;
+
+      fn.apply(<span class="hljs-built_in">this</span>, args);
+    }, interval);
+  };
+}
+</code></pre>
+<h2 id="miscellaneous">Miscellaneous</h2>
+<h3 id="difference-between-defer-and-async">Difference between defer and async</h3>
+<p>When you hit an web url in browser, first the HTML content is downloaded and browser starts parsing the HTML. During HTML parsing if it encounters a script block, HTML parsing halts. It makes a call to fetch the script (if external ) and then executes the script, before resuming HTML parsing.</p>
+<p>If we use <strong>async</strong>, HTML parsing doesn’t stop whilst file is fetched, but once it’s fetched, HTML parsing stops to execute the script.</p>
+<p>If we use <strong>defer</strong> browser downloads the JS during HTML parsing, and executes the JS only when HTML parsing is <a href="http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html"><em>done</em></a>.</p>
+<h3 id="pass-by-value--pass-by-reference-in-javascript">Pass By Value &amp; Pass By Reference In JavaScript</h3>
+<p>Javascript uses a <strong>pass by value</strong> strategy for <strong>primitives</strong> but uses <strong>pass by reference</strong> for <strong>objects including arrays</strong> (AKA <a href="https://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_sharing">call by sharing</a>).</p>
+<p><strong>Pass by reference</strong> is when variables passed in to functions are given the direct memory address. This allows the function to manipulate the object or primitive as it exists outside the scope of the function.</p>
+<p><strong>Pass by value</strong> means that when you pass that variable into a function its the equivalent of creating a new var and making a copy of the passed in var. They’re not necessarily the same exact variable in the same exact memory address but rather copies. Modifying the copy does not affect the original.</p>
+<h3 id="array-methods">Array Methods</h3>
+<p><strong>Stack methods</strong></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop"><code>Array.prototype.pop()</code></a> Removes the last element from an array and returns that element.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push"><code>Array.prototype.push()</code></a> Adds one or more elements to the end of an array and returns the new length of the array.</p>
+<p><strong>Queue Methods</strong></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift"><code>rray.prototype.unshift()</code></a> Adds one or more elements to the front of an array and returns the new length of the array.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop"><code>Array.prototype.pop()</code></a> Removes the last element from an array and returns that element.</p>
+<p><strong>Misc</strong></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse"><code>Array.prototype.reverse()</code></a> Reverses the order of the elements of an array in place — the first becomes the last, and the last becomes the first.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice"><code>Array.prototype.splice()</code></a> Adds and/or removes elements from an array.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice"><code>Array.prototype.slice()</code></a> Extracts a section of an array and returns a new array.</p>
+<h3 id="memoization">Memoization</h3>
+<p>Memoization is an optimisation technique used primarily to speed up computer programs by storing the results of expensive function calls and returning the cached result when the same inputs occur again.</p>
+<p>A memoized function &quot;remembers&quot; the results corresponding to some set of specific inputs. Subsequent calls with remembered inputs return the remembered result rather than recalculating it, thus eliminating the primary cost of a call with given parameters from all but the first call made to the function with those parameters. The set of remembered associations may be a fixed-size set controlled by a replacement algorithm or a fixed set, depending on the nature of the function and its use. A function can only be memoized if it is referentially transparent; that is, only if calling the function has exactly the same effect as replacing that function call with its return value.</p>
+<p>Memoization is a way to lower a function&#39;s time cost in exchange for space cost; that is, memoized functions become optimised for speed in exchange for a higher use of computer memory space. The time/space &quot;cost&quot; of algorithms has a specific name in computing: computational complexity. All functions have a computational complexity in time (i.e. they take time to execute) and in space.</p>
+<h1 id="design-patterns">Design Patterns</h1>
+<h2 id="decorator">Decorator</h2>
+<p><a href="https://addyosmani.com/resources/essentialjsdesignpatterns/book/#decoratorpatternjavascript">Decorator</a></p>
+<p>Decorators are a structural design pattern that aim to promote code re-use. Similar to Mixins, they can be considered another viable alternative to object sub-classing.</p>
+<p>Classically, Decorators offered the ability to add behaviour to existing classes in a system dynamically. The idea was that the <em>decoration</em> itself wasn&#39;t essential to the base functionality of the class, otherwise it would be baked into the <em>superclass</em> itself.</p>
+<p>They can be used to modify existing systems where we wish to add additional features to objects without the need to heavily modify the underlying code using them. A common reason why developers use them is their applications may contain features requiring a large quantity of distinct types of object. Imagine having to define hundreds of different object constructors for say, a JavaScript game.</p>
+<p>The Decorator pattern isn&#39;t heavily tied to how objects are created but instead focuses on the problem of extending their functionality. Rather than just relying on prototypal inheritance, we work with a single base object and progressively add decorator objects which provide the additional capabilities. The idea is that rather than sub-classing, we add (decorate) properties or methods to a base object so it&#39;s a little more streamlined.</p>
+<pre><code class="language-javascript"><span class="hljs-comment">// The constructor to decorate</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">MacBook</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">this</span>.cost = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-number">997</span>;
+  };
+  <span class="hljs-built_in">this</span>.screenSize = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-number">11.6</span>;
+  };
+}
+
+<span class="hljs-comment">// Decorator 1</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">memory</span>(<span class="hljs-params">macbook</span>) </span>{
+  <span class="hljs-keyword">var</span> v = macbook.cost();
+  macbook.cost = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> v + <span class="hljs-number">75</span>;
+  };
+}
+
+<span class="hljs-comment">// Decorator 2</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">engraving</span>(<span class="hljs-params">macbook</span>) </span>{
+  <span class="hljs-keyword">var</span> v = macbook.cost();
+  macbook.cost = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> v + <span class="hljs-number">200</span>;
+  };
+}
+
+<span class="hljs-comment">// Decorator 3</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">insurance</span>(<span class="hljs-params">macbook</span>) </span>{
+  <span class="hljs-keyword">var</span> v = macbook.cost();
+  macbook.cost = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> v + <span class="hljs-number">250</span>;
+  };
+}
+
+<span class="hljs-keyword">var</span> mb = <span class="hljs-keyword">new</span> MacBook();
+memory(mb);
+engraving(mb);
+insurance(mb);
+
+<span class="hljs-built_in">console</span>.log(mb.cost()); <span class="hljs-comment">// Outputs: 1522</span>
+<span class="hljs-built_in">console</span>.log(mb.screenSize()); <span class="hljs-comment">// Outputs: 11.6</span>
+</code></pre>
+<h2 id="factory">Factory</h2>
+<p><a href="https://addyosmani.com/resources/essentialjsdesignpatterns/book/#factorypatternjavascript">Factory</a></p>
+<p>The Factory pattern is another creational pattern concerned with the notion of creating objects. Where it differs from the other patterns in its category is that it doesn&#39;t explicitly require us to use a constructor. Instead, a Factory can provide a generic interface for creating objects, where we can specify the type of factory object we wish to be created.</p>
+<p>Imagine that we have a UI factory where we are asked to create a type of UI component. Rather than creating this component directly using the <code>new</code> operator or via another creational constructor, we ask a Factory object for a new component instead. We inform the Factory what type of object is required (e.g &quot;Button&quot;, &quot;Panel&quot;) and it instantiates this, returning it to us for use.</p>
+<p><strong>When To Use The Factory Pattern</strong></p>
+<p>The Factory pattern can be especially useful when applied to the following situations:</p>
+<ul>
+<li>When our object or component setup involves a high level of complexity</li>
+<li>When we need to easily generate different instances of objects depending on the environment we are in</li>
+<li>When we&#39;re working with many small objects or components that share the same properties</li>
+<li>When composing objects with instances of other objects that need only satisfy an API contract (aka, duck typing) to work. This is useful for decoupling.</li>
+</ul>
+<p><strong>When Not To Use The Factory Pattern</strong></p>
+<p>When applied to the wrong type of problem, this pattern can introduce an unnecessarily great deal of complexity to an application. Unless providing an interface for object creation is a design goal for the library or framework we are writing, I would suggest sticking to explicit constructors to avoid the unnecessary overhead.</p>
+<p>Due to the fact that the process of object creation is effectively abstracted behind an interface, this can also introduce problems with unit testing depending on just how complex this process might be.</p>
+<h2 id="singleton">Singleton</h2>
+<p><a href="https://addyosmani.com/resources/essentialjsdesignpatterns/book/#singletonpatternjavascript">Singleton</a></p>
+<p>The Singleton pattern is thus known because it restricts instantiation of a class to a single object. Classically, the Singleton pattern can be implemented by creating a class with a method that creates a new instance of the class if one doesn&#39;t exist. In the event of an instance already existing, it simply returns a reference to that object.</p>
+<p>Singletons differ from static <em>classes</em> (or objects) as we can delay their initialization, generally because they require some information that may not be available during initialization time. They don&#39;t provide a way for code that is unaware of a previous reference to them to easily retrieve them. This is because it is neither the object or &quot;class&quot; that&#39;s returned by a Singleton, it&#39;s a structure. Think of how closured variables aren&#39;t actually closures - the function scope that provides the closure is the closure.</p>
+<p>In JavaScript, Singletons serve as a shared resource namespace which isolate implementation code from the global namespace so as to provide a single point of access for functions.</p>
+<p><strong>Pros:</strong></p>
+<ol>
+<li>Better memory usage</li>
+<li>Low latency</li>
+<li>Needs initialisation once</li>
+</ol>
+<p><strong>Cons:</strong></p>
+<ol>
+<li>They are <strong>generally used as a global instance</strong>, why is that so bad? Because you hide the dependencies of your application in your code, instead of exposing them through the interfaces. Making something global to avoid passing it around is a code smell.</li>
+<li>They violate the <a href="https://en.wikipedia.org/wiki/Single_responsibility_principle">single responsibility principle</a>: by virtue of the fact that they control their own creation and lifecycle.</li>
+<li>They inherently cause code to be tightly <a href="https://en.wikipedia.org/wiki/Coupling_%28computer_programming%29">coupled</a>. This makes faking them out under test rather difficult in many cases.</li>
+<li>They carry state around for the lifetime of the application. Another hit to testing since you can end up with a situation where tests need to be ordered which is a big no no for unit tests. Why? Because each unit test should be independent from the other.</li>
+</ol>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Singleton</span> </span>{
+  <span class="hljs-keyword">static</span> instance;
+
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">if</span>(instance) <span class="hljs-keyword">return</span> instance;
+
+    <span class="hljs-built_in">this</span>.state = <span class="hljs-string">&quot;duke&quot;</span>;
+    <span class="hljs-built_in">this</span>.instance = <span class="hljs-built_in">this</span>;
+  }
+}
+
+<span class="hljs-attr">Now</span>:
+<span class="hljs-keyword">let</span> first = <span class="hljs-keyword">new</span> Singleton();
+<span class="hljs-keyword">let</span> second = <span class="hljs-keyword">new</span> Singleton();
+
+<span class="hljs-built_in">console</span>.log(first===second); <span class="hljs-comment">//output: true</span>
+</code></pre>
+<h2 id="module">Module</h2>
+<p>The Module pattern was originally defined as a way to provide both private and public encapsulation for classes in conventional software engineering.</p>
+<p>In JavaScript, the Module pattern is used to further emulate the concept of classes in such a way that we&#39;re able to include both public/private methods and variables inside a single object, thus shielding particular parts from the global scope. What this results in is a reduction in the likelihood of our function names conflicting with other functions defined in additional scripts on the page.</p>
+<p><strong>Privacy</strong></p>
+<p>The Module pattern encapsulates &quot;privacy&quot;, state and organization using closures. It provides a way of wrapping a mix of public and private methods and variables, protecting pieces from leaking into the global scope and accidentally colliding with another developer&#39;s interface. With this pattern, only a public API is returned, keeping everything else within the closure private.</p>
+<p>This gives us a clean solution for shielding logic doing the heavy lifting whilst only exposing an interface we wish other parts of our application to use. The pattern utilizes an immediately-invoked function expression (IIFE - see the section on namespacing patterns for more on this) where an object is returned.</p>
+<p>It should be noted that there isn&#39;t really an explicitly true sense of &quot;privacy&quot; inside JavaScript because unlike some traditional languages, it doesn&#39;t have access modifiers. Variables can&#39;t technically be declared as being public nor private and so we use function scope to simulate this concept. Within the Module pattern, variables or methods declared are only available inside the module itself thanks to closure. Variables or methods defined within the returning object however are available to everyone.</p>
+<h2 id="facade">Facade</h2>
+<p><a href="https://addyosmani.com/resources/essentialjsdesignpatterns/book/#facadepatternjavascript">Facade</a></p>
+<p>When we put up a facade, we present an outward appearance to the world which may conceal a very different reality. This was the inspiration for the name behind the Facade pattern. This pattern provides a convenient higher-level interface to a larger body of code, hiding its true underlying complexity. Think of it as simplifying the API being presented to other developers, something which almost always improves usability.</p>
+<p><strong>Facades are a structural pattern which can often be seen in JavaScript libraries like jQuery where, although an implementation may support methods with a wide range of behaviors, only a &quot;facade&quot; or limited abstraction of these methods is presented to the public for use.</strong></p>
+<p>This allows us to interact with the Facade directly rather than the subsystem behind the scenes. Whenever we use jQuery&#39;s <code>$(el).css()</code> or <code>$(el).animate()</code> methods, we&#39;re actually using a Facade - the simpler public interface that avoids us having to manually call the many internal methods in jQuery core required to get some behavior working. This also avoids the need to manually interact with DOM APIs and maintain state variables.</p>
+<p>The jQuery core methods should be considered intermediate abstractions. The more immediate burden to developers is the DOM API and facades are what make the jQuery library so easy to use.</p>
+<p>To build on what we&#39;ve learned, <strong>the Facade pattern both simplifies the interface of a class and it also decouples the class from the code that utilizes it</strong>. This gives us the ability to indirectly interact with subsystems in a way that can sometimes be less prone to error than accessing the subsystem directly. A Facade&#39;s advantages include ease of use and often a small size-footprint in implementing the pattern.</p>
+<h2 id="observer">Observer</h2>
+<p><a href="https://addyosmani.com/resources/essentialjsdesignpatterns/book/#observerpatternjavascript">Observer</a></p>
+<p>The Observer is a design pattern where an object (known as a subject) maintains a list of objects depending on it (observers), automatically notifying them of any changes to state.</p>
+<p>When a subject needs to notify observers about something interesting happening, it broadcasts a notification to the observers (which can include specific data related to the topic of the notification).</p>
+<p>When we no longer wish for a particular observer to be notified of changes by the subject they are registered with, the subject can remove them from the list of observers.</p>
+<p>It&#39;s often useful to refer back to published definitions of design patterns that are language agnostic to get a broader sense of their usage and advantages over time. The definition of the Observer pattern provided in the GoF book, <em>Design Patterns: Elements of Reusable Object-Oriented Software</em>, is:</p>
+<blockquote>
+<p>One or more observers are interested in the state of a subject and register their interest with the subject by attaching themselves. When something changes in our subject that the observer may be interested in, a notify message is sent which calls the update method in each observer. When the observer is no longer interested in the subject&#39;s state, they can simply detach themselves.</p>
+</blockquote>
+<h2 id="strategy-pattern">Strategy Pattern</h2>
+<blockquote>
+<p>Strategy - defines a family of algorithms, encapsulates each, and makes them interchangeable. Strategy lets the algorithm vary independently form clients that use it.</p>
+</blockquote>
+<p>This pattern seems to be very similar to Factory, Command and others. The main difference is that it is <em>one to many</em> pattern (one object can have many strategies). Also this pattern is used to define algorithms. It may be used for:</p>
+<ul>
+<li>Using optimal sorting algorithm for different types of data</li>
+<li>Using different algorithms to count product discount based on user type</li>
+<li>Using different algorithms to convert an image/file to different format</li>
+</ul>
+<p><strong>When to use it</strong>
+When you have a part of your Class that&#39;s subject to change frequently or perhaps you have many related subclasses which only differ in behavior it&#39;s often a good time to consider using a Strategy pattern.</p>
+<p>Another benefit of the Strategy pattern is that it can hide complex logic or data that the client doesn&#39;t need to know about.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Greeter</span> </span>{
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">strategy</span>)</span> {
+    <span class="hljs-built_in">this</span>.strategy = strategy;
+  }
+
+  <span class="hljs-function"><span class="hljs-title">greet</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.strategy();
+  }
+}
+
+<span class="hljs-comment">// Since a function encapsulates an algorithm, it makes a perfect</span>
+<span class="hljs-comment">// candidate for a Strategy.</span>
+<span class="hljs-keyword">var</span> politeGreetingStrategy = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Hello.&quot;</span>);
+};
+
+<span class="hljs-keyword">var</span> friendlyGreetingStrategy = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Hey!&quot;</span>);
+};
+
+<span class="hljs-keyword">var</span> boredGreetingStrategy = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;sup.&quot;</span>);
+};
+
+<span class="hljs-comment">// Let&#x27;s use these strategies!</span>
+<span class="hljs-keyword">var</span> politeGreeter = <span class="hljs-keyword">new</span> Greeter(politeGreetingStrategy);
+<span class="hljs-keyword">var</span> friendlyGreeter = <span class="hljs-keyword">new</span> Greeter(friendlyGreetingStrategy);
+<span class="hljs-keyword">var</span> boredGreeter = <span class="hljs-keyword">new</span> Greeter(boredGreetingStrategy);
+
+politeGreeter.greet(); <span class="hljs-comment">//=&gt; Hello.</span>
+friendlyGreeter.greet(); <span class="hljs-comment">//=&gt; Hey!</span>
+boredGreeter.greet(); <span class="hljs-comment">//=&gt; sup.</span>
+</code></pre>
+<h2 id="inversion-of-control">Inversion of Control</h2>
+<p>IoC and DIP are high level design principles which should be used while designing application classes. These are principles, so they only recommend certain best practices but do not provide any specific implementation details. Dependency Injection (DI) is a pattern and IoC container is a framework.</p>
+<h3 id="ioc-principles-and-patterns"><img src="assets/img/ioc-principles-and-patterns.png" alt="ioc-principles-and-patterns"></h3>
+<p><strong>IoC</strong> is a design principle which recommends inversion of different kinds of controls in object oriented design to achieve loose coupling between the application classes. Here, the control means any additional responsibilities a class has other than its main responsibility, such as control over the flow of an application, control over the dependent object creation and binding (Remember SRP-Single Responsibility Principle). If you want to do TDD (Test Driven Development) then you must use IoC principle without which TDD is not possible.</p>
+<h3 id="dependency-inversion-principle">Dependency Inversion Principle</h3>
+<p>DIP principle also helps in achieving loose coupling between the classes. It is highly recommended to use DIP and IoC together in order to achieve loose coupling.</p>
+<p>DIP suggests that high-level modules should not depend on low level modules. Both should depend on abstraction.</p>
+<h3 id="dependency-injection">Dependency Injection</h3>
+<p>Dependency Injection (DI) is a design pattern used to implement IoC where it allows creation of dependent objects outside of a class and provides those objects to a class through different ways. Using DI, we move the creation and binding of the dependent objects outside of the class that depends on it.</p>
+<p>Dependency Injection pattern involves 3 types of classes.</p>
+<ol>
+<li><strong>Client Class:</strong> The client class (dependent class) is a class which depends on the service class</li>
+<li><strong>Service Class:</strong> The service class (dependency) is a class that provides service to the client class.</li>
+<li><strong>Injector Class:</strong> The injector class injects service class object into the client class.</li>
+</ol>
+<p><strong>Types of Dependency Injection:</strong></p>
+<ul>
+<li><strong>Constructor Injection:</strong> In the constructor injection, injector supplies service (dependency) through the client class constructor.</li>
+<li><strong>Property Injection:</strong> In property injection (aka Setter Injection), injector supplies dependency through a public property of the client class.</li>
+<li><strong>Method Injection:</strong> In this type of injection, client class implements an interface which declares method(s) to supply dependency and the injector uses this interface to supply dependency to the client class.</li>
+</ul>
+<p>Dependency injection is effective in these situations:</p>
+<ol>
+<li>You need to inject configuration data into one or more components.</li>
+<li>You need to inject the same dependency into multiple components.</li>
+<li>You need to inject different implementations of the same dependency.</li>
+<li>You need to inject the same implementation in different configurations.</li>
+<li>You need some of the services provided by the container.</li>
+</ol>
+<p>Dependency injection is <strong>not</strong> effective if:</p>
+<ul>
+<li>You will never need a different implementation.</li>
+<li>You will never need a different configuration.</li>
+</ul>
+<p>If you know you will never change the implementation or configuration of some dependency, there is no benefit in using dependency injection.</p>
+<h3 id="ioc-container">IoC Container</h3>
+<p>IoC Container (a.k.a. DI Container) is a framework for implementing automatic dependency injection. It manages object creating and its life time and also injects dependencies to the class.</p>
+<p>IoC container creates an object of the specified class and also injects all the dependency objects through constructor, property or method at run time and disposes it at the appropriate time. This is done so that we don&#39;t have to create and manage objects manually.</p>
+<p>All the containers must provide easy support for the following DI lifecycle.</p>
+<ul>
+<li><strong>Register:</strong> The container must know which dependency to instantiate when it encounters a particular type. This process is called registration. Basically, it must include some way to register type-mapping.</li>
+<li><strong>Resolve:</strong> When using IoC container, we don&#39;t need to create objects manually. Container does it for us. This is called resolution. Container must include some methods to resolve the specified type; container creates an object of specified type, injects required dependencies if any and returns it.</li>
+<li><strong>Dispose:</strong> Container must manage the lifetime of dependent objects. Most IoC containers include different lifetime managers to manage an object&#39;s lifecycle and dispose of it.</li>
+</ul>
+<h2 id="composition-vs-inheritance">Composition vs Inheritance</h2>
+<p><em>Prefer composition over inheritance as it is easy to modify later, but do not use a compose-always approach.</em></p>
+<p>Composition is simply when a class is <em>composed</em> of other classes; or to say it another way, an instance of an object has references to instances of other objects.</p>
+<p>Inheritance is when a class inherits methods and properties from another class.</p>
+<p>To favor composition over inheritance is a design principle that gives the design higher flexibility. It is more natural to build business-domain classes out of various components than trying to find commonality between them and creating a family tree. For example, a gas pedal and a wheel share very few common traits, yet are both vital components in a car. What they can do and how they can be used to benefit the car is easily defined. Composition also provides a more stable business domain in the long term as it is less prone to the quirks of the family members. In other words, it is better to compose what an object can do (HAS-A) than extend what it is (IS-A).</p>
+<p>Initial design is simplified by identifying system object behaviors in separate interfaces instead of creating a hierarchical relationship to distribute behaviors among business-domain classes via inheritance. This approach more easily accommodates future requirements changes that would otherwise require a complete restructuring of business-domain classes in the inheritance model. Additionally, it avoids problems often associated with relatively minor changes to an inheritance-based model that includes several generations of classes.</p>
+<h1 id="html--css">HTML / CSS</h1>
+<h2 id="flexbox">Flexbox</h2>
+<p>The Flexible Box Module, usually referred to as flexbox, was designed as a one-dimensional layout model, and as a method that could offer space distribution between items in an interface and powerful alignment capabilities.</p>
+<p>When we describe flexbox as being one dimensional we are describing the fact that flexbox deals with layout in one dimension at a time — either as a row or as a column. This can be contrasted with the two-dimensional model of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>, which controls columns and rows together.</p>
+<p>When working with flexbox you need to <strong>think in terms of two axes</strong> — <strong>the main axis</strong> and <strong>the cross axis</strong>. The main axis is defined by the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction"><code>flex-direction</code></a> property, and the cross axis runs perpendicular to it. Everything we do with flexbox refers back to these axes, so it is worth understanding how they work from the outset.</p>
+<p>The main axis is defined by <code>flex-direction</code>, which has four possible values:</p>
+<ul>
+<li><code>row</code></li>
+<li><code>row-reverse</code></li>
+<li><code>column</code></li>
+<li><code>column-reverse</code></li>
+</ul>
+<p>Should you choose <code>row</code> or <code>row-reverse</code>, your main axis will run along the row in the <strong>inline direction</strong>.</p>
+<p>Choose <code>column</code> or <code>column-reverse</code> and your main axis will run from the top of the page to the bottom — in the <strong>block direction</strong>.</p>
+<p>The cross axis runs perpendicular to the main axis, therefore if your <code>flex-direction</code>(main axis) is set to <code>row</code> or <code>row-reverse</code> the cross axis runs down the columns.</p>
+<p>If your main axis is <code>column</code> or <code>column-reverse</code> then the cross axis runs along the rows.</p>
+<p>Understanding which axis is which is important when we start to look at aligning and justifying flex items; flexbox features properties that align and justify content along one axis or the other.</p>
+<h2 id="transforms">Transforms</h2>
+<p>The <strong>transform</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> property lets you rotate, scale, skew, or translate a given element. This is achieved by modifying the coordinate space of the CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Visual_formatting_model">visual formatting model</a>.</p>
+<pre><code class="language-css"><span class="hljs-attribute">transform</span>: <span class="hljs-built_in">matrix</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>);
+<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">120px</span>, <span class="hljs-number">50%</span>);
+<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">scale</span>(<span class="hljs-number">2</span>, <span class="hljs-number">0.5</span>);
+<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">0.5turn</span>);
+<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">skew</span>(<span class="hljs-number">30deg</span>, <span class="hljs-number">20deg</span>);
+<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">scale</span>(<span class="hljs-number">0.5</span>) <span class="hljs-built_in">translate</span>(-<span class="hljs-number">100%</span>, -<span class="hljs-number">100%</span>);
+</code></pre>
+<h2 id="accessibility">Accessibility</h2>
+<blockquote>
+<p>Being accessible is about making your website, with all of its data and functions, available for anyone, no matter how they have to use your website. — Katie Cunningham, Accessibility Handbook (O’Reilly)</p>
+</blockquote>
+<p>For a beginner-friendly overview of accessibility, the <a href="https://developers.google.com/web/fundamentals/accessibility">Google Web Fundamentals guide</a> is an excellent starting point. They explain the <a href="https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree">Acessibility Tree</a> particularly well.</p>
+<p>If you want to dive into a more hands-on learning plan with recommended activities, see Julie Grundy&#39;s <a href="https://github.com/stringyland/a11y-learning-plan">Accessibility Learning Plan for Developers</a>. Julie recommends resources and activities for:</p>
+<ul>
+<li>Writing semantic HTML</li>
+<li>Creating accessible styles</li>
+<li>Making images accessible</li>
+<li>Learning the methods for hiding content</li>
+<li>Building an accessible drop-down menu</li>
+<li>Building an accessible form</li>
+<li>Providing accessible error messages</li>
+<li>Accessibility testing</li>
+</ul>
+<h1 id="questions">Questions</h1>
+<h3 id="how-would-you-make-these-functions-work">How would you make these functions work?</h3>
+<pre><code class="language-javascript">add(<span class="hljs-number">2</span>, <span class="hljs-number">5</span>); <span class="hljs-comment">// 7</span>
+add(<span class="hljs-number">2</span>)(<span class="hljs-number">5</span>); <span class="hljs-comment">// 7</span>
+</code></pre>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<p>Basic function curry</p>
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">addend</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">summand</span>) </span>{
+    <span class="hljs-keyword">return</span> addend + summand;
+  };
+}
+</code></pre>
+<p>Generic function curry (supports both invocations)</p>
+<pre><code class="language-javascript"><span class="hljs-comment">// accepts partial list of arguments</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">x, y</span>) </span>{
+  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> y === <span class="hljs-string">&quot;undefined&quot;</span>) {
+    <span class="hljs-comment">// partial</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">y</span>) </span>{
+      <span class="hljs-keyword">return</span> x + y;
+    };
+  }
+
+  <span class="hljs-keyword">return</span> x + y;
+}
+</code></pre>
+</details>
+
+<h3 id="if-we-execute-this-javascript-what-will-the-browsers-console-show">If we execute this Javascript, what will the browser&#39;s console show?</h3>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> text = <span class="hljs-string">&quot;outside&quot;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">logIt</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(text);
+  <span class="hljs-keyword">var</span> text = <span class="hljs-string">&quot;inside&quot;</span>;
+}
+
+logIt();
+</code></pre>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<p>In JavaScript, variables are &quot;hoisted&quot; to the top of the function. That is, unlike some other languages (such as C), a variable declared within a function is within scope <em>throughout</em> the function. So the compiler sees your function like this:</p>
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">logIt</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">var</span> text;
+  <span class="hljs-built_in">console</span>.log(text);
+  text = <span class="hljs-string">&quot;inside&quot;</span>;
+} <span class="hljs-comment">// &lt;-- no semicolon after a function declaration</span>
+</code></pre>
+<p>When you declare <code>text</code> as a local variable inside <code>logIt</code>, it shadows the variable in the outer scope. And when a variable is declared, it is initialized to undefined. That&#39;s why undefined gets printed.</p>
+<p>If you want to keep <code>text</code> in the outer scope, just leave off the <code>var</code> declaration inside the function.</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> text = <span class="hljs-string">&quot;outside&quot;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">logIt</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(text); <span class="hljs-comment">// logs &#x27;outside&#x27; now</span>
+  text = <span class="hljs-string">&quot;inside&quot;</span>;
+}
+logIt();
+</code></pre>
+</details>
+
+<h3 id="get-nth-fibonacci-number">Get nth Fibonacci number?</h3>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fib</span>(<span class="hljs-params">n</span>) </span>{
+  <span class="hljs-keyword">if</span> (n &lt;= <span class="hljs-number">2</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+
+  <span class="hljs-keyword">let</span> x = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">let</span> y = <span class="hljs-number">1</span>;
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) {
+    <span class="hljs-keyword">let</span> tempY = y;
+    y = tempY + x;
+    x = tempY;
+  }
+
+  <span class="hljs-keyword">return</span> y;
+}
+</code></pre>
+</details>
+
+<h3 id="write-a-function-that-deeply-flattens-an-array-recursively">Write a function that deeply flattens an array <em>recursively</em></h3>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">flatten</span>(<span class="hljs-params">array</span>) </span>{
+  <span class="hljs-keyword">return</span> array.reduce(<span class="hljs-function">(<span class="hljs-params">sum, el</span>) =&gt;</span> {
+    <span class="hljs-keyword">let</span> flattenedArr = <span class="hljs-built_in">Array</span>.isArray(el) ? flatten(el) : el;
+
+    <span class="hljs-keyword">return</span> sum.concat(flattenedArr);
+  }, []);
+}
+
+flatten([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, [<span class="hljs-number">5</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>]]]]);
+
+<span class="hljs-comment">// [ 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 4, 5 ]</span>
+</code></pre>
+</details>
+
+<h3 id="write-a-function-that-deeply-flattens-an-array-iteratively">Write a function that deeply flattens an array <em>iteratively</em></h3>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">flatten</span>(<span class="hljs-params">array</span>) </span>{
+  <span class="hljs-keyword">let</span> clonedList = array.slice(<span class="hljs-number">0</span>);
+  <span class="hljs-keyword">const</span> flatList = [];
+
+  <span class="hljs-keyword">while</span> (clonedList.length) {
+    <span class="hljs-keyword">const</span> item = clonedList.shift();
+
+    <span class="hljs-keyword">if</span> (item <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Array</span> === <span class="hljs-literal">true</span>) {
+      clonedList = item.concat(clonedList);
+    } <span class="hljs-keyword">else</span> {
+      flatList.push(item);
+    }
+  }
+
+  <span class="hljs-keyword">return</span> flatList;
+}
+
+flatten([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, [<span class="hljs-number">5</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>]]]]);
+
+<span class="hljs-comment">// [ 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 4, 5 ]</span>
+</code></pre>
+</details>
+
+<h3 id="write-a-function-to-find-the-2nd-largest-element-in-a-binary-search-tree">Write a function to find the 2nd largest element in a binary search tree.</h3>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> MIN = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">const</span> MAX = <span class="hljs-number">1000</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">rand</span>(<span class="hljs-params">min, max</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.random() * (max - min) + min;
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Node</span> </span>{
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">value</span>)</span> {
+    <span class="hljs-built_in">this</span>.value = value;
+    <span class="hljs-built_in">this</span>.left = <span class="hljs-literal">null</span>;
+    <span class="hljs-built_in">this</span>.right = <span class="hljs-literal">null</span>;
+  }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">insert</span>(<span class="hljs-params">root, key</span>) </span>{
+  <span class="hljs-keyword">const</span> node = <span class="hljs-keyword">new</span> Node(key);
+
+  <span class="hljs-keyword">if</span> (!root) <span class="hljs-keyword">return</span> node;
+
+  <span class="hljs-keyword">if</span> (root.value &gt; key &amp;&amp; !root.left) {
+    root.left = node;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (root.value &lt; key &amp;&amp; !root.right) {
+    root.right = node;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (root.value &gt; key) {
+    insert(root.left, key);
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (root.value &lt; key) {
+    insert(root.right, key);
+  }
+
+  <span class="hljs-keyword">return</span> root;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getMaxNode</span>(<span class="hljs-params">node</span>) </span>{
+  <span class="hljs-keyword">if</span> (!node) <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+  <span class="hljs-keyword">if</span> (!node.right) <span class="hljs-keyword">return</span> node;
+
+  <span class="hljs-keyword">return</span> getMaxNode(node.right);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">findSecondLargest</span>(<span class="hljs-params">node</span>) </span>{
+  <span class="hljs-keyword">if</span> (!node) <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+
+  <span class="hljs-comment">// if the current node is the max, the second largest is the max</span>
+  <span class="hljs-comment">// node on the left tree.</span>
+  <span class="hljs-keyword">if</span> (node.left &amp;&amp; !node.right) {
+    <span class="hljs-keyword">return</span> getMaxNode(node.left);
+  }
+  <span class="hljs-comment">// if the right child node is the max, the current node is the</span>
+  <span class="hljs-comment">// second largest.</span>
+  <span class="hljs-keyword">if</span> (node.right) {
+    <span class="hljs-keyword">if</span> (!node.right.left &amp;&amp; !node.right.right) {
+      <span class="hljs-keyword">return</span> node;
+    }
+  }
+  <span class="hljs-comment">// otherwise, move on to the right child.</span>
+  <span class="hljs-keyword">return</span> findSecondLargest(node.right);
+}
+
+<span class="hljs-comment">// Build BST</span>
+<span class="hljs-keyword">let</span> bst;
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) {
+  <span class="hljs-keyword">const</span> randNo = rand(MIN, MAX);
+  bst = insert(bst, randNo);
+}
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;largest&quot;</span>, getMaxNode(bst).value);
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;second largest&quot;</span>, findSecondLargest(bst).value);
+</code></pre>
+</details>
+
+<h3 id="given-2-identical-dom-trees-but-not-equal-and-one-element-of-the-first-dom-tree-how-would-you-find-this-element-in-the-second-dom-tree">Given 2 identical DOM trees (but not equal) and one element of the first DOM tree, how would you find this element in the second DOM tree?</h3>
+<p>Example DOM:</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;root1&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;node1&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;root2&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;node2&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<pre><code class="language-javascript"><span class="hljs-comment">/*
+  O          O
+ / \        / \
+O   O      O   O
+    /|\       /|\
+   O O O     O O O
+
+  A            B
+ / \          / \
+O   O        O   O
+   /|\          /|\
+  x O O        y O O
+
+y = find(A, B, x);
+*/</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getPath</span>(<span class="hljs-params">rootNode, startingNode</span>) </span>{
+  <span class="hljs-keyword">const</span> path = [];
+  <span class="hljs-keyword">let</span> currentNode = startingNode;
+
+  <span class="hljs-keyword">while</span>(currentNode !== rootNode) {
+    <span class="hljs-keyword">const</span> parentNode = currentNode.parentElement;
+    <span class="hljs-keyword">const</span> childIndex = <span class="hljs-built_in">Array</span>.from(parentNode.children).indexOf(currentNode); <span class="hljs-comment">// We only care about the index</span>
+
+    path.push(childIndex);
+
+    currentNode = parentNode;
+  }
+
+  <span class="hljs-keyword">return</span> path;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">findNode</span>(<span class="hljs-params">rootNode, path</span>) </span>{
+  <span class="hljs-keyword">let</span> currentNode = rootNode;
+
+  <span class="hljs-keyword">while</span> (path.length) {
+    <span class="hljs-keyword">const</span> childIndex = path[path.length - <span class="hljs-number">1</span>];
+    <span class="hljs-keyword">const</span> childNode = currentNode.childen[childIndex]);
+
+    currentNode = childNode;
+
+    path.pop();
+  }
+
+  <span class="hljs-keyword">return</span> currentNode;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">find</span>(<span class="hljs-params">rootA, rootB, nodeX</span>) </span>{
+  <span class="hljs-keyword">const</span> path = getPath(rootA, nodeX);
+  <span class="hljs-keyword">const</span> nodeY = findNode(rootB, path);
+
+  <span class="hljs-keyword">return</span> nodeY;
+}
+</code></pre>
+</details>
+
+<h3 id="write-an-event-emitter-that-supports-subscribing-unsubscribing-and-emitting-events">Write an event emitter that supports subscribing, unsubscribing and emitting events.</h3>
+<p>Your implementation should fire the <code>callback</code> supplied as part of your subscription to be invoked with <code>foo</code> and <code>bar</code> as parameters. For example: <code>emitter.emit(&#39;event_name&#39;, foo, bar);</code></p>
+<p><a href="https://www.glassdoor.com.au/Interview/Write-an-emitter-class-emitter-new-Emitter-1-Support-subscribing-to-events-sub-emitter-subscribe-eve-QTN_1793084.htm">Reference 📖</a></p>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<p>There&#39;s no answer here - yet! Suggest one by <a href="https://github.com/danieldelcore/mega-interview-guide/pulls">creating a pull request 🙏</a></p>
+</details>
+
+<h3 id="given-an-input-array-and-another-array-that-describes-a-new-index-for-each-element-mutate-the-input-array-so-that-each-element-ends-up-in-their-new-index-discuss-the-runtime-of-the-algorithm-and-how-you-can-be-sure-there-wont-be-any-infinite-loops">Given an input array and another array that describes a new index for each element, mutate the input array so that each element ends up in their new index. Discuss the runtime of the algorithm and how you can be sure there won&#39;t be any infinite loops.</h3>
+<p><a href="https://www.glassdoor.com.au/Interview/Given-an-input-array-and-another-array-that-describes-a-new-index-for-each-element-mutate-the-input-array-so-that-each-ele-QTN_446534.htm">Reference 📖</a></p>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<pre><code class="language-javascript"><span class="hljs-keyword">let</span> arr = [<span class="hljs-string">&quot;a&quot;</span>, <span class="hljs-string">&quot;b&quot;</span>, <span class="hljs-string">&quot;c&quot;</span>, <span class="hljs-string">&quot;d&quot;</span>, <span class="hljs-string">&quot;e&quot;</span>, <span class="hljs-string">&quot;f&quot;</span>];
+<span class="hljs-keyword">const</span> indices = [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">0</span>, <span class="hljs-number">5</span>, <span class="hljs-number">1</span>];
+<span class="hljs-comment">//should return  [&quot;d&quot;, &quot;f&quot;, &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;e&quot;]</span>
+</code></pre>
+<ol>
+<li>O(n) space and O(n) time solution:</li>
+</ol>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> indicesMap = indices.reduce(<span class="hljs-function">(<span class="hljs-params">map, item, index</span>) =&gt;</span> {
+  map.set(item, index);
+  <span class="hljs-keyword">return</span> map;
+}, <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>());
+
+arr = indices.map(<span class="hljs-function">(<span class="hljs-params">val, index</span>) =&gt;</span> {
+  <span class="hljs-keyword">return</span> arr[indicesMap.get(index)];
+});
+
+<span class="hljs-built_in">console</span>.log(arr);
+</code></pre>
+<ol start="2">
+<li>O(n2) (n*n) time solution:</li>
+</ol>
+<pre><code class="language-javascript">arr = indices.map(<span class="hljs-function">(<span class="hljs-params">val, index</span>) =&gt;</span> {
+  <span class="hljs-keyword">return</span> arr[indices.indexOf(index)];
+});
+</code></pre>
+</details>
+
+<h3 id="implement-a-square-root-function">Implement a square root function.</h3>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<p>There&#39;s no answer here - yet! Suggest one by <a href="https://github.com/danieldelcore/mega-interview-guide/pulls">creating a pull request 🙏</a></p>
+</details>
+
+<h3 id="write-a-function-to-check-that-a-binary-tree-is-a-valid-binary-search-tree">Write a function to check that a binary tree is a valid binary search tree.</h3>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<p><a href="https://www.interviewcake.com/question/javascript/bst-checker">https://www.interviewcake.com/question/javascript/bst-checker</a></p>
+<p>This question is designed to trick you. You MUST keep track of the min and max nodes. Do not evaluate only the children nodes in relation to the value of the parent node.</p>
+<p>For more information please see: <a href="https://www.geeksforgeeks.org/a-program-to-check-if-a-binary-tree-is-bst-or-not/">https://www.geeksforgeeks.org/a-program-to-check-if-a-binary-tree-is-bst-or-not/</a></p>
+<p>Consider this BST:</p>
+<pre><code>      3
+     / \
+    2   5
+  /  \
+ 1    4
+</code></pre>
+<p>Notice how the 4 is in the left sub tree (as a child of 2). It should actually be in the right subtree as a left hand child of 5.</p>
+<p>The following solution <strong>is correct, but not efficient</strong>.
+It runs slowly since it traverses over some parts of the tree many times. A better solution looks at each node only once.</p>
+<p><strong>DO NOT USE THIS SOLUTION</strong></p>
+<pre><code class="language-javascript"><span class="hljs-comment">/**
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isValidBST</span>(<span class="hljs-params">root, min = <span class="hljs-number">0</span>, max = <span class="hljs-number">9999</span></span>) </span>{
+  <span class="hljs-keyword">if</span> (!root) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+  }
+
+  <span class="hljs-keyword">if</span> (root.val &gt;= max || root.val &lt;= min) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+  }
+
+  <span class="hljs-keyword">if</span> (!!root.left &amp;&amp; !isValidBST(root.left, min, root.val)) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+  }
+
+  <span class="hljs-keyword">if</span> (!!root.right &amp;&amp; !isValidBST(root.right, root.val, max)) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+  }
+
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+}
+</code></pre>
+<p>The trick is to write a utility help function that traverses the tree keeping track of the narrowing min and max allowed values as it goes, looking at each node only once!</p>
+<p><strong>DO NOT USE THIS SOLUTION</strong></p>
+<p>This is a more efficient and correct solution:</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> isValidBST = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">root, min, max</span>) </span>{
+  <span class="hljs-keyword">return</span> isBSTUtil(root, min, max);
+};
+
+<span class="hljs-keyword">var</span> isBSTUtil = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">root, min, max</span>) </span>{
+  <span class="hljs-keyword">if</span> (!root) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+  }
+
+  <span class="hljs-keyword">if</span> (root.val &lt; min || root.val &gt; max) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+  }
+
+  <span class="hljs-keyword">return</span> (
+    isBSTUtil(root.left, min, root.val - <span class="hljs-number">1</span>) &amp;&amp;
+    isBSTUtil(root.right, root.val + <span class="hljs-number">1</span>, max)
+  );
+};
+</code></pre>
+<p>BUT the best solution is to do an in-order traversal of the given tree and store the result in a temp array. Then check if the array is sorted, if it is then the tree is a valid BST. This is the general idea, but we can improve upon it further but removing the temp array and just checking the previously visited node value. If the value is less than the previous value then tree is not bst.</p>
+<p><strong>Time Complexity: O(n)</strong></p>
+<p>In-order traversal</p>
+<ol>
+<li>Traverse the left subtree, i.e., call Inorder(left-subtree)</li>
+<li>Visit the root.</li>
+<li>Traverse the right subtree, i.e., call Inorder(right-subtree)</li>
+</ol>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> isValidBST = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">root</span>) </span>{
+  <span class="hljs-keyword">if</span> (!root) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+
+  <span class="hljs-keyword">const</span> stack = [];
+  <span class="hljs-keyword">let</span> prev;
+
+  <span class="hljs-keyword">while</span> (!!root || stack.length !== <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">while</span> (root != <span class="hljs-literal">null</span>) {
+      stack.push(root);
+      root = root.left;
+    }
+
+    root = stack.pop();
+
+    <span class="hljs-keyword">if</span> (!!prev &amp;&amp; root.val &lt;= prev.val) {
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    }
+
+    prev = root;
+    root = root.right;
+  }
+
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+};
+</code></pre>
+</details>
+
+<h3 id="delete-a-node-from-a-singly-linked-list-given-only-variable-pointing-to-that-node">Delete a node from a singly-linked list, given only variable pointing to that node.</h3>
+<p><a href="https://www.interviewcake.com/question/javascript/delete-node">Reference 📖</a></p>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<p>There&#39;s no answer here - yet! Suggest one by <a href="https://github.com/danieldelcore/mega-interview-guide/pulls">creating a pull request 🙏</a></p>
+</details>
+
+<h3 id="write-a-function-for-reversing-a-linked-list-do-it-in-place">Write a function for reversing a linked list. Do it in-place.</h3>
+<p><a href="https://www.interviewcake.com/question/javascript/reverse-linked-list">Reference 📖</a></p>
+<ul>
+<li>Your function will have one input: the head of the list.</li>
+<li>Your function should return the new head of the list.</li>
+</ul>
+<p>Here&#39;s a sample linked list node class:</p>
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">LinkedListNode</span>(<span class="hljs-params">value</span>) </span>{
+  <span class="hljs-built_in">this</span>.value = value;
+  <span class="hljs-built_in">this</span>.next = <span class="hljs-literal">null</span>;
+}
+</code></pre>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<p>There&#39;s no answer here - yet! Suggest one by <a href="https://github.com/danieldelcore/mega-interview-guide/pulls">creating a pull request 🙏</a></p>
+</details>
+
+<h3 id="you-have-a-linked-list-and-want-to-find-the-kth-to-last-node">You have a linked list and want to find the kth to last node.</h3>
+<p><a href="https://www.interviewcake.com/question/javascript/kth-to-last-node-in-singly-linked-list">Reference 📖</a></p>
+<p>Write a function kthToLastNode() that takes an integer <code>k</code> and the headNode of a singly-linked list, and returns the <code>kth</code> to last node in the list.</p>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<p>There&#39;s no answer here - yet! Suggest one by <a href="https://github.com/danieldelcore/mega-interview-guide/pulls">creating a pull request 🙏</a></p>
+</details>
+
+<h3 id="verify-a-prime-number">Verify a prime number?</h3>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> isPrime = <span class="hljs-function">(<span class="hljs-params">num</span>) =&gt;</span> {
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">2</span>; i &lt; num; i++) <span class="hljs-keyword">if</span> (num % i === <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+
+  <span class="hljs-keyword">return</span> num !== <span class="hljs-number">1</span>;
+};
+</code></pre>
+</details>
+
+<h3 id="remove-duplicate-members-from-an-array">Remove duplicate members from an array?</h3>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<p><a href="https://wsvincent.com/javascript-remove-duplicates-array/">Reference 📖</a></p>
+<p>The simplest approach is to use the Set object which lets you store unique values of any type. In other words, Set will automatically remove duplicates for us.</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> names = [<span class="hljs-string">&quot;John&quot;</span>, <span class="hljs-string">&quot;Paul&quot;</span>, <span class="hljs-string">&quot;George&quot;</span>, <span class="hljs-string">&quot;Ringo&quot;</span>, <span class="hljs-string">&quot;John&quot;</span>];
+
+<span class="hljs-keyword">let</span> unique = [...new <span class="hljs-built_in">Set</span>(names)];
+<span class="hljs-built_in">console</span>.log(unique); <span class="hljs-comment">// &#x27;John&#x27;, &#x27;Paul&#x27;, &#x27;George&#x27;, &#x27;Ringo&#x27;</span>
+</code></pre>
+<p>Another option is to use filter().</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> names = [<span class="hljs-string">&quot;John&quot;</span>, <span class="hljs-string">&quot;Paul&quot;</span>, <span class="hljs-string">&quot;George&quot;</span>, <span class="hljs-string">&quot;Ringo&quot;</span>, <span class="hljs-string">&quot;John&quot;</span>];
+
+<span class="hljs-keyword">let</span> x = <span class="hljs-function">(<span class="hljs-params">names</span>) =&gt;</span> names.filter(<span class="hljs-function">(<span class="hljs-params">v, i</span>) =&gt;</span> names.indexOf(v) === i);
+x(names); <span class="hljs-comment">// &#x27;John&#x27;, &#x27;Paul&#x27;, &#x27;George&#x27;, &#x27;Ringo&#x27;</span>
+</code></pre>
+<p>And finally we can use forEach().</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> names = [<span class="hljs-string">&quot;John&quot;</span>, <span class="hljs-string">&quot;Paul&quot;</span>, <span class="hljs-string">&quot;George&quot;</span>, <span class="hljs-string">&quot;Ringo&quot;</span>, <span class="hljs-string">&quot;John&quot;</span>];
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">removeDups</span>(<span class="hljs-params">names</span>) </span>{
+  <span class="hljs-keyword">let</span> unique = {};
+  names.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">i</span>) </span>{
+    <span class="hljs-keyword">if</span> (!unique[i]) {
+      unique[i] = <span class="hljs-literal">true</span>;
+    }
+  });
+  <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.keys(unique);
+}
+
+removeDups(names); <span class="hljs-comment">// // &#x27;John&#x27;, &#x27;Paul&#x27;, &#x27;George&#x27;, &#x27;Ringo&#x27;</span>
+</code></pre>
+</details>
+
+<h3 id="swap-two-numbers-without-using-a-temp-variable">Swap two numbers without using a temp variable?</h3>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<pre><code class="language-javascript">a = a + b;
+b = a - b;
+a = a - b;
+</code></pre>
+</details>
+
+<h3 id="reverse-a-string-in-javascript">Reverse a string in JavaScript?</h3>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<blockquote>
+<p>Since strings in JavaScript are <strong>immutable</strong>, first convert the string into <em>an array of characters</em>, do the in-place reversal on that array, and re-join that array into a string before returning it. This isn&#39;t technically &quot;in-place&quot; and the array of characters will cost <em>O(n)</em> additional space, but it&#39;s a reasonable way to stay within the spirit of the challenge.</p>
+</blockquote>
+<p><a href="https://www.interviewcake.com/question/javascript/reverse-string-in-place">https://www.interviewcake.com/question/javascript/reverse-string-in-place</a></p>
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reverseString</span>(<span class="hljs-params">str</span>) </span>{
+  <span class="hljs-comment">// Step 1. Use the split() method to return a new array</span>
+  <span class="hljs-keyword">var</span> splitString = str.split(<span class="hljs-string">&quot;&quot;</span>); <span class="hljs-comment">// [&quot;h&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot;]</span>
+
+  <span class="hljs-comment">// Step 2. Use the reverse() method to reverse the new created array</span>
+  <span class="hljs-keyword">var</span> reverseArray = splitString.reverse(); <span class="hljs-comment">// [&quot;o&quot;, &quot;l&quot;, &quot;l&quot;, &quot;e&quot;, &quot;h&quot;]</span>
+
+  <span class="hljs-comment">// Step 3. Use the join() method to join all elements of the array into a string</span>
+  <span class="hljs-keyword">var</span> joinArray = reverseArray.join(<span class="hljs-string">&quot;&quot;</span>); <span class="hljs-comment">// &quot;olleh&quot;</span>
+
+  <span class="hljs-comment">//Step 4. Return the reversed string</span>
+  <span class="hljs-keyword">return</span> joinArray; <span class="hljs-comment">// &quot;olleh&quot;</span>
+}
+
+reverseString(<span class="hljs-string">&quot;hello&quot;</span>);
+</code></pre>
+</details>
+
+<h3 id="reverse-words-in-a-sentence">Reverse words in a sentence?</h3>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<p>Similar to the above, but take note of the space to denote a new word.</p>
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reverseString</span>(<span class="hljs-params">str</span>) </span>{
+  <span class="hljs-keyword">return</span> str.split(<span class="hljs-string">&quot; &quot;</span>).reverse().join(<span class="hljs-string">&quot; &quot;</span>);
+}
+
+reverseString(<span class="hljs-string">&quot;Hello, World. My Name is Daniel Del Core&quot;</span>);
+</code></pre>
+</details>
+
+<h3 id="find-the-first-non-repeating-char-in-a-string">Find the first non-repeating char in a string?</h3>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<p>There&#39;s no answer here - yet! Suggest one by <a href="https://github.com/danieldelcore/mega-interview-guide/pulls">creating a pull request 🙏</a></p>
+</details>
+
+<h3 id="remove-duplicate-characters-from-a-sting">Remove duplicate characters from a sting?</h3>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<p>There&#39;s no answer here - yet! Suggest one by <a href="https://github.com/danieldelcore/mega-interview-guide/pulls">creating a pull request 🙏</a></p>
+</details>
+
+<h3 id="how-can-you-verify-that-a-word-is-palindrome">How can you verify that a word is palindrome?</h3>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">palindrome</span>(<span class="hljs-params">str</span>) </span>{
+  <span class="hljs-comment">// String clean up to support sentences etc</span>
+  <span class="hljs-keyword">const</span> cleanStr = str.toLowerCase();
+  <span class="hljs-keyword">const</span> reverseStr = cleanStr.split(<span class="hljs-string">&quot;&quot;</span>).reverse().join(<span class="hljs-string">&quot;&quot;</span>);
+
+  <span class="hljs-keyword">return</span> cleanStr === reverseStr;
+}
+
+palindrome(<span class="hljs-string">&quot;race car&quot;</span>); <span class="hljs-comment">// True</span>
+</code></pre>
+</details>
+
+<h3 id="generate-random-between-5-to-7-by-using-defined-function">Generate random between 5 to 7 by using defined function.</h3>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<p>There&#39;s no answer here - yet! Suggest one by <a href="https://github.com/danieldelcore/mega-interview-guide/pulls">creating a pull request 🙏</a></p>
+</details>
+
+<h3 id="find-missing-number-from-unsorted-array-of-integers">Find missing number from unsorted array of integers.</h3>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<p>There&#39;s no answer here - yet! Suggest one by <a href="https://github.com/danieldelcore/mega-interview-guide/pulls">creating a pull request 🙏</a></p>
+</details>
+
+<h3 id="get-two-numbers-that-equal-to-a-given-number">Get two numbers that equal to a given number?</h3>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<p>There&#39;s no answer here - yet! Suggest one by <a href="https://github.com/danieldelcore/mega-interview-guide/pulls">creating a pull request 🙏</a></p>
+</details>
+
+<h3 id="find-the-largest-sum-of-any-two-elements">Find the largest sum of any two elements?</h3>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">findLargestSum</span>(<span class="hljs-params">arr</span>) </span>{
+  <span class="hljs-keyword">const</span> [largest, secondLargest] = arr.reduce(
+    <span class="hljs-function">(<span class="hljs-params">[largest, secondLargest], currentValue</span>) =&gt;</span> {
+      <span class="hljs-keyword">if</span> (currentValue &gt; largest) {
+        <span class="hljs-keyword">return</span> [currentValue, largest];
+      }
+      <span class="hljs-keyword">if</span> (currentValue &gt; secondLargest) {
+        <span class="hljs-keyword">return</span> [largest, currentValue];
+      }
+      <span class="hljs-keyword">return</span> [largest, secondLargest];
+    },
+    [<span class="hljs-built_in">Number</span>.MIN_VALUE, <span class="hljs-built_in">Number</span>.MIN_VALUE]
+  );
+  <span class="hljs-keyword">return</span> largest + secondLargest;
+}
+
+findLargestSum([<span class="hljs-number">7</span>, <span class="hljs-number">5</span>, <span class="hljs-number">3</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">34</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>]); <span class="hljs-comment">// 43</span>
+</code></pre>
+</details>
+
+<h3 id="check-whether-a-given-string-is-a-substring-of-bigger-string">Check whether a given string is a substring of bigger string</h3>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<p>There&#39;s no answer here - yet! Suggest one by <a href="https://github.com/danieldelcore/mega-interview-guide/pulls">creating a pull request 🙏</a></p>
+</details>
+
+<h3 id="get-permutations-of-a-string">Get permutations of a string</h3>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<p>There&#39;s no answer here - yet! Suggest one by <a href="https://github.com/danieldelcore/mega-interview-guide/pulls">creating a pull request 🙏</a></p>
+</details>
+
+<h3 id="how-would-you-handle-5000-promises">How would you handle 5000 promises?</h3>
+<details>
+<summary>Show Answer 💡</summary>
+<br>
+
+<p>Group the promises into batches of 50 (for example) and recursively execute each batch until completion or error. If an error occurs you could either retry, with that batch, or throw an error to the client as timeouts and other server errors are likely to occur.</p>
+<p><strong>Don&#39;t forget!</strong> If duplicate requests occur, you can simply memoize the function and safely return the same result to side-step the network request and improve performance.</p>
+<p>There&#39;s no answer here - yet! Suggest one by <a href="https://github.com/danieldelcore/mega-interview-guide/pulls">creating a pull request 🙏</a></p>
+</details>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -4,6 +4,8 @@
   "description": "The mega frontend interview guide",
   "main": "index.js",
   "scripts": {
+    "dev": "npm update:toc && node index.js && npx http-server -p 8080 ./build",
+    "build": "node index.js",
     "update:toc": "markdown-toc -i ./README.md --maxdepth 2",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -26,8 +28,11 @@
   },
   "homepage": "https://github.com/danieldelcore/mega-interview-guide#readme",
   "devDependencies": {
+    "fs-extra": "^9.1.0",
+    "highlight.js": "^10.7.2",
     "husky": "^4.2.5",
-    "markdown-toc": "^1.2.0"
+    "markdown-toc": "^1.2.0",
+    "marked": "^2.0.3"
   },
   "husky": {
     "hooks": {

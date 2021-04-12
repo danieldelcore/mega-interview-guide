@@ -8,7 +8,6 @@
       name="description"
       content="A humble guide to give developers the tools they need to nail technical interviews!"
     />
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -35,28 +34,14 @@
     />
     <link
       rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/atom-one-dark.min.css"
     />
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
   </head>
   <body>
     <main>
-      <div id="Content" class="container"></div>
+      <div class="container">
+        <!-- REPLACE_HERE -->
+      </div>
     </main>
-    <script>
-      async function init() {
-        marked.setOptions({
-          highlight: function (code, lang, callback) {
-            const validLanguage = hljs.getLanguage(lang) ? lang : "plaintext";
-            return hljs.highlight(validLanguage, code).value;
-          },
-        });
-        const r = await fetch("README.md");
-        const readmeText = await r.text();
-        document.querySelector("#Content").innerHTML = marked(readmeText);
-      }
-
-      init();
-    </script>
   </body>
 </html>
