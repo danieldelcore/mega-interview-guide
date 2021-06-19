@@ -79,7 +79,7 @@ Also review **recursion and iterative approaches**.
 - [Cracking the Coding Interview](https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.amazon.com%2Fdp%2F0984782850%2F&h=ATMZRtbfTrzQcLHngryrTjFT_XCq2o3nid4NoEE88Unt61VMu5gFILsu62CeZiwgbMGZEsXHIio3myVajcoWduG6CmE2SNFwxgOsHYHdaHWJIaSz20A7UL-X0oS1_Y4HnsCjr2FMWV3QabQf&s=1)
 - [Introduction to Algorithms](https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.amazon.com%2Fdp%2F0262033844&h=ATOR-C75elaqF-869Wl2vEifzniqLLc-mNpQXeueUSB7OVXcUN7-lehuzUCmjAgZ_VvnNPPra-ogSE4exCDEjTb2hxaQHSzun9WU0eN94HDmr58g7ibkPOCFv2Cns6eQcvcH72WAD9yfxcyI&s=1)
 - [Algorithms in C](http://www.amazon.com/Algorithms-Parts-1-5-Bundle-Fundamentals/dp/0201756080)
-- [Data Structures and Algorithms](http://lib.mdp.ac.id/ebook/Karya%20Umum/Dsa.pdf) and [Big-O Cheat Sheet](http://bigocheatsheet.com/)
+- [Data Structures and Algorithms](https://apps2.mdp.ac.id/perpustakaan/ebook/Karya%20Umum/Dsa.pdf) and [Big-O Cheat Sheet](http://bigocheatsheet.com/)
 - [Coursera - Algorithms, Part 1](https://www.coursera.org/learn/algorithms-part1)
 - [Coursera - Algorithms, Part 2](https://www.coursera.org/learn/algorithms-part2)
 - [Udacity - Intro to Algorithms](https://www.udacity.com/course/intro-to-algorithms--cs215)
