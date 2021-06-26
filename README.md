@@ -1085,7 +1085,7 @@ In summary, here's what happens when you try to update the DOM in React:
 
 Shadow DOM is used to encapsulate a DOM subtree from the rest of the page. Useful if you are making plug and play widgets. This **encapsulation means your document stylesheet can’t accidentally apply to encapsulated subtree**. Your **JavaScript can’t accidentally modify parts inside shadow Dom**; your **IDs wont overlap** and so on.
 
-Following code will change the buttons text to Chinese. But interestingly `host.innerText` will still give us `Hello, world!` because the DOM subtree under the shadow root is encapsulated. HTML5 input type range , Video , Audio etc all uses shadow DOM.
+Following code will change the buttons text to Japanese. But interestingly `host.innerText` will still give us `Hello, world!` because the DOM subtree under the shadow root is encapsulated. HTML5 input type range , Video , Audio etc all uses shadow DOM.
 
 ```html
 <button>Hello, world!</button>
