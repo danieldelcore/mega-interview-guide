@@ -868,7 +868,7 @@ farenheitToCelsius(<span class="hljs-number">98</span>); <span class="hljs-comme
 </ol>
 <h2 id="shadow-dom">Shadow DOM</h2>
 <p>Shadow DOM is used to encapsulate a DOM subtree from the rest of the page. Useful if you are making plug and play widgets. This <strong>encapsulation means your document stylesheet can’t accidentally apply to encapsulated subtree</strong>. Your <strong>JavaScript can’t accidentally modify parts inside shadow Dom</strong>; your <strong>IDs wont overlap</strong> and so on.</p>
-<p>Following code will change the buttons text to Chinese. But interestingly <code>host.innerText</code> will still give us <code>Hello, world!</code> because the DOM subtree under the shadow root is encapsulated. HTML5 input type range , Video , Audio etc all uses shadow DOM.</p>
+<p>Following code will change the buttons text to Japanese. But interestingly <code>host.innerText</code> will still give us <code>Hello, world!</code> because the DOM subtree under the shadow root is encapsulated. HTML5 input type range , Video , Audio etc all uses shadow DOM.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>Hello, world!<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
   <span class="hljs-keyword">var</span> host = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;button&quot;</span>);
