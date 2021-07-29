@@ -1797,10 +1797,44 @@ It runs slowly since it traverses over some parts of the tree many times. A bett
 <summary>Show Answer 💡</summary>
 <br>
 
+<p>The simplest approach is to check if the number is divisible by every integer less than itself.</p>
 <pre><code class="language-javascript"><span class="hljs-keyword">const</span> isPrime = <span class="hljs-function">(<span class="hljs-params">num</span>) =&gt;</span> {
   <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">2</span>; i &lt; num; i++) <span class="hljs-keyword">if</span> (num % i === <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
 
-  <span class="hljs-keyword">return</span> num !== <span class="hljs-number">1</span>;
+  <span class="hljs-keyword">return</span> num &gt; <span class="hljs-number">1</span>;
+};
+</code></pre>
+<p>A more efficient approach is to check if the number is divisible by every integer up to its square root.</p>
+<blockquote>
+<p>If <code>n = a * b</code> where <code>a &lt;= b</code>, a is always going to be less or equal to the square root of <code>n</code>. </p>
+</blockquote>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> isPrime = <span class="hljs-function">(<span class="hljs-params">num</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> limit = <span class="hljs-built_in">Math</span>.sqrt(num);
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">2</span>; i &lt;= limit i++) <span class="hljs-keyword">if</span> (num % i === <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+
+  <span class="hljs-keyword">return</span> num &gt; <span class="hljs-number">1</span>;
+};
+</code></pre>
+<p>A slightly more efficient approach is also to avoid all even numbers since they are divisible by 2; hence can&#39;t be prime.</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> isPrime = <span class="hljs-function">(<span class="hljs-params">num</span>) =&gt;</span> {
+  <span class="hljs-keyword">if</span> (num % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> num === <span class="hljs-number">2</span>;
+  <span class="hljs-keyword">const</span> limit = <span class="hljs-built_in">Math</span>.sqrt(num);
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">3</span>; i &lt;= limit; i+=<span class="hljs-number">2</span>) 
+      <span class="hljs-keyword">if</span> (num % i === <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+  <span class="hljs-keyword">return</span> num &gt; <span class="hljs-number">1</span>;
+};
+</code></pre>
+<p>We can keep creating slightly more efficient versions by eliminating multiples of known primes.</p>
+<blockquote>
+<p>For 2 &amp; 3, it boils down to <code>6k + i</code>. We can even write more efficient versions following the same pattern <code>(p1 * p2 * ... * pn)k + i</code>.</p>
+</blockquote>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> isPrime = <span class="hljs-function">(<span class="hljs-params">num</span>) =&gt;</span> {
+  <span class="hljs-keyword">if</span> (num % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> num === <span class="hljs-number">2</span>;
+  <span class="hljs-keyword">if</span> (num % <span class="hljs-number">3</span> === <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> num === <span class="hljs-number">3</span>;
+  <span class="hljs-keyword">const</span> limit = <span class="hljs-built_in">Math</span>.sqrt(num);
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">5</span>; i &lt;= limit; i+=<span class="hljs-number">6</span>) 
+      <span class="hljs-keyword">if</span> (num % i === <span class="hljs-number">0</span> || num % (i + <span class="hljs-number">2</span>) === <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+  <span class="hljs-keyword">return</span> num &gt; <span class="hljs-number">1</span>;
 };
 </code></pre>
 </details>
