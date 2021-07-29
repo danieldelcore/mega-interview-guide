@@ -2270,11 +2270,53 @@ There's no answer here - yet! Suggest one by [creating a pull request 🙏](http
 <summary>Show Answer 💡</summary>
 <br>
 
+The simplest approach is to check if the number is divisible by every integer less than itself.
+
 ```javascript
 const isPrime = (num) => {
   for (let i = 2; i < num; i++) if (num % i === 0) return false;
 
-  return num !== 1;
+  return num > 1;
+};
+```
+
+A more efficient approach is to check if the number is divisible by every integer up to its square root.
+
+> If `n = a * b` where `a <= b`, a is always going to be less or equal to the square root of `n`. 
+
+```javascript
+const isPrime = (num) => {
+  const limit = Math.sqrt(num);
+  for (let i = 2; i <= limit i++) if (num % i === 0) return false;
+
+  return num > 1;
+};
+```
+
+A slightly more efficient approach is also to avoid all even numbers since they are divisible by 2; hence can't be prime.
+
+```javascript
+const isPrime = (num) => {
+  if (num % 2 === 0) return num === 2;
+  const limit = Math.sqrt(num);
+  for (let i = 3; i <= limit; i+=2) 
+      if (num % i === 0) return false;
+  return num > 1;
+};
+```
+
+We can keep creating slightly more efficient versions by eliminating multiples of known primes.
+
+> For 2 & 3, it boils down to `6k + i`. We can even write more efficient versions following the same pattern `(p1 * p2 * ... * pn)k + i`.
+
+```javascript
+const isPrime = (num) => {
+  if (num % 2 === 0) return num === 2;
+  if (num % 3 === 0) return num === 3;
+  const limit = Math.sqrt(num);
+  for (let i = 5; i <= limit; i+=6) 
+      if (num % i === 0 || num % (i + 2) === 0) return false;
+  return num > 1;
 };
 ```
 
