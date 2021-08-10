@@ -91,7 +91,7 @@ Also review **recursion and iterative approaches**.
 ### Practice questions
 
 - [Awesome JavaScript Interviews](https://github.com/rohan-paul/Awesome-JavaScript-Interviews)
-- [500 Data Structures and Algorithms ](https://techiedelight.quora.com/500-Data-Structures-and-Algorithms-practice-problems-and-their-solutions?share=1&utm_medium=email&utm_source=hackernewsletter&utm_term=code)
+- [500 Data Structures and Algorithms ](https://techiedelight.quora.com/500-Data-Structures-and-Algorithms-interview-questions-and-their-solutions)
 - [Top 10 Algos in Interview Questions](http://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/)
 - [HackerRank](https://www.hackerrank.com/), [Topcoder](https://community.topcoder.com/tc?module=MatchDetails&rd=15712), [Codeforces](http://codeforces.com/contests), [Leetcode](https://leetcode.com/), [InterviewBit](https://www.interviewbit.com/) or [Kattis.](https://open.kattis.com/)
 - Problems from[ Cracking the Coding Interview Book](https://books.google.co.uk/books/about/Cracking_the_Coding_Interview.html?id=anhAXwAACAAJ&hl=en)
