@@ -1359,6 +1359,8 @@ Memoization is a way to lower a function's time cost in exchange for space cost;
 
 [Decorator](https://addyosmani.com/resources/essentialjsdesignpatterns/book/#decoratorpatternjavascript)
 
+https://www.scaler.com/topics/design-patterns/decorator-design-pattern/
+
 Decorators are a structural design pattern that aim to promote code re-use. Similar to Mixins, they can be considered another viable alternative to object sub-classing.
 
 Classically, Decorators offered the ability to add behaviour to existing classes in a system dynamically. The idea was that the _decoration_ itself wasn't essential to the base functionality of the class, otherwise it would be baked into the _superclass_ itself.
