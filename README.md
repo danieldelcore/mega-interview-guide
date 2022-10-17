@@ -86,6 +86,7 @@ Also review **recursion and iterative approaches**.
 - [MIT Open courseware - Introduction to Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2008/)
 - “You Don’t Know JS” by Kyle Simpson - https://github.com/getify/You-Dont-Know-JS
 - [Cracking the javascript interview](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d)
+- [Data Structures and Algorithms Tutorial](https://www.scaler.com/topics/data-structures/)
 - [Cracking the Coding Interview (JS) Solutions](https://github.com/careercup/CtCI-6th-Edition-JavaScript)
 - [Tech Interview Handbook](https://techinterviewhandbook.org/)
 - [Front End Interview Handbook](https://frontendinterviewhandbook.com/)
