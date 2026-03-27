@@ -15,6 +15,11 @@
 <!-- toc -->
 
 - [How to Prepare](#how-to-prepare)
+  * [Know the Interview Loop](#know-the-interview-loop)
+  * [Create a Study Plan](#create-a-study-plan)
+  * [Practice with Deliberate Feedback](#practice-with-deliberate-feedback)
+  * [Build Your Interview Narrative](#build-your-interview-narrative)
+  * [Day-before Checklist](#day-before-checklist)
 - [Resources](#resources)
   * [Suggested reading](#suggested-reading)
   * [Videos](#videos)
@@ -54,59 +59,118 @@
   * [Flexbox](#flexbox)
   * [Transforms](#transforms)
   * [Accessibility](#accessibility)
+- [System Design](#system-design)
+- [Behavioral Interviews](#behavioral-interviews)
+- [Take-home Assignments](#take-home-assignments)
+- [Compensation + Offer Evaluation](#compensation--offer-evaluation)
 - [Questions](#questions)
+- [References](#references)
 
 <!-- tocstop -->
 
 # How to Prepare
 
-Invest time in preparing: It's important for any engineer, even senior ones, to brush up on their interview skills, coding skills and algorithms. An interview is typically different from your day-to-day job.
+Interview prep works best when you treat it like a short training block, not random practice.
 
-**Practice answering many different coding questions:** Practice answering a coding question with the most efficient bug-free solution without using a compiler. A few resources that offer coding questions to use for practice: [Careercup](https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.careercup.com%2Fpage&h=ATNXGEU22051CK2jrQZuz0-_xpFzm-N44vARqRRGaN11C-Bj2vvn7WakmxepET56eZiatvTQ5pvqo_-swS4N6QtW0wLyqika349D8d17ymipgFcPjfwzH5Ij6wH7PmPc-MTcx2YwK5Yovm8v&s=1), [Topcoder](https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.topcoder.com%2F&h=ATM84NVzQHwje5rS4KBb5NHBfgwbX2g_4I-v4q3gW9I31bL155_2HLWALBAaz-u1XIGY8T7w1xFngHX7f9JT4IzFUw-OECGgW0kHns9mvkGq7tkFG9sQz_Oy3oKpwcwOwnJoXMEin1QmB7id&s=1), [Project Euler](https://l.facebook.com/l.php?u=http%3A%2F%2Fprojecteuler.net%2Findex.php&h=ATPG4D_F0Q_s08m-PKCq6owpQh-cUzeLVDZO2hpdW2Sz03dK80GOAQBL45uEyK73sTqcVHOpXPG-Sd-naTXSuOVwa7TKMiqHcJ72OMhzpwUay472i7xcEjrivGdjUlnSu39Rl-gh3G1T8a-s&s=1), or [Facebook Code Lab](https://l.facebook.com/l.php?u=https%3A%2F%2Fcodelab.interviewbit.com%2F&h=ATMMRfsaHRYEOnw7HsLuQSRHKv2q_tQz63MRO-4U9xFgmowjsV9YadpCd4pxMEPnpm2RnXJ8idkl23HwzzMTmFbwK0VAu8MYvxrPs2jqY0TMHs4VJe-df8N0qAG3D15gW4ZKAjGQKCE2SAni&s=1).
+## Know the Interview Loop
 
-**Go over data structures, algorithms and complexity**: Be able to discuss the **big-O complexity** of your approaches. Don't forget to brush up on your **data structures like lists, arrays, hash tables, hash maps, stacks, queues, graphs, trees, heaps**. Also **sorts, searches, and traversals (BFS, DFS)**.
+Most software interview loops include some combination of:
 
-Also review **recursion and iterative approaches**.
+- Recruiter screen (role alignment, compensation, timeline)
+- Hiring manager screen (scope, ownership, communication)
+- Coding rounds (data structures/algorithms, debugging, code quality)
+- System design (for mid-level+ roles)
+- Behavioral rounds (collaboration, conflict, impact)
+- Final panel / bar raiser
 
-**Think about your 2-5 years career aspirations:** You will be asked to talk about your interest and your strengths as an engineer.
+Prep becomes easier once you map **which rounds** are likely for your target role.
 
-**Prepare 1-2 questions to ask your interviewer:** There is generally 5 minutes at the end of a typical interview for this.
+## Create a Study Plan
+
+A practical 4-week plan:
+
+- **Week 1**: Arrays/strings/hash maps + foundational behavioral stories
+- **Week 2**: Trees/graphs/recursion + mock interview #1
+- **Week 3**: Dynamic programming + system design fundamentals
+- **Week 4**: Mixed mocks, weak-area review, company-specific prep
+
+Timebox daily sessions:
+
+1. 45–60 min new concepts
+2. 45–60 min timed practice
+3. 15 min retrospective (what you missed + why)
+
+## Practice with Deliberate Feedback
+
+When solving questions:
+
+- State assumptions out loud.
+- Start with brute force, then optimize.
+- Discuss complexity tradeoffs.
+- Test with edge cases before finalizing.
+- Explain naming and readability choices.
+
+After each session, log:
+
+- Pattern (e.g. sliding window, DFS backtracking)
+- Mistake type (logic, edge case, complexity, communication)
+- Fix you will apply next time
+
+## Build Your Interview Narrative
+
+Prepare 6–8 stories using STAR (Situation, Task, Action, Result), covering:
+
+- Hard technical problem
+- Conflict/disagreement
+- Failure and recovery
+- Leadership without authority
+- Mentoring or unblocking others
+- Shipping under ambiguity
+
+Keep each story to ~2 minutes, with measurable outcomes.
+
+## Day-before Checklist
+
+- Review your notes, do **not** cram new topics.
+- Re-read your resume and project details.
+- Prepare thoughtful interviewer questions.
+- Verify your coding environment, camera, mic, and internet.
+- Sleep enough; performance drops sharply with fatigue.
 
 # Resources
 
 ## Suggested reading
 
-- [Cracking the Coding Interview](https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.amazon.com%2Fdp%2F0984782850%2F&h=ATMZRtbfTrzQcLHngryrTjFT_XCq2o3nid4NoEE88Unt61VMu5gFILsu62CeZiwgbMGZEsXHIio3myVajcoWduG6CmE2SNFwxgOsHYHdaHWJIaSz20A7UL-X0oS1_Y4HnsCjr2FMWV3QabQf&s=1)
-- [Introduction to Algorithms](https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.amazon.com%2Fdp%2F0262033844&h=ATOR-C75elaqF-869Wl2vEifzniqLLc-mNpQXeueUSB7OVXcUN7-lehuzUCmjAgZ_VvnNPPra-ogSE4exCDEjTb2hxaQHSzun9WU0eN94HDmr58g7ibkPOCFv2Cns6eQcvcH72WAD9yfxcyI&s=1)
-- [Algorithms in C](http://www.amazon.com/Algorithms-Parts-1-5-Bundle-Fundamentals/dp/0201756080)
-- [Data Structures and Algorithms](https://apps2.mdp.ac.id/perpustakaan/ebook/Karya%20Umum/Dsa.pdf) and [Big-O Cheat Sheet](http://bigocheatsheet.com/)
-- [Coursera - Algorithms, Part 1](https://www.coursera.org/learn/algorithms-part1)
-- [Coursera - Algorithms, Part 2](https://www.coursera.org/learn/algorithms-part2)
-- [Udacity - Intro to Algorithms](https://www.udacity.com/course/intro-to-algorithms--cs215)
-- [MIT Open courseware - Introduction to Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2008/)
-- “You Don’t Know JS” by Kyle Simpson - https://github.com/getify/You-Dont-Know-JS
-- [Cracking the javascript interview](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d)
-- [Data Structures and Algorithms Tutorial](https://www.scaler.com/topics/data-structures/)
-- [Cracking the Coding Interview (JS) Solutions](https://github.com/careercup/CtCI-6th-Edition-JavaScript)
-- [Tech Interview Handbook](https://techinterviewhandbook.org/)
-- [Front End Interview Handbook](https://frontendinterviewhandbook.com/)
+- [Cracking the Coding Interview](https://www.crackingthecodinginterview.com/)
+- [Introduction to Algorithms (CLRS)](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)
+- [The Algorithm Design Manual](https://www.algorist.com/)
+- [Grokking Algorithms](https://www.manning.com/books/grokking-algorithms-second-edition)
+- [Tech Interview Handbook](https://www.techinterviewhandbook.org/)
+- [Frontend Interview Handbook](https://frontendinterviewhandbook.com/)
+- [Designing Data-Intensive Applications](https://dataintensive.net/)
+- [You Don’t Know JS Yet](https://github.com/getify/You-Dont-Know-JS)
 
 ### Practice questions
 
-- [Awesome JavaScript Interviews](https://github.com/rohan-paul/Awesome-JavaScript-Interviews)
-- [500 Data Structures and Algorithms ](https://techiedelight.quora.com/500-Data-Structures-and-Algorithms-interview-questions-and-their-solutions)
-- [Top 10 Algos in Interview Questions](http://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/)
-- [HackerRank](https://www.hackerrank.com/), [Topcoder](https://community.topcoder.com/tc?module=MatchDetails&rd=15712), [Codeforces](http://codeforces.com/contests), [Leetcode](https://leetcode.com/), [InterviewBit](https://www.interviewbit.com/) or [Kattis.](https://open.kattis.com/)
-- Problems from[ Cracking the Coding Interview Book](https://books.google.co.uk/books/about/Cracking_the_Coding_Interview.html?id=anhAXwAACAAJ&hl=en)
-- List of [ACM-ICPC](https://icpc.baylor.edu/worldfinals/problems) and [Code Jam](https://code.google.com/codejam/past-contests) past questions
+- [LeetCode](https://leetcode.com/)
+- [HackerRank](https://www.hackerrank.com/)
+- [Codeforces](https://codeforces.com/)
+- [Exercism](https://exercism.org/)
+- [NeetCode problem roadmap](https://neetcode.io/roadmap)
+- [Project Euler](https://projecteuler.net/)
 
 ## Videos
 
-- [Clean Code](https://www.youtube.com/watch?v=RlfLCWKxHJ0)
+- [MIT 6.006 Introduction to Algorithms](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/)
+- [CS50 (Harvard)](https://cs50.harvard.edu/x/)
+- [Clean Code talk by Robert C. Martin](https://www.youtube.com/watch?v=7EmboKQH8lM)
 
 ## Misc.
 
-- [Flexbox Froggy](http://flexboxfroggy.com/)
+- [Big-O Cheat Sheet](https://www.bigocheatsheet.com/)
+- [VisuAlgo (algorithm visualizations)](https://visualgo.net/)
+- [Flexbox Froggy](https://flexboxfroggy.com/)
+- [Grid Garden](https://cssgridgarden.com/)
 
 # Computer Science
 
@@ -1701,6 +1765,62 @@ If you want to dive into a more hands-on learning plan with recommended activiti
 - Providing accessible error messages
 - Accessibility testing
 
+# System Design
+
+System design interviews evaluate how you reason about scale, tradeoffs, and ambiguity.
+
+Suggested structure:
+
+1. Clarify requirements (functional + non-functional)
+2. Estimate scale (QPS, storage, read/write ratio)
+3. Define APIs and data model
+4. Propose high-level architecture
+5. Deep dive into bottlenecks (caching, partitioning, consistency)
+6. Discuss reliability, security, and observability
+
+Common topics to know:
+
+- Load balancing and reverse proxies
+- Caching patterns (cache-aside, write-through, TTL)
+- SQL vs NoSQL tradeoffs
+- Queues/streams and asynchronous processing
+- Rate limiting, retries, idempotency
+- CAP theorem, replication, sharding
+
+# Behavioral Interviews
+
+Behavioral interviews often decide offers when technical performance is close.
+
+Tips:
+
+- Use STAR format and lead with the result.
+- Quantify impact (latency, revenue, incidents reduced, time saved).
+- Show ownership, collaboration, and learning loops.
+- Be explicit about what *you* did.
+- Prepare concise stories for conflict, failure, and prioritization.
+
+# Take-home Assignments
+
+For take-home tasks:
+
+- Clarify requirements early and document assumptions.
+- Keep scope realistic; quality > breadth.
+- Include a short README with setup, decisions, and tradeoffs.
+- Add tests for critical paths.
+- Treat the submission like production code (linting, naming, small commits).
+
+# Compensation + Offer Evaluation
+
+When comparing offers, evaluate more than base salary:
+
+- Base, bonus, equity, vesting schedule, refresh policy
+- Level/title trajectory and promotion rubric
+- Team quality, manager fit, and product roadmap
+- On-call expectations and work-life boundaries
+- Learning opportunities and long-term career compounding
+
+Use total compensation over 4 years for apples-to-apples comparison.
+
 # Questions
 
 ### How would you make these functions work?
@@ -2566,3 +2686,14 @@ Group the promises into batches of 50 (for example) and recursively execute each
 There's no answer here - yet! Suggest one by [creating a pull request 🙏](https://github.com/danieldelcore/mega-interview-guide/pulls)
 
 </details>
+
+# References
+
+- [Google Engineering Practices Documentation](https://google.github.io/eng-practices/)
+- [AWS Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/)
+- [System Design Primer](https://github.com/donnemartin/system-design-primer)
+- [The Twelve-Factor App](https://12factor.net/)
+- [MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
+- [MDN Web APIs](https://developer.mozilla.org/en-US/docs/Web/API)
+- [OWASP Top 10](https://owasp.org/www-project-top-ten/)
+- [Nielsen Norman Group: UX heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/)
