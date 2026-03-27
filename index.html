@@ -90,7 +90,14 @@
 <!-- toc -->
 
 <ul>
-<li><a href="#how-to-prepare">How to Prepare</a></li>
+<li><a href="#how-to-prepare">How to Prepare</a><ul>
+<li><a href="#know-the-interview-loop">Know the Interview Loop</a></li>
+<li><a href="#create-a-study-plan">Create a Study Plan</a></li>
+<li><a href="#practice-with-deliberate-feedback">Practice with Deliberate Feedback</a></li>
+<li><a href="#build-your-interview-narrative">Build Your Interview Narrative</a></li>
+<li><a href="#day-before-checklist">Day-before Checklist</a></li>
+</ul>
+</li>
 <li><a href="#resources">Resources</a><ul>
 <li><a href="#suggested-reading">Suggested reading</a></li>
 <li><a href="#videos">Videos</a></li>
@@ -140,51 +147,109 @@
 <li><a href="#accessibility">Accessibility</a></li>
 </ul>
 </li>
+<li><a href="#system-design">System Design</a></li>
+<li><a href="#behavioral-interviews">Behavioral Interviews</a></li>
+<li><a href="#take-home-assignments">Take-home Assignments</a></li>
+<li><a href="#compensation--offer-evaluation">Compensation + Offer Evaluation</a></li>
 <li><a href="#questions">Questions</a></li>
+<li><a href="#references">References</a></li>
 </ul>
 <!-- tocstop -->
 
 <h1 id="how-to-prepare">How to Prepare</h1>
-<p>Invest time in preparing: It&#39;s important for any engineer, even senior ones, to brush up on their interview skills, coding skills and algorithms. An interview is typically different from your day-to-day job.</p>
-<p><strong>Practice answering many different coding questions:</strong> Practice answering a coding question with the most efficient bug-free solution without using a compiler. A few resources that offer coding questions to use for practice: <a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.careercup.com%2Fpage&amp;h=ATNXGEU22051CK2jrQZuz0-_xpFzm-N44vARqRRGaN11C-Bj2vvn7WakmxepET56eZiatvTQ5pvqo_-swS4N6QtW0wLyqika349D8d17ymipgFcPjfwzH5Ij6wH7PmPc-MTcx2YwK5Yovm8v&amp;s=1">Careercup</a>, <a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.topcoder.com%2F&amp;h=ATM84NVzQHwje5rS4KBb5NHBfgwbX2g_4I-v4q3gW9I31bL155_2HLWALBAaz-u1XIGY8T7w1xFngHX7f9JT4IzFUw-OECGgW0kHns9mvkGq7tkFG9sQz_Oy3oKpwcwOwnJoXMEin1QmB7id&amp;s=1">Topcoder</a>, <a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fprojecteuler.net%2Findex.php&amp;h=ATPG4D_F0Q_s08m-PKCq6owpQh-cUzeLVDZO2hpdW2Sz03dK80GOAQBL45uEyK73sTqcVHOpXPG-Sd-naTXSuOVwa7TKMiqHcJ72OMhzpwUay472i7xcEjrivGdjUlnSu39Rl-gh3G1T8a-s&amp;s=1">Project Euler</a>, or <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fcodelab.interviewbit.com%2F&amp;h=ATMMRfsaHRYEOnw7HsLuQSRHKv2q_tQz63MRO-4U9xFgmowjsV9YadpCd4pxMEPnpm2RnXJ8idkl23HwzzMTmFbwK0VAu8MYvxrPs2jqY0TMHs4VJe-df8N0qAG3D15gW4ZKAjGQKCE2SAni&amp;s=1">Facebook Code Lab</a>.</p>
-<p><strong>Go over data structures, algorithms and complexity</strong>: Be able to discuss the <strong>big-O complexity</strong> of your approaches. Don&#39;t forget to brush up on your <strong>data structures like lists, arrays, hash tables, hash maps, stacks, queues, graphs, trees, heaps</strong>. Also <strong>sorts, searches, and traversals (BFS, DFS)</strong>.</p>
-<p>Also review <strong>recursion and iterative approaches</strong>.</p>
-<p><strong>Think about your 2-5 years career aspirations:</strong> You will be asked to talk about your interest and your strengths as an engineer.</p>
-<p><strong>Prepare 1-2 questions to ask your interviewer:</strong> There is generally 5 minutes at the end of a typical interview for this.</p>
+<p>Interview prep works best when you treat it like a short training block, not random practice.</p>
+<h2 id="know-the-interview-loop">Know the Interview Loop</h2>
+<p>Most software interview loops include some combination of:</p>
+<ul>
+<li>Recruiter screen (role alignment, compensation, timeline)</li>
+<li>Hiring manager screen (scope, ownership, communication)</li>
+<li>Coding rounds (data structures/algorithms, debugging, code quality)</li>
+<li>System design (for mid-level+ roles)</li>
+<li>Behavioral rounds (collaboration, conflict, impact)</li>
+<li>Final panel / bar raiser</li>
+</ul>
+<p>Prep becomes easier once you map <strong>which rounds</strong> are likely for your target role.</p>
+<h2 id="create-a-study-plan">Create a Study Plan</h2>
+<p>A practical 4-week plan:</p>
+<ul>
+<li><strong>Week 1</strong>: Arrays/strings/hash maps + foundational behavioral stories</li>
+<li><strong>Week 2</strong>: Trees/graphs/recursion + mock interview #1</li>
+<li><strong>Week 3</strong>: Dynamic programming + system design fundamentals</li>
+<li><strong>Week 4</strong>: Mixed mocks, weak-area review, company-specific prep</li>
+</ul>
+<p>Timebox daily sessions:</p>
+<ol>
+<li>45–60 min new concepts</li>
+<li>45–60 min timed practice</li>
+<li>15 min retrospective (what you missed + why)</li>
+</ol>
+<h2 id="practice-with-deliberate-feedback">Practice with Deliberate Feedback</h2>
+<p>When solving questions:</p>
+<ul>
+<li>State assumptions out loud.</li>
+<li>Start with brute force, then optimize.</li>
+<li>Discuss complexity tradeoffs.</li>
+<li>Test with edge cases before finalizing.</li>
+<li>Explain naming and readability choices.</li>
+</ul>
+<p>After each session, log:</p>
+<ul>
+<li>Pattern (e.g. sliding window, DFS backtracking)</li>
+<li>Mistake type (logic, edge case, complexity, communication)</li>
+<li>Fix you will apply next time</li>
+</ul>
+<h2 id="build-your-interview-narrative">Build Your Interview Narrative</h2>
+<p>Prepare 6–8 stories using STAR (Situation, Task, Action, Result), covering:</p>
+<ul>
+<li>Hard technical problem</li>
+<li>Conflict/disagreement</li>
+<li>Failure and recovery</li>
+<li>Leadership without authority</li>
+<li>Mentoring or unblocking others</li>
+<li>Shipping under ambiguity</li>
+</ul>
+<p>Keep each story to ~2 minutes, with measurable outcomes.</p>
+<h2 id="day-before-checklist">Day-before Checklist</h2>
+<ul>
+<li>Review your notes, do <strong>not</strong> cram new topics.</li>
+<li>Re-read your resume and project details.</li>
+<li>Prepare thoughtful interviewer questions.</li>
+<li>Verify your coding environment, camera, mic, and internet.</li>
+<li>Sleep enough; performance drops sharply with fatigue.</li>
+</ul>
 <h1 id="resources">Resources</h1>
 <h2 id="suggested-reading">Suggested reading</h2>
 <ul>
-<li><a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.amazon.com%2Fdp%2F0984782850%2F&amp;h=ATMZRtbfTrzQcLHngryrTjFT_XCq2o3nid4NoEE88Unt61VMu5gFILsu62CeZiwgbMGZEsXHIio3myVajcoWduG6CmE2SNFwxgOsHYHdaHWJIaSz20A7UL-X0oS1_Y4HnsCjr2FMWV3QabQf&amp;s=1">Cracking the Coding Interview</a></li>
-<li><a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.amazon.com%2Fdp%2F0262033844&amp;h=ATOR-C75elaqF-869Wl2vEifzniqLLc-mNpQXeueUSB7OVXcUN7-lehuzUCmjAgZ_VvnNPPra-ogSE4exCDEjTb2hxaQHSzun9WU0eN94HDmr58g7ibkPOCFv2Cns6eQcvcH72WAD9yfxcyI&amp;s=1">Introduction to Algorithms</a></li>
-<li><a href="http://www.amazon.com/Algorithms-Parts-1-5-Bundle-Fundamentals/dp/0201756080">Algorithms in C</a></li>
-<li><a href="https://apps2.mdp.ac.id/perpustakaan/ebook/Karya%20Umum/Dsa.pdf">Data Structures and Algorithms</a> and <a href="http://bigocheatsheet.com/">Big-O Cheat Sheet</a></li>
-<li><a href="https://www.coursera.org/learn/algorithms-part1">Coursera - Algorithms, Part 1</a></li>
-<li><a href="https://www.coursera.org/learn/algorithms-part2">Coursera - Algorithms, Part 2</a></li>
-<li><a href="https://www.udacity.com/course/intro-to-algorithms--cs215">Udacity - Intro to Algorithms</a></li>
-<li><a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2008/">MIT Open courseware - Introduction to Algorithms</a></li>
-<li>“You Don’t Know JS” by Kyle Simpson - <a href="https://github.com/getify/You-Dont-Know-JS">https://github.com/getify/You-Dont-Know-JS</a></li>
-<li><a href="https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d">Cracking the javascript interview</a></li>
-<li><a href="https://www.scaler.com/topics/data-structures/">Data Structures and Algorithms Tutorial</a></li>
-<li><a href="https://github.com/careercup/CtCI-6th-Edition-JavaScript">Cracking the Coding Interview (JS) Solutions</a></li>
-<li><a href="https://techinterviewhandbook.org/">Tech Interview Handbook</a></li>
-<li><a href="https://frontendinterviewhandbook.com/">Front End Interview Handbook</a></li>
+<li><a href="https://www.crackingthecodinginterview.com/">Cracking the Coding Interview</a></li>
+<li><a href="https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/">Introduction to Algorithms (CLRS)</a></li>
+<li><a href="https://www.algorist.com/">The Algorithm Design Manual</a></li>
+<li><a href="https://www.manning.com/books/grokking-algorithms-second-edition">Grokking Algorithms</a></li>
+<li><a href="https://www.techinterviewhandbook.org/">Tech Interview Handbook</a></li>
+<li><a href="https://frontendinterviewhandbook.com/">Frontend Interview Handbook</a></li>
+<li><a href="https://dataintensive.net/">Designing Data-Intensive Applications</a></li>
+<li><a href="https://github.com/getify/You-Dont-Know-JS">You Don’t Know JS Yet</a></li>
 </ul>
 <h3 id="practice-questions">Practice questions</h3>
 <ul>
-<li><a href="https://github.com/rohan-paul/Awesome-JavaScript-Interviews">Awesome JavaScript Interviews</a></li>
-<li><a href="https://techiedelight.quora.com/500-Data-Structures-and-Algorithms-interview-questions-and-their-solutions">500 Data Structures and Algorithms </a></li>
-<li><a href="http://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/">Top 10 Algos in Interview Questions</a></li>
-<li><a href="https://www.hackerrank.com/">HackerRank</a>, <a href="https://community.topcoder.com/tc?module=MatchDetails&amp;rd=15712">Topcoder</a>, <a href="http://codeforces.com/contests">Codeforces</a>, <a href="https://leetcode.com/">Leetcode</a>, <a href="https://www.interviewbit.com/">InterviewBit</a> or <a href="https://open.kattis.com/">Kattis.</a></li>
-<li>Problems from<a href="https://books.google.co.uk/books/about/Cracking_the_Coding_Interview.html?id=anhAXwAACAAJ&amp;hl=en"> Cracking the Coding Interview Book</a></li>
-<li>List of <a href="https://icpc.baylor.edu/worldfinals/problems">ACM-ICPC</a> and <a href="https://code.google.com/codejam/past-contests">Code Jam</a> past questions</li>
+<li><a href="https://leetcode.com/">LeetCode</a></li>
+<li><a href="https://www.hackerrank.com/">HackerRank</a></li>
+<li><a href="https://codeforces.com/">Codeforces</a></li>
+<li><a href="https://exercism.org/">Exercism</a></li>
+<li><a href="https://neetcode.io/roadmap">NeetCode problem roadmap</a></li>
+<li><a href="https://projecteuler.net/">Project Euler</a></li>
 </ul>
 <h2 id="videos">Videos</h2>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=RlfLCWKxHJ0">Clean Code</a></li>
+<li><a href="https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/">MIT 6.006 Introduction to Algorithms</a></li>
+<li><a href="https://cs50.harvard.edu/x/">CS50 (Harvard)</a></li>
+<li><a href="https://www.youtube.com/watch?v=7EmboKQH8lM">Clean Code talk by Robert C. Martin</a></li>
 </ul>
 <h2 id="misc">Misc.</h2>
 <ul>
-<li><a href="http://flexboxfroggy.com/">Flexbox Froggy</a></li>
+<li><a href="https://www.bigocheatsheet.com/">Big-O Cheat Sheet</a></li>
+<li><a href="https://visualgo.net/">VisuAlgo (algorithm visualizations)</a></li>
+<li><a href="https://flexboxfroggy.com/">Flexbox Froggy</a></li>
+<li><a href="https://cssgridgarden.com/">Grid Garden</a></li>
 </ul>
 <h1 id="computer-science">Computer Science</h1>
 <h2 id="data-structures">Data Structures</h2>
@@ -1312,6 +1377,55 @@ boredGreeter.greet(); <span class="hljs-comment">//=&gt; sup.</span>
 <li>Providing accessible error messages</li>
 <li>Accessibility testing</li>
 </ul>
+<h1 id="system-design">System Design</h1>
+<p>System design interviews evaluate how you reason about scale, tradeoffs, and ambiguity.</p>
+<p>Suggested structure:</p>
+<ol>
+<li>Clarify requirements (functional + non-functional)</li>
+<li>Estimate scale (QPS, storage, read/write ratio)</li>
+<li>Define APIs and data model</li>
+<li>Propose high-level architecture</li>
+<li>Deep dive into bottlenecks (caching, partitioning, consistency)</li>
+<li>Discuss reliability, security, and observability</li>
+</ol>
+<p>Common topics to know:</p>
+<ul>
+<li>Load balancing and reverse proxies</li>
+<li>Caching patterns (cache-aside, write-through, TTL)</li>
+<li>SQL vs NoSQL tradeoffs</li>
+<li>Queues/streams and asynchronous processing</li>
+<li>Rate limiting, retries, idempotency</li>
+<li>CAP theorem, replication, sharding</li>
+</ul>
+<h1 id="behavioral-interviews">Behavioral Interviews</h1>
+<p>Behavioral interviews often decide offers when technical performance is close.</p>
+<p>Tips:</p>
+<ul>
+<li>Use STAR format and lead with the result.</li>
+<li>Quantify impact (latency, revenue, incidents reduced, time saved).</li>
+<li>Show ownership, collaboration, and learning loops.</li>
+<li>Be explicit about what <em>you</em> did.</li>
+<li>Prepare concise stories for conflict, failure, and prioritization.</li>
+</ul>
+<h1 id="take-home-assignments">Take-home Assignments</h1>
+<p>For take-home tasks:</p>
+<ul>
+<li>Clarify requirements early and document assumptions.</li>
+<li>Keep scope realistic; quality &gt; breadth.</li>
+<li>Include a short README with setup, decisions, and tradeoffs.</li>
+<li>Add tests for critical paths.</li>
+<li>Treat the submission like production code (linting, naming, small commits).</li>
+</ul>
+<h1 id="compensation--offer-evaluation">Compensation + Offer Evaluation</h1>
+<p>When comparing offers, evaluate more than base salary:</p>
+<ul>
+<li>Base, bonus, equity, vesting schedule, refresh policy</li>
+<li>Level/title trajectory and promotion rubric</li>
+<li>Team quality, manager fit, and product roadmap</li>
+<li>On-call expectations and work-life boundaries</li>
+<li>Learning opportunities and long-term career compounding</li>
+</ul>
+<p>Use total compensation over 4 years for apples-to-apples comparison.</p>
 <h1 id="questions">Questions</h1>
 <h3 id="how-would-you-make-these-functions-work">How would you make these functions work?</h3>
 <pre><code class="language-javascript">add(<span class="hljs-number">2</span>, <span class="hljs-number">5</span>); <span class="hljs-comment">// 7</span>
@@ -2037,6 +2151,18 @@ findLargestSum([<span class="hljs-number">7</span>, <span class="hljs-number">5<
 <p><strong>Don&#39;t forget!</strong> If duplicate requests occur, you can simply memoize the function and safely return the same result to side-step the network request and improve performance.</p>
 <p>There&#39;s no answer here - yet! Suggest one by <a href="https://github.com/danieldelcore/mega-interview-guide/pulls">creating a pull request 🙏</a></p>
 </details>
+
+<h1 id="references">References</h1>
+<ul>
+<li><a href="https://google.github.io/eng-practices/">Google Engineering Practices Documentation</a></li>
+<li><a href="https://aws.amazon.com/architecture/well-architected/">AWS Well-Architected Framework</a></li>
+<li><a href="https://github.com/donnemartin/system-design-primer">System Design Primer</a></li>
+<li><a href="https://12factor.net/">The Twelve-Factor App</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">MDN JavaScript Guide</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API">MDN Web APIs</a></li>
+<li><a href="https://owasp.org/www-project-top-ten/">OWASP Top 10</a></li>
+<li><a href="https://www.nngroup.com/articles/ten-usability-heuristics/">Nielsen Norman Group: UX heuristics</a></li>
+</ul>
 
       </div>
     </main>
