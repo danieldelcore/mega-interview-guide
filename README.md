@@ -6,7 +6,7 @@
   The MEGA Interview Guide
 </h1>
 <p align="center">
-  A humble guide to give developers the tools they need to nail technical interviews!
+  A humble guide to give developers the tools, they need to nail technical interviews!
 </p>
 <p align="center">
   <strong>❤️ PRs Welcome ❤️</strong>
