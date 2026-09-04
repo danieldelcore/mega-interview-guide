@@ -159,6 +159,7 @@ Keep each story to ~2 minutes, with measurable outcomes.
 - [NeetCode problem roadmap](https://neetcode.io/roadmap)
 - [Project Euler](https://projecteuler.net/)
 - [PracHub](https://prachub.com)
+- [FrontendAtlas Essential 60](https://frontendatlas.com/interview-questions/essential)
 
 ## Videos
 
